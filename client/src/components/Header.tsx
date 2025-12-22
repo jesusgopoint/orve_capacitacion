@@ -38,6 +38,12 @@ export default function Header() {
           ))}
         </nav>
 
+        {/* Experience Badge */}
+        <div className="hidden md:flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
+          <span className="text-xs font-semibold text-primary">15+</span>
+          <span className="text-xs text-gray-600">años de experiencia</span>
+        </div>
+
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
