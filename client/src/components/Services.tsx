@@ -8,47 +8,115 @@ export default function Services() {
       id: "formacion",
       title: "Formación",
       content: [
-        "En ORVE Capacitación, diseñamos programas de formación especializados en el desarrollo de habilidades blandas para potenciar el desempeño y crecimiento del talento dentro de las organizaciones.",
-        "Nuestras capacitaciones abarcan áreas clave como liderazgo, trabajo en equipo, comunicación efectiva, gestión del tiempo, entre otras, adaptándose a las necesidades específicas de cada empresa.",
-        "Ofrecemos diversas modalidades de formación, incluyendo cursos, talleres, charlas y seminarios web, asegurando flexibilidad y efectividad en el aprendizaje.",
-        "Impulsa el desarrollo de tu equipo con programas diseñados para fortalecer su desempeño y productividad."
+        {
+          text: "En ORVE Capacitación, diseñamos programas de formación especializados en el desarrollo de ",
+          bold: "habilidades blandas",
+          rest: " para potenciar el desempeño y crecimiento del talento dentro de las organizaciones."
+        },
+        {
+          text: "Nuestras capacitaciones abarcan áreas clave como liderazgo, trabajo en equipo, comunicación efectiva, gestión del tiempo, entre otras, ",
+          bold: "adaptándose a las necesidades",
+          rest: " específicas de cada empresa."
+        },
+        {
+          text: "Ofrecemos ",
+          bold: "diversas modalidades",
+          rest: " de formación, incluyendo cursos, talleres, charlas y seminarios web, asegurando flexibilidad y efectividad en el aprendizaje."
+        },
+        {
+          text: "Impulsa el desarrollo de tu equipo con programas diseñados para ",
+          bold: "fortalecer desempeño",
+          rest: " y productividad."
+        }
       ]
     },
     {
       id: "bienestar",
       title: "Programa de Bienestar Laboral",
       content: [
-        "En ORVE ofrecemos un programa diseñado para mejorar el bienestar de los colaboradores dentro de las organizaciones. Abordamos aspectos clave como la salud mental, la gestión del estrés, el equilibrio entre la vida laboral y personal, y la promoción de hábitos saludables.",
-        "Nuestras actividades son flexibles y se adaptan a la rutina de cada equipo, contribuyendo a un entorno laboral más saludable, motivador y productivo.",
-        "Invierta en el bienestar de su equipo y potencia su desempeño con nuestro servicio especializado.",
-        "Cuida a tus colaboradores que ellos cuidaran de tu compañía."
+        {
+          text: "En ORVE ofrecemos un programa diseñado para ",
+          bold: "mejorar el bienestar",
+          rest: " de los colaboradores dentro de las organizaciones. Abordamos aspectos clave como la salud mental, la gestión del estrés, el equilibrio entre la vida laboral y personal, y la promoción de hábitos saludables."
+        },
+        {
+          text: "Nuestras actividades son ",
+          bold: "flexibles y adaptables",
+          rest: " a la rutina de cada equipo, contribuyendo a un entorno laboral más saludable, motivador y productivo."
+        },
+        {
+          text: "Invierta en el bienestar de su equipo y ",
+          bold: "potencia su desempeño",
+          rest: " con nuestro servicio especializado."
+        },
+        {
+          text: "Cuida a tus colaboradores que ",
+          bold: "ellos cuidarán",
+          rest: " de tu compañía."
+        }
       ]
     },
     {
       id: "desarrollo",
       title: "Desarrollo Organizacional",
       content: [
-        "En ORVE Capacitación, ayudamos a las organizaciones a optimizar su estructura, cultura y procesos internos para alcanzar su máximo potencial. A través de un diagnóstico organizacional integral, diseñamos e implementamos programas de cambio, fomentamos el desarrollo de equipos de alto rendimiento y aseguramos una alineación cultural.",
-        "Nuestro enfoque estratégico potencia el rendimiento global, alineando los recursos con los objetivos de la empresa, mejorando la eficiencia operativa y fortaleciendo la cohesión organizacional.",
-        "Transformamos desafíos en oportunidades para un crecimiento sostenible y una cultura empresarial más sólida.",
-        "Impulsa la evolución de tu empresa con nuestro servicio de Desarrollo Organizacional."
+        {
+          text: "En ORVE Capacitación, ayudamos a las organizaciones a ",
+          bold: "optimizar estructura y cultura",
+          rest: " para alcanzar su máximo potencial. A través de un diagnóstico organizacional integral, diseñamos e implementamos programas de cambio, fomentamos el desarrollo de equipos de alto rendimiento y aseguramos una alineación cultural."
+        },
+        {
+          text: "Nuestro enfoque estratégico ",
+          bold: "potencia el rendimiento global",
+          rest: ", alineando los recursos con los objetivos de la empresa, mejorando la eficiencia operativa y fortaleciendo la cohesión organizacional."
+        },
+        {
+          text: "Transformamos desafíos en ",
+          bold: "oportunidades de crecimiento",
+          rest: " sostenible y una cultura empresarial más sólida."
+        },
+        {
+          text: "Impulsa la evolución de tu empresa con nuestro ",
+          bold: "servicio especializado",
+          rest: " de Desarrollo Organizacional."
+        }
       ]
     },
     {
       id: "hunting",
       title: "Hunting",
       content: [
-        "En ORVE nos encargamos de encontrar a los profesionales ideales para cada puesto, optimizando el proceso de selección y garantizando incorporaciones que impulsen el crecimiento.",
-        "Encuentra el talento adecuado con nuestro servicio de Hunting"
+        {
+          text: "En ORVE nos encargamos de ",
+          bold: "encontrar profesionales ideales",
+          rest: " para cada puesto, optimizando el proceso de selección y garantizando incorporaciones que impulsen el crecimiento."
+        },
+        {
+          text: "Encuentra el ",
+          bold: "talento adecuado",
+          rest: " con nuestro servicio de Hunting"
+        }
       ]
     },
     {
       id: "coaching",
       title: "Coaching",
       content: [
-        "Ofrecemos servicios de coaching personalizado, tanto a nivel individual como grupal, para potenciar el desarrollo personal y profesional. A través de un acompañamiento estratégico, ayudamos a las personas a definir objetivos claros, mejorar sus competencias y superar obstáculos, permitiéndoles alcanzar su máximo potencial en el ámbito laboral y personal.",
-        "Nuestro enfoque brinda herramientas efectivas para la toma de decisiones, el liderazgo y la gestión del cambio, promoviendo un crecimiento sostenible y alineado con los desafíos actuales.",
-        "Transforma tu desarrollo con nuestro servicio de Coaching."
+        {
+          text: "Ofrecemos servicios de ",
+          bold: "coaching personalizado",
+          rest: ", tanto a nivel individual como grupal, para potenciar el desarrollo personal y profesional. A través de un acompañamiento estratégico, ayudamos a las personas a definir objetivos claros, mejorar sus competencias y superar obstáculos, permitiéndoles alcanzar su máximo potencial en el ámbito laboral y personal."
+        },
+        {
+          text: "Nuestro enfoque brinda ",
+          bold: "herramientas efectivas",
+          rest: " para la toma de decisiones, el liderazgo y la gestión del cambio, promoviendo un crecimiento sostenible y alineado con los desafíos actuales."
+        },
+        {
+          text: "Transforma tu desarrollo con nuestro ",
+          bold: "servicio de Coaching",
+          rest: "."
+        }
       ]
     }
   ];
@@ -86,9 +154,11 @@ export default function Services() {
               <div className="bg-gray-50 rounded-lg p-8 min-h-96">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">{activeService.title}</h3>
                 <div className="space-y-4">
-                  {activeService.content.map((paragraph, index) => (
+                  {activeService.content.map((item, index) => (
                     <p key={index} className="text-gray-700 leading-relaxed">
-                      {paragraph}
+                      {item.text}
+                      <span className="font-bold">{item.bold}</span>
+                      {item.rest}
                     </p>
                   ))}
                 </div>

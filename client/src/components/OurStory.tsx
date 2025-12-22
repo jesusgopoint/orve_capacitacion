@@ -43,18 +43,25 @@ export default function OurStory() {
             {/* Right Content */}
             <div>
               <p className="text-gray-700 text-lg mb-4 leading-relaxed">
-                Orve Capacitación y Desarrollo nace con la misión de mejorar las capacidades y el talento de cada persona.
+                Orve Capacitación y Desarrollo nace con la misión de <span className="font-bold">mejorar las capacidades</span> y el talento de cada persona.
               </p>
               
               <p className="text-gray-700 text-lg mb-6 leading-relaxed">
-                Con más de 15 años de experiencia en la industria del manejo de talento humano, nos hemos dedicado a transformar la vida laboral y personal de aquellos que confían en nuestros programas, academias, charlas y más. Nuestra esencia está centrada en las personas, y es eso lo que nos impulsa cada día a seguir entregando lo mejor de nosotros.
+                Con más de 15 años de experiencia en la industria del manejo de talento humano, nos hemos dedicado a <span className="font-bold">transformar la vida laboral</span> de aquellos que confían en nuestros programas, academias, charlas y más. Nuestra esencia está <span className="font-bold">centrada en las personas</span>, y es eso lo que nos impulsa cada día a seguir entregando lo mejor de nosotros.
               </p>
 
-              {/* ORVE Badge */}
-              <div className="bg-white border-2 border-primary rounded-lg p-6">
-                <p className="text-primary font-bold text-center mb-1">ORVE</p>
-                <p className="text-gray-900 font-semibold text-center mb-3">Capacitación y Desarrollo</p>
-                <p className="text-primary font-bold text-center text-sm">Organismo Técnico Certificado y Acreditado</p>
+              {/* ORVE Badge - Improved Design */}
+              <div className="bg-gradient-to-br from-primary/5 to-primary/10 border-2 border-primary rounded-xl p-8 text-center">
+                <div className="inline-block bg-primary text-white px-4 py-2 rounded-full mb-3">
+                  <p className="font-bold text-sm">ORVE</p>
+                </div>
+                <p className="text-gray-900 font-bold text-xl mb-2">Capacitación y Desarrollo</p>
+                <div className="flex items-center justify-center gap-2 mt-4 pt-4 border-t border-primary/20">
+                  <svg className="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                  </svg>
+                  <p className="text-primary font-semibold text-sm">Organismo Técnico Certificado y Acreditado</p>
+                </div>
               </div>
             </div>
           </div>

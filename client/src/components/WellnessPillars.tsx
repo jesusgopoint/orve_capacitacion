@@ -79,7 +79,7 @@ export default function WellnessPillars() {
             </h2>
             
             <p className="text-white text-lg mb-8 leading-relaxed">
-              En ORVE capacitación y desarrollo, transformamos tus fondos excedentes de capacitación SENCE en inversiones estratégicas que impulsan el potencial de tu equipo. Ofrecemos cursos totalmente personalizados que se alinean con las necesidades específicas de tu empresa, maximizando el rendimiento y desarrollo de tus empleados.
+              En ORVE capacitación y desarrollo, transformamos tus <span className="font-bold">fondos excedentes SENCE</span> en <span className="font-bold">inversiones estratégicas</span> que impulsan el potencial de tu equipo. Ofrecemos <span className="font-bold">cursos personalizados</span> que se alinean con las necesidades específicas de tu empresa, maximizando el rendimiento y desarrollo de tus empleados.
             </p>
 
             <a 
