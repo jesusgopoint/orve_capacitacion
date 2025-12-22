@@ -172,7 +172,7 @@ export default function Contact() {
                   </svg>
                 </a>
                 <a href="https://api.whatsapp.com/send/?phone=56986983439&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white border border-gray-300 rounded-lg flex items-center justify-center hover:border-primary hover:text-primary transition-colors flex-shrink-0">
-                  <img src="/images/whatsappicono.jpg" alt="WhatsApp" className="w-6 h-6" />
+                  <img src="/images/whatsapp-icon.jpg" alt="WhatsApp" className="w-6 h-6 object-contain" />
                 </a>
                 <a href="https://www.youtube.com/@ORVECapacitaciónYDesarrollo" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white border border-gray-300 rounded-lg flex items-center justify-center hover:border-primary hover:text-primary transition-colors flex-shrink-0">
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
