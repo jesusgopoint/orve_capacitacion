@@ -105,7 +105,7 @@ export default function HeroSection() {
         <div className="mt-12 flex justify-center">
           <div className="bg-primary text-white px-8 py-6 rounded-2xl font-bold inline-block text-center">
             <div className="text-4xl">15+</div>
-            <div className="text-sm mt-2">EQUIPO CON AÑOS DE EXPERIENCIA</div>
+            <div className="text-sm mt-2">Años de experiencia</div>
           </div>
         </div>
       </div>
