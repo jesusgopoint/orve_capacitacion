@@ -66,32 +66,40 @@ export default function WellnessPillars() {
         </div>
       </section>
 
-      {/* SENCE Section */}
-      <section className="relative py-16 md:py-24 overflow-hidden" style={{
-        backgroundImage: 'url(/images/hero-1.jpg)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed'
-      }}>
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/60 to-purple-700/60"></div>
-        
-        <div className="container relative z-10">
-          <div className="max-w-3xl mx-auto text-center animate-fade-in-up">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              ¡Convierte tus excedentes SENCE en oportunidades de crecimiento real!
-            </h2>
-            
-            <p className="text-white text-lg mb-8 leading-relaxed">
-              En ORVE capacitación y desarrollo, transformamos tus <span className="font-bold">fondos excedentes SENCE</span> en <span className="font-bold">inversiones estratégicas</span> que impulsan el potencial de tu equipo. Ofrecemos <span className="font-bold">cursos personalizados</span> que se alinean con las necesidades específicas de tu empresa, maximizando el rendimiento y desarrollo de tus empleados.
-            </p>
+      {/* SENCE Section - Redesigned */}
+      <section className="bg-white py-16 md:py-24">
+        <div className="container">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <div className="animate-slide-in-left" style={{animationDelay: '0s'}}>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                ¡Convierte tus excedentes SENCE en oportunidades de crecimiento real!
+              </h2>
+              
+              <p className="text-gray-700 text-lg mb-6 leading-relaxed">
+                En ORVE capacitación y desarrollo, transformamos tus <span className="font-bold">fondos excedentes SENCE</span> en <span className="font-bold">inversiones estratégicas</span> que impulsan el potencial de tu equipo.
+              </p>
 
-            <a 
-              href="#contacto" 
-              className="inline-block bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
-              Contáctanos
-            </a>
+              <p className="text-gray-700 text-lg mb-8 leading-relaxed">
+                Ofrecemos <span className="font-bold">cursos personalizados</span> que se alinean con las necesidades específicas de tu empresa, maximizando el rendimiento y desarrollo de tus empleados.
+              </p>
+
+              <a 
+                href="#contacto" 
+                className="inline-block bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+              >
+                Contáctanos
+              </a>
+            </div>
+
+            {/* Right Image */}
+            <div className="bg-gray-300 rounded-lg overflow-hidden h-96 animate-fade-in-scale" style={{animationDelay: '0.2s'}}>
+              <img 
+                src="/images/hero-1.jpg" 
+                alt="SENCE" 
+                className="w-full h-full object-cover animate-float"
+              />
+            </div>
           </div>
         </div>
       </section>
