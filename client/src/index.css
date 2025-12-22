@@ -282,4 +282,17 @@
     animation: typewriter 3s steps(20, end) 1, blink 0.75s step-end infinite;
     display: inline-block;
   }
+
+  @keyframes iconBounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  .animate-icon-bounce {
+    animation: iconBounce 2s ease-in-out infinite;
+  }
 }
