@@ -243,4 +243,17 @@
   .delay-400 {
     animation-delay: 0.4s;
   }
+
+  @keyframes buttonGlow {
+    0%, 100% {
+      box-shadow: 0 0 0 0 rgba(107, 70, 193, 0.7);
+    }
+    50% {
+      box-shadow: 0 0 0 8px rgba(107, 70, 193, 0);
+    }
+  }
+
+  .animate-button-glow {
+    animation: buttonGlow 2s infinite;
+  }
 }
