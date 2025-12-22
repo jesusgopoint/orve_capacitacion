@@ -63,8 +63,16 @@ export default function WellnessPillars() {
       </section>
 
       {/* SENCE Section */}
-      <section className="bg-gradient-to-r from-primary to-purple-700 py-16 md:py-24">
-        <div className="container">
+      <section className="relative py-16 md:py-24 overflow-hidden" style={{
+        backgroundImage: 'url(/images/hero-1.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}>
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-purple-700/90"></div>
+        
+        <div className="container relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               ¡Convierte tus excedentes SENCE en oportunidades de crecimiento real!
@@ -72,14 +80,6 @@ export default function WellnessPillars() {
             
             <p className="text-white text-lg mb-8 leading-relaxed">
               En ORVE capacitación y desarrollo, transformamos tus fondos excedentes de capacitación SENCE en inversiones estratégicas que impulsan el potencial de tu equipo. Ofrecemos cursos totalmente personalizados que se alinean con las necesidades específicas de tu empresa, maximizando el rendimiento y desarrollo de tus empleados.
-            </p>
-
-            <p className="text-white text-lg mb-8 font-semibold">
-              No dejes que estas oportunidades se escapen.
-            </p>
-
-            <p className="text-white text-lg mb-8">
-              ¡Contáctanos ahora y asegura el futuro de tu empresa con nosotros!
             </p>
 
             <a 
