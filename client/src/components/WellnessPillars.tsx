@@ -74,7 +74,7 @@ export default function WellnessPillars() {
         backgroundAttachment: 'fixed'
       }}>
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-purple-700/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/60 to-purple-700/60"></div>
         
         <div className="container relative z-10">
           <div className="max-w-3xl mx-auto text-center animate-fade-in-up">
