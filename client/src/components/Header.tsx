@@ -18,9 +18,11 @@ export default function Header() {
       <div className="container flex items-center justify-between h-20">
         {/* Logo */}
         <div className="flex items-center">
-          <div className="text-2xl font-bold text-primary">
-            <span className="text-primary">ORVE</span>
-          </div>
+          <img 
+            src="/images/orve-logo.png" 
+            alt="ORVE Logo" 
+            className="h-16 w-auto"
+          />
         </div>
 
         {/* Desktop Navigation */}
