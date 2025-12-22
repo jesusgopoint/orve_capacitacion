@@ -3,12 +3,12 @@ export default function Team() {
     {
       name: "Orlando Palma",
       role: "Socio Fundador",
-      image: "/images/orlando-team.png"
+      image: "/images/orlando-palma.jpg"
     },
     {
       name: "Tamara Bravo",
       role: "Especialista",
-      image: "/images/tamara-team.png"
+      image: "/images/tamara-bravo.jpg"
     }
   ];
 
@@ -17,10 +17,10 @@ export default function Team() {
       <div className="container">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">Nuestro Equipo</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
           {teamMembers.map((member, index) => (
             <div key={index} className="text-center">
-              <div className="bg-gray-300 rounded-lg overflow-hidden mb-6" style={{aspectRatio: '3/4'}}>
+              <div className="bg-gray-300 rounded-lg overflow-hidden mb-4 animate-fade-in-scale" style={{aspectRatio: '3/4', maxHeight: '320px'}}>
                 <img 
                   src={member.image} 
                   alt={member.name} 
