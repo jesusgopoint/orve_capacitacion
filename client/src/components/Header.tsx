@@ -33,7 +33,7 @@ export default function Header() {
               href={item.href}
               className={`text-sm font-medium transition-colors ${
                 item.label === "Contacto"
-                  ? "text-white bg-primary border-2 border-primary px-4 py-2 rounded-lg hover:bg-purple-700 hover:border-purple-700 animate-button-glow"
+                  ? "text-white bg-primary border-2 border-primary px-4 py-2 rounded-lg hover:bg-purple-700 hover:border-purple-700"
                   : "text-gray-700 hover:text-primary"
               }`}
             >

@@ -30,36 +30,16 @@ export default function OurStory() {
         <div className="container">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">Nuestra Historia</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            {/* Left Image */}
-            <div className="bg-gray-300 rounded-lg overflow-hidden h-96 animate-fade-in-scale">
-              <img 
-                src="/images/history.jpg" 
-                alt="Nuestra historia" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-
-            {/* Right Content */}
-            <div>
-              <p className="text-gray-700 text-lg mb-4 leading-relaxed">
-                Orve Capacitación y Desarrollo nace con la misión de <span className="font-bold">mejorar las capacidades</span> y el talento de cada persona.
-              </p>
-              
-              <p className="text-gray-700 text-lg mb-6 leading-relaxed">
-                Con más de 15 años de experiencia en la industria del manejo de talento humano, nos hemos dedicado a <span className="font-bold">transformar la vida laboral</span> de aquellos que confían en nuestros programas, academias, charlas y más. Nuestra esencia está <span className="font-bold">centrada en las personas</span>, y es eso lo que nos impulsa cada día a seguir entregando lo mejor de nosotros.
-              </p>
-
-              {/* ORVE Badge - Improved Design with Trophy Icon */}
-              <div className="bg-gradient-to-br from-primary/5 to-primary/10 border-2 border-primary rounded-xl p-8 text-center animate-shimmer">
-                <div className="inline-block bg-primary text-white px-4 py-2 rounded-full mb-3">
-                  <p className="font-bold text-sm">ORVE</p>
-                </div>
-                <p className="text-gray-900 font-bold text-xl mb-4">Capacitación y Desarrollo</p>
-                <div className="flex items-center justify-center gap-3 mt-4 pt-4 border-t border-primary/20">
-                  <Trophy className="w-6 h-6 text-primary flex-shrink-0 animate-float" style={{animationDuration: '2.5s'}} />
-                  <p className="text-primary font-bold text-base">Organismo Técnico Certificado y Acreditado</p>
-                </div>
+          <div className="flex justify-center items-center min-h-96">
+            {/* ORVE Badge - Simplified with animation on entire block */}
+            <div className="bg-gradient-to-br from-primary/5 to-primary/10 border-2 border-primary rounded-3xl p-12 text-center max-w-2xl animate-shimmer">
+              <div className="inline-block bg-primary text-white px-6 py-3 rounded-full mb-6">
+                <p className="font-bold text-base">ORVE</p>
+              </div>
+              <p className="text-gray-900 font-bold text-2xl mb-8">Capacitación y Desarrollo</p>
+              <div className="flex items-center justify-center gap-4 mt-6 pt-6 border-t border-primary/20">
+                <Trophy className="w-8 h-8 text-primary flex-shrink-0" />
+                <p className="text-primary font-bold text-lg">Organismo Técnico Certificado y Acreditado</p>
               </div>
             </div>
           </div>
