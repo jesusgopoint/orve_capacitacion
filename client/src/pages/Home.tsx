@@ -5,7 +5,7 @@ import Services from "@/components/Services";
 import Team from "@/components/Team";
 import MissionVision from "@/components/MissionVision";
 import WellnessPillars from "@/components/WellnessPillars";
-import News from "@/components/News";
+// import News from "@/components/News"; // Sección de Noticias - Comentada por ahora
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -20,7 +20,7 @@ export default function Home() {
         <Team />
         <MissionVision />
         <WellnessPillars />
-        <News />
+        {/* <News /> */} {/* Sección de Noticias - Comentada por ahora */}
         <Contact />
       </main>
       <Footer />
