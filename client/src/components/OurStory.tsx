@@ -170,21 +170,7 @@ export default function OurStory() {
                 </div>
               </div>
 
-              {/* Navigation Buttons */}
-              <button
-                onClick={handlePrev}
-                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-primary text-white p-2 rounded-full hover:bg-purple-700 transition-colors z-10"
-                aria-label="Previous"
-              >
-                ←
-              </button>
-              <button
-                onClick={handleNext}
-                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-primary text-white p-2 rounded-full hover:bg-purple-700 transition-colors z-10"
-                aria-label="Next"
-              >
-                →
-              </button>
+
 
               {/* Dots Indicator */}
               <div className="flex justify-center gap-2 mt-6">
