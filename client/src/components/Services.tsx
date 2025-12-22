@@ -131,12 +131,12 @@ export default function Services() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Tabs Vertical */}
           <div className="md:col-span-1">
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col md:flex-col gap-2">
               {services.map((service) => (
                 <button
                   key={service.id}
                   onClick={() => setActiveTab(service.id)}
-                  className={`text-left px-4 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                  className={`text-center md:text-left px-4 py-3 rounded-lg font-semibold transition-all duration-300 ${
                     activeTab === service.id
                       ? "bg-primary text-white shadow-md"
                       : "bg-gray-100 text-gray-900 hover:bg-gray-200"

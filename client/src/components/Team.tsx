@@ -17,11 +17,11 @@ export default function Team() {
       <div className="container">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">Nuestro Equipo</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto md:mx-auto justify-items-center md:justify-items-start">
           {teamMembers.map((member, index) => (
             <div 
               key={index} 
-              className="text-center animate-fade-in-up"
+              className="text-center animate-fade-in-up w-full md:w-auto"
               style={{animationDelay: `${index * 0.15}s`}}
             >
               <div className="bg-gray-300 rounded-lg overflow-hidden mb-4 animate-fade-in-scale" style={{aspectRatio: '3/4', maxHeight: '320px', animationDelay: `${index * 0.15 + 0.1}s`}}>

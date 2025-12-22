@@ -56,7 +56,7 @@ export default function WellnessPillars() {
                     ))}
                   </ul>
 
-                  <a href="#contacto" className="w-full bg-primary text-white py-2 rounded-lg font-semibold hover:bg-purple-700 transition-colors text-center block text-sm">
+                  <a href="#contacto" className="w-full md:w-auto bg-primary text-white py-2 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors text-center block text-sm mx-auto md:mx-0">
                     Conocer más
                   </a>
                 </div>
@@ -69,9 +69,9 @@ export default function WellnessPillars() {
       {/* SENCE Section - Redesigned */}
       <section className="bg-white py-16 md:py-24">
         <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center text-center md:text-left">
             {/* Left Content */}
-            <div className="animate-slide-in-left" style={{animationDelay: '0s'}}>
+            <div className="animate-slide-in-left flex flex-col items-center md:items-start" style={{animationDelay: '0s'}}>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 ¡Convierte tus excedentes SENCE en oportunidades de crecimiento real!
               </h2>
@@ -86,7 +86,7 @@ export default function WellnessPillars() {
 
               <a 
                 href="#contacto" 
-                className="inline-block bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+                className="inline-block bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors md:inline-block"
               >
                 Contáctanos
               </a>
