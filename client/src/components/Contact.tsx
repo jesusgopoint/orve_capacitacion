@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 export default function Contact() {
@@ -7,8 +7,28 @@ export default function Contact() {
     lastName: "",
     email: "",
     phone: "",
-    message: ""
+    message: "",
+    utm_source: "",
+    utm_medium: "",
+    utm_campaign: "",
+    utm_content: "",
+    utm_term: "",
+    campaign_id: ""
   });
+
+  // Capturar parámetros UTM de la URL
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    setFormData(prev => ({
+      ...prev,
+      utm_source: params.get('utm_source') || '',
+      utm_medium: params.get('utm_medium') || '',
+      utm_campaign: params.get('utm_campaign') || '',
+      utm_content: params.get('utm_content') || '',
+      utm_term: params.get('utm_term') || '',
+      campaign_id: params.get('campaign_id') || ''
+    }));
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -21,7 +41,7 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Formulario enviado:", formData);
-    setFormData({ firstName: "", lastName: "", email: "", phone: "", message: "" });
+    setFormData({ firstName: "", lastName: "", email: "", phone: "", message: "", utm_source: "", utm_medium: "", utm_campaign: "", utm_content: "", utm_term: "", campaign_id: "" });
   };
 
   return (
@@ -87,6 +107,14 @@ export default function Contact() {
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none"
                 required
               ></textarea>
+
+              {/* Campos ocultos UTM */}
+              <input type="hidden" name="utm_source" id="utm_source" value={formData.utm_source} />
+              <input type="hidden" name="utm_medium" id="utm_medium" value={formData.utm_medium} />
+              <input type="hidden" name="utm_campaign" id="utm_campaign" value={formData.utm_campaign} />
+              <input type="hidden" name="utm_content" id="utm_content" value={formData.utm_content} />
+              <input type="hidden" name="utm_term" id="utm_term" value={formData.utm_term} />
+              <input type="hidden" name="campaign_id" id="campaign_id" value={formData.campaign_id} />
 
               <button
                 type="submit"
