@@ -3,9 +3,10 @@ import { Mail, Phone, MapPin } from "lucide-react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    name: "",
+    firstName: "",
+    lastName: "",
     email: "",
-    subject: "",
+    phone: "",
     message: ""
   });
 
@@ -20,7 +21,7 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Formulario enviado:", formData);
-    setFormData({ name: "", email: "", subject: "", message: "" });
+    setFormData({ firstName: "", lastName: "", email: "", phone: "", message: "" });
   };
 
   return (
@@ -32,40 +33,54 @@ export default function Contact() {
           {/* Contact Form */}
           <div>
             <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Fila 1: Nombre y Apellido */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <input
                   type="text"
-                  name="name"
+                  name="firstName"
                   placeholder="Nombre"
-                  value={formData.name}
+                  value={formData.firstName}
                   onChange={handleChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   required
                 />
                 <input
-                  type="email"
-                  name="email"
-                  placeholder="Email"
-                  value={formData.email}
+                  type="text"
+                  name="lastName"
+                  placeholder="Apellido"
+                  value={formData.lastName}
                   onChange={handleChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   required
                 />
               </div>
 
-              <input
-                type="text"
-                name="subject"
-                placeholder="Asunto"
-                value={formData.subject}
-                onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                required
-              />
+              {/* Fila 2: Correo y Teléfono */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Correo"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  required
+                />
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Teléfono"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  required
+                />
+              </div>
 
+              {/* Fila 3: Mensaje */}
               <textarea
                 name="message"
-                placeholder="Mensaje"
+                placeholder="¿Cómo podemos ayudarte?"
                 value={formData.message}
                 onChange={handleChange}
                 rows={6}
