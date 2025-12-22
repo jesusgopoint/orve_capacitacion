@@ -44,7 +44,7 @@ export default function Services() {
           <div>
             <div className="bg-gray-300 rounded-lg overflow-hidden h-96 mb-6">
               <img 
-                src="/images/tamara-bravo.jpg" 
+                src="/images/services.jpg" 
                 alt="Especialista en servicios" 
                 className="w-full h-full object-cover"
               />

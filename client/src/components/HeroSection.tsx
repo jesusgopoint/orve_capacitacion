@@ -38,42 +38,30 @@ export default function HeroSection() {
           <div className="grid grid-cols-2 gap-4">
             <div className="bg-gray-200 rounded-lg overflow-hidden h-64 md:h-72">
               <img 
-                src="/images/placeholder-1.jpg" 
+                src="/images/hero-1.jpg" 
                 alt="Equipo trabajando" 
                 className="w-full h-full object-cover"
-                onError={(e) => {
-                  e.currentTarget.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Crect fill='%23e5e7eb' width='100' height='100'/%3E%3C/svg%3E";
-                }}
               />
             </div>
             <div className="bg-gray-200 rounded-lg overflow-hidden h-64 md:h-72 mt-8">
               <img 
-                src="/images/placeholder-2.jpg" 
+                src="/images/hero-2.jpg" 
                 alt="Reunión de equipo" 
                 className="w-full h-full object-cover"
-                onError={(e) => {
-                  e.currentTarget.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Crect fill='%23e5e7eb' width='100' height='100'/%3E%3C/svg%3E";
-                }}
               />
             </div>
             <div className="bg-gray-200 rounded-lg overflow-hidden h-64 md:h-72">
               <img 
-                src="/images/placeholder-3.jpg" 
+                src="/images/hero-3.jpg" 
                 alt="Capacitación" 
                 className="w-full h-full object-cover"
-                onError={(e) => {
-                  e.currentTarget.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Crect fill='%23e5e7eb' width='100' height='100'/%3E%3C/svg%3E";
-                }}
               />
             </div>
             <div className="bg-gray-200 rounded-lg overflow-hidden h-64 md:h-72 mt-8">
               <img 
-                src="/images/placeholder-4.jpg" 
+                src="/images/hero-4.jpg" 
                 alt="Colaboración" 
                 className="w-full h-full object-cover"
-                onError={(e) => {
-                  e.currentTarget.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Crect fill='%23e5e7eb' width='100' height='100'/%3E%3C/svg%3E";
-                }}
               />
             </div>
           </div>

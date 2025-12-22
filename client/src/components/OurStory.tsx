@@ -8,12 +8,9 @@ export default function OurStory() {
           {/* Left Image */}
           <div className="bg-gray-300 rounded-lg overflow-hidden h-96">
             <img 
-              src="/images/placeholder-history.jpg" 
+              src="/images/history.jpg" 
               alt="Nuestra historia" 
               className="w-full h-full object-cover"
-              onError={(e) => {
-                e.currentTarget.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Crect fill='%23d1d5db' width='100' height='100'/%3E%3C/svg%3E";
-              }}
             />
           </div>
 
