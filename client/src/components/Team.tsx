@@ -2,13 +2,13 @@ export default function Team() {
   const teamMembers = [
     {
       name: "Orlando Palma",
-      role: "Socio Fundador",
-      image: "/images/orlando-palma.jpg"
+      role: "Gerente Comercial",
+      image: "/images/Orlando-Orve.png"
     },
     {
       name: "Tamara Bravo",
-      role: "Especialista",
-      image: "/images/tamara-bravo.jpg"
+      role: "Coordinadora Capacitación",
+      image: "/images/Tamara-Orve.png"
     }
   ];
 
