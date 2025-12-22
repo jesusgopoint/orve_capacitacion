@@ -1,30 +1,64 @@
+import { useState, useEffect } from 'react';
+
+const services = [
+  'Formación',
+  'Programa de Bienestar Laboral',
+  'Desarrollo Organizacional',
+  'Hunting',
+  'Coaching'
+];
+
 export default function HeroSection() {
+  const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
+  const [displayedService, setDisplayedService] = useState(services[0]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentServiceIndex((prev) => (prev + 1) % services.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    setDisplayedService(services[currentServiceIndex]);
+  }, [currentServiceIndex]);
+
   return (
     <section className="bg-white py-12 md:py-20">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left Content */}
           <div>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-              Transformamos el talento interno de nuestros partners, impulsando su crecimiento y las soluciones de capacitación innovadoras
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+              Transformamos el talento interno de nuestros partners, impulsando su crecimiento 
+              <span className="block">
+                con <span className="font-black">soluciones de capacitación innovadoras</span>
+              </span>
             </h1>
             
+            {/* Subtitle */}
+            <p className="text-gray-600 mb-8 text-base md:text-lg leading-relaxed">
+              Capacitamos en modalidad <span className="font-semibold text-gray-900">presencial, e-learning sincrónico y asincrónico, y autoinstrucción</span>, potenciando el talento y fortaleciendo habilidades.
+            </p>
+
+            {/* Services Carousel */}
             <div className="mb-8">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">Servicios</h3>
-              <ul className="space-y-2 text-gray-700">
-                <li className="flex items-start">
-                  <span className="text-primary mr-3 mt-1">•</span>
-                  <span>Capacitación Organizacional</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-3 mt-1">•</span>
-                  <span>Asesoramiento Directivo</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-3 mt-1">•</span>
-                  <span>Soluciones de Capacitación Innovadoras</span>
-                </li>
-              </ul>
+              <h3 className="text-lg font-semibold text-primary mb-4">Servicios:</h3>
+              <div className="h-12 flex items-center">
+                <div className="text-2xl font-bold text-primary transition-all duration-500 ease-in-out">
+                  {displayedService}
+                </div>
+              </div>
+              <div className="flex gap-2 mt-4">
+                {services.map((_, index) => (
+                  <div
+                    key={index}
+                    className={`h-1 transition-all duration-300 ${
+                      index === currentServiceIndex ? 'bg-primary w-8' : 'bg-gray-300 w-2'
+                    }`}
+                  />
+                ))}
+              </div>
             </div>
 
             <div className="flex gap-4">
@@ -69,8 +103,9 @@ export default function HeroSection() {
 
         {/* Badge */}
         <div className="mt-12 flex justify-center">
-          <div className="bg-purple-100 text-primary px-6 py-3 rounded-full font-semibold inline-block">
-            15+ años de experiencia
+          <div className="bg-primary text-white px-8 py-6 rounded-2xl font-bold inline-block text-center">
+            <div className="text-4xl">15+</div>
+            <div className="text-sm mt-2">EQUIPO CON AÑOS DE EXPERIENCIA</div>
           </div>
         </div>
       </div>
