@@ -49,16 +49,7 @@ export default function HeroSection() {
                   {displayedService}
                 </div>
               </div>
-              <div className="flex gap-2 mt-4">
-                {services.map((_, index) => (
-                  <div
-                    key={index}
-                    className={`h-1 transition-all duration-300 ${
-                      index === currentServiceIndex ? 'bg-primary w-8' : 'bg-gray-300 w-2'
-                    }`}
-                  />
-                ))}
-              </div>
+
             </div>
 
             <div className="flex gap-4">
