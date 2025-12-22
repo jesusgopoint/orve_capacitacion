@@ -85,7 +85,7 @@ export default function Contact() {
           {/* Contact Info */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Ubicación</h3>
+              <p className="text-xl font-semibold text-gray-900 mb-4">Ubicación</p>
               <div className="flex items-start gap-3">
                 <MapPin className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
                 <p className="text-gray-700">
@@ -95,7 +95,7 @@ export default function Contact() {
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Llámanos</h3>
+              <p className="text-xl font-semibold text-gray-900 mb-4">Llámanos</p>
               <div className="flex items-center gap-3">
                 <Phone className="w-6 h-6 text-primary flex-shrink-0" />
                 <p className="text-gray-700">+56 9 8698 3439</p>
@@ -103,7 +103,7 @@ export default function Contact() {
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Escríbenos</h3>
+              <p className="text-xl font-semibold text-gray-900 mb-4">Escríbenos</p>
               <div className="flex items-center gap-3">
                 <Mail className="w-6 h-6 text-primary flex-shrink-0" />
                 <p className="text-gray-700">comercial@orvecapacitacion.cl</p>
@@ -111,7 +111,7 @@ export default function Contact() {
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Síguenos</h3>
+              <p className="text-xl font-semibold text-gray-900 mb-4">Síguenos</p>
               <div className="flex gap-4">
                 <a href="#" className="w-12 h-12 bg-white border border-gray-300 rounded-lg flex items-center justify-center hover:border-primary hover:text-primary transition-colors">
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">

@@ -43,7 +43,7 @@ export default function HeroSection() {
 
             {/* Services Carousel */}
             <div className="mb-8">
-              <h3 className="text-lg font-semibold text-primary mb-4">Servicios:</h3>
+              <p className="text-lg font-semibold text-primary mb-4">Servicios:</p>
               <div className="h-12 flex items-center">
                 <div className="text-2xl font-bold text-primary transition-all duration-500 ease-in-out">
                   {displayedService}
