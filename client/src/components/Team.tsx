@@ -19,8 +19,12 @@ export default function Team() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
           {teamMembers.map((member, index) => (
-            <div key={index} className="text-center">
-              <div className="bg-gray-300 rounded-lg overflow-hidden mb-4 animate-fade-in-scale" style={{aspectRatio: '3/4', maxHeight: '320px'}}>
+            <div 
+              key={index} 
+              className="text-center animate-fade-in-up"
+              style={{animationDelay: `${index * 0.15}s`}}
+            >
+              <div className="bg-gray-300 rounded-lg overflow-hidden mb-4 animate-fade-in-scale" style={{aspectRatio: '3/4', maxHeight: '320px', animationDelay: `${index * 0.15 + 0.1}s`}}>
                 <img 
                   src={member.image} 
                   alt={member.name} 

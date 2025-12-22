@@ -28,7 +28,11 @@ export default function WellnessPillars() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pillars.map((pillar, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+              <div 
+                key={index} 
+                className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow animate-fade-in-up"
+                style={{animationDelay: `${index * 0.15}s`}}
+              >
                 {/* Image */}
                 <div className="h-48 overflow-hidden bg-gray-300">
                   <img 
@@ -73,7 +77,7 @@ export default function WellnessPillars() {
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-purple-700/90"></div>
         
         <div className="container relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-3xl mx-auto text-center animate-fade-in-up">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               ¡Convierte tus excedentes SENCE en oportunidades de crecimiento real!
             </h2>

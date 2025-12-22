@@ -27,7 +27,11 @@ export default function News() {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {newsItems.map((news, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+            <div 
+              key={index} 
+              className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow animate-fade-in-up"
+              style={{animationDelay: `${index * 0.15}s`}}
+            >
               <div className="bg-gray-300 h-48 overflow-hidden">
                 <img 
                   src={news.image} 
