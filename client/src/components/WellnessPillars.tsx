@@ -2,20 +2,20 @@ export default function WellnessPillars() {
   const pillars = [
     {
       title: "Bienestar Físico",
-      description: "Programas enfocados en la salud y actividad física de los colaboradores.",
-      features: ["Actividades deportivas", "Asesoramiento nutricional", "Prevención de lesiones"],
+      description: "Programas enfocados en la salud y actividad física de los colaboradores, promoviendo hábitos saludables y energía en el trabajo.",
+      features: ["Pausas Activas", "Masajes en Silla", "Baile entretenido", "Entre Otros"],
       image: "/images/pilar-fisico.jpg"
     },
     {
       title: "Bienestar Mental",
-      description: "Iniciativas para cuidar la salud emocional y mental del equipo.",
-      features: ["Talleres de mindfulness", "Apoyo psicológico", "Gestión del estrés"],
+      description: "Iniciativas para cuidar la salud emocional y mental del equipo, generando espacios de calma y equilibrio.",
+      features: ["Pausas Psicológicas", "Mindfulness (Eating, express, tradicional)", "Yoga", "Entre Otros"],
       image: "/images/pilar-mental.jpg"
     },
     {
-      title: "Bienestar Social",
-      description: "Actividades que fortalecen las relaciones y la comunidad laboral.",
-      features: ["Eventos de integración", "Voluntariado corporativo", "Espacios de convivencia"],
+      title: "Bienestar Integral de Salud",
+      description: "Programas integrales que cuidan la salud general de los colaboradores desde múltiples dimensiones.",
+      features: ["Operativos Médicos", "Programa Alimentación Saludable Organizacional", "Programa Integral de Salud", "Entre Otros"],
       image: "/images/pilar-social.jpg"
     }
   ];
@@ -33,8 +33,8 @@ export default function WellnessPillars() {
                 className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow animate-fade-in-up"
                 style={{animationDelay: `${index * 0.15}s`}}
               >
-                {/* Image */}
-                <div className="h-48 overflow-hidden bg-gray-300">
+                {/* Image - Horizontal */}
+                <div className="h-40 overflow-hidden bg-gray-300">
                   <img 
                     src={pillar.image} 
                     alt={pillar.title}
@@ -45,18 +45,18 @@ export default function WellnessPillars() {
                 {/* Content */}
                 <div className="p-8">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{pillar.title}</h3>
-                  <p className="text-gray-600 mb-6">{pillar.description}</p>
+                  <p className="text-gray-600 mb-6 text-sm leading-relaxed">{pillar.description}</p>
                   
                   <ul className="space-y-2 mb-8">
                     {pillar.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start text-gray-700">
-                        <span className="text-primary mr-3 mt-1">✓</span>
+                      <li key={idx} className="flex items-start text-gray-700 text-sm">
+                        <span className="text-primary mr-3 mt-0.5 font-bold">✓</span>
                         <span>{feature}</span>
                       </li>
                     ))}
                   </ul>
 
-                  <a href="#contacto" className="w-full bg-primary text-white py-2 rounded-lg font-semibold hover:bg-purple-700 transition-colors text-center block">
+                  <a href="#contacto" className="w-full bg-primary text-white py-2 rounded-lg font-semibold hover:bg-purple-700 transition-colors text-center block text-sm">
                     Conocer más
                   </a>
                 </div>
