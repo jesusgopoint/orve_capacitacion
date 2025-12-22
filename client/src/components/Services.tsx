@@ -50,7 +50,7 @@ export default function Services() {
               />
             </div>
             <div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Especialista en Servicios</h3>
+              <p className="text-xl font-semibold text-gray-900 mb-3">Especialista en Servicios</p>
               <p className="text-gray-700 leading-relaxed">
                 Nuestro equipo de especialistas está comprometido con la excelencia y la innovación en cada proyecto. Trabajamos de cerca con nuestros clientes para entender sus necesidades específicas y diseñar soluciones personalizadas que generen impacto real en sus organizaciones.
               </p>

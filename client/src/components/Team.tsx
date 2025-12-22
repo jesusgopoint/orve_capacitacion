@@ -27,7 +27,7 @@ export default function Team() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-1">{member.name}</h3>
+              <p className="text-xl font-semibold text-gray-900 mb-1">{member.name}</p>
               <p className="text-gray-600">{member.role}</p>
             </div>
           ))}
