@@ -29,7 +29,7 @@ export default function HeroSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left Content */}
           <div>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight" style={{fontWeight: '400'}}>
               Transformamos el talento interno de nuestros partners, impulsando su crecimiento 
               <span className="block">
                 con <span className="font-black">soluciones de capacitación innovadoras</span>
