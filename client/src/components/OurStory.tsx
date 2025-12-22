@@ -155,9 +155,9 @@ export default function OurStory() {
                           </div>
                           
                           {/* Title */}
-                          <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                          <p className="text-lg font-semibold text-gray-900 mb-2">
                             {feature.title}
-                          </h3>
+                          </p>
                           
                           {/* Description */}
                           <p className="text-gray-600 text-sm leading-relaxed">
