@@ -18,7 +18,7 @@ export default function Header() {
         {/* Logo */}
         <div className="flex items-center">
           <img 
-            src="/images/orve-logo.png" 
+            src="/images/logo-orve.png" 
             alt="ORVE Logo" 
             className="h-16 w-auto"
           />
