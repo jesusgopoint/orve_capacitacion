@@ -38,10 +38,38 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Formulario enviado:", formData);
-    setFormData({ firstName: "", lastName: "", email: "", phone: "", message: "", utm_source: "", utm_medium: "", utm_campaign: "", utm_content: "", utm_term: "", campaign_id: "" });
+    
+    try {
+      // Enviar el formulario a través de FormSubmit
+      const formElement = e.currentTarget as HTMLFormElement;
+      const formDataObj = new FormData(formElement);
+      
+      // Agregar destinatarios
+      formDataObj.append('_to', 'comercial@orvecapacitacion.cl,seo@gopointagency.com');
+      formDataObj.append('_cc', 'seo@gopointagency.com');
+      formDataObj.append('_subject', 'Nuevo mensaje de contacto desde Orve Capacitación');
+      formDataObj.append('_captcha', 'false');
+      
+      const response = await fetch('https://formspree.io/f/myzgwbzr', {
+        method: 'POST',
+        body: formDataObj,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      
+      if (response.ok) {
+        alert('¡Mensaje enviado exitosamente! Nos pondremos en contacto pronto.');
+        setFormData({ firstName: "", lastName: "", email: "", phone: "", message: "", utm_source: "", utm_medium: "", utm_campaign: "", utm_content: "", utm_term: "", campaign_id: "" });
+      } else {
+        alert('Hubo un error al enviar el mensaje. Por favor, intenta de nuevo.');
+      }
+    } catch (error) {
+      console.error('Error al enviar formulario:', error);
+      alert('Error al enviar el formulario. Por favor, intenta de nuevo.');
+    }
   };
 
   return (
