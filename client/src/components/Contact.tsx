@@ -93,7 +93,6 @@ export default function Contact() {
                   value={formData.phone}
                   onChange={handleChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                  required
                 />
               </div>
 
@@ -105,7 +104,6 @@ export default function Contact() {
                 onChange={handleChange}
                 rows={6}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none"
-                required
               ></textarea>
 
               {/* Campos ocultos UTM */}
