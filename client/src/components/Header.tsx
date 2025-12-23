@@ -9,7 +9,6 @@ export default function Header() {
     { label: "Nosotros", href: "#nosotros" },
     { label: "Servicios", href: "#servicios" },
     { label: "Equipo", href: "#equipo" },
-    { label: "Noticias", href: "#noticias" },
     { label: "Contacto", href: "#contacto" },
   ];
 
