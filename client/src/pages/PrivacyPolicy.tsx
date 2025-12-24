@@ -1,4 +1,6 @@
 import { useEffect } from 'react';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 export default function PrivacyPolicy() {
   useEffect(() => {
@@ -6,9 +8,8 @@ export default function PrivacyPolicy() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* Header spacing */}
-      <div className="h-24 md:h-28"></div>
+    <div className="min-h-screen bg-white flex flex-col">
+      <Header />
 
       {/* Main content */}
       <section className="py-16 md:py-24">
@@ -110,6 +111,8 @@ export default function PrivacyPolicy() {
           </div>
         </div>
       </section>
+      
+      <Footer />
     </div>
   );
 }
