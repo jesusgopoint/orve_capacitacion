@@ -19,26 +19,94 @@ export default function PrivacyPolicy() {
           </h1>
 
           {/* Content */}
-          <div className="space-y-6 text-gray-700 leading-relaxed">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
+          <div className="space-y-8 text-gray-700 leading-relaxed">
+            {/* Responsable del tratamiento */}
+            <section>
+              <h2 className="text-2xl font-bold mb-4 text-gray-900">
+                Responsable del tratamiento
+              </h2>
+              <p>
+                El responsable del tratamiento de los datos personales es Orve Capacitación y desarrollo, con domicilio en Avenida Manquehue Norte 958, Las Condes, Zócalo -1, y correo electrónico de contacto orlando.palma@orvecapacitacion.cl
+              </p>
+            </section>
 
-            <p>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+            {/* Datos personales que se recopilan */}
+            <section>
+              <h2 className="text-2xl font-bold mb-4 text-gray-900">
+                Datos personales que se recopilan
+              </h2>
+              <p>
+                A través de este sitio web y de los formularios asociados, se podrán recopilar datos personales básicos, tales como nombre, correo electrónico, teléfono y cualquier otra información que el usuario decida proporcionar voluntariamente al momento de completar un formulario.
+              </p>
+            </section>
 
-            <p>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-            </p>
+            {/* Finalidad del tratamiento */}
+            <section>
+              <h2 className="text-2xl font-bold mb-4 text-gray-900">
+                Finalidad del tratamiento
+              </h2>
+              <p className="mb-4">
+                Los datos personales serán utilizados exclusivamente para:
+              </p>
+              <ul className="list-disc list-inside space-y-2 ml-2">
+                <li>Atender consultas, solicitudes de información o contacto.</li>
+                <li>Enviar información relacionada con productos, servicios o contenidos de la empresa.</li>
+                <li>Gestionar relaciones comerciales o profesionales.</li>
+              </ul>
+              <p className="mt-4">
+                En ningún caso los datos serán utilizados para fines distintos a los aquí indicados.
+              </p>
+            </section>
 
-            <p>
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-            </p>
+            {/* Base legal del tratamiento */}
+            <section>
+              <h2 className="text-2xl font-bold mb-4 text-gray-900">
+                Base legal del tratamiento
+              </h2>
+              <p>
+                El tratamiento de los datos personales se realiza sobre la base del consentimiento del usuario, otorgado al enviar voluntariamente sus datos a través de los formularios disponibles.
+              </p>
+            </section>
 
-            <p>
-              Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-            </p>
+            {/* Conservación de los datos */}
+            <section>
+              <h2 className="text-2xl font-bold mb-4 text-gray-900">
+                Conservación de los datos
+              </h2>
+              <p>
+                Los datos personales se conservarán durante el tiempo necesario para cumplir con la finalidad para la cual fueron recopilados o hasta que el usuario solicite su eliminación.
+              </p>
+            </section>
+
+            {/* Comunicación de datos a terceros */}
+            <section>
+              <h2 className="text-2xl font-bold mb-4 text-gray-900">
+                Comunicación de datos a terceros
+              </h2>
+              <p>
+                Los datos personales no serán cedidos a terceros, salvo cuando sea necesario para la prestación del servicio o exista una obligación legal.
+              </p>
+            </section>
+
+            {/* Derechos del usuario */}
+            <section>
+              <h2 className="text-2xl font-bold mb-4 text-gray-900">
+                Derechos del usuario
+              </h2>
+              <p>
+                El usuario tiene derecho a acceder, rectificar o solicitar la eliminación de sus datos personales, así como a retirar su consentimiento en cualquier momento. Para ejercer estos derechos, podrá contactar al responsable a través del correo electrónico orlando.palma@orvecapacitacion.cl
+              </p>
+            </section>
+
+            {/* Modificaciones */}
+            <section>
+              <h2 className="text-2xl font-bold mb-4 text-gray-900">
+                Modificaciones
+              </h2>
+              <p>
+                El responsable se reserva el derecho de modificar la presente Política de Privacidad para adaptarla a cambios legales o operativos. Las modificaciones serán publicadas en esta misma página.
+              </p>
+            </section>
           </div>
         </div>
       </section>
