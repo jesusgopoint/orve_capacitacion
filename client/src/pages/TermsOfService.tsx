@@ -17,7 +17,7 @@ export default function TermsOfService() {
             {/* Sección 1 */}
             <section>
           <h2 className="text-2xl md:text-3xl font-bold text-black mb-4">
-            1. Información general
+            Información general
           </h2>
           <p className="text-gray-700 mb-4 leading-relaxed">
             El presente documento regula el acceso y uso del sitio web{" "}
@@ -34,7 +34,7 @@ export default function TermsOfService() {
             {/* Sección 2 */}
             <section>
           <h2 className="text-2xl md:text-3xl font-bold text-black mb-4">
-            2. Objeto del sitio web
+            Objeto del sitio web
           </h2>
           <p className="text-gray-700 mb-4 leading-relaxed">
             El sitio web tiene como finalidad proporcionar información sobre los servicios de capacitación, desarrollo profesional y contenidos asociados ofrecidos por Orve Capacitación y Desarrollo, así como permitir el contacto con potenciales clientes y usuarios interesados.
@@ -47,7 +47,7 @@ export default function TermsOfService() {
             {/* Sección 3 */}
             <section>
           <h2 className="text-2xl md:text-3xl font-bold text-black mb-4">
-            3. Condiciones de uso
+            Condiciones de uso
           </h2>
           <p className="text-gray-700 mb-4 leading-relaxed">
             El usuario se compromete a utilizar el sitio web de manera responsable y conforme a la legislación vigente, la buena fe y el orden público.
@@ -68,7 +68,7 @@ export default function TermsOfService() {
             {/* Sección 4 */}
             <section>
           <h2 className="text-2xl md:text-3xl font-bold text-black mb-4">
-            4. Propiedad intelectual
+            Propiedad intelectual
           </h2>
           <p className="text-gray-700 mb-4 leading-relaxed">
             Todos los contenidos presentes en el sitio web, incluyendo textos, imágenes, logotipos, marcas, diseños, material audiovisual y cualquier otro elemento, son propiedad de Orve Capacitación y Desarrollo o se utilizan con autorización de sus titulares.
@@ -81,7 +81,7 @@ export default function TermsOfService() {
             {/* Sección 5 */}
             <section>
           <h2 className="text-2xl md:text-3xl font-bold text-black mb-4">
-            5. Responsabilidad
+            Responsabilidad
           </h2>
           <p className="text-gray-700 mb-4 leading-relaxed">
             Orve Capacitación y Desarrollo no garantiza la disponibilidad permanente del sitio ni la inexistencia de errores técnicos o interrupciones.
@@ -102,7 +102,7 @@ export default function TermsOfService() {
             {/* Sección 6 */}
             <section>
           <h2 className="text-2xl md:text-3xl font-bold text-black mb-4">
-            6. Enlaces a sitios de terceros
+            Enlaces a sitios de terceros
           </h2>
           <p className="text-gray-700 leading-relaxed">
             El sitio web puede contener enlaces a páginas externas. Orve Capacitación y Desarrollo no se responsabiliza por los contenidos, políticas o prácticas de dichos sitios, los cuales son gestionados por terceros.
@@ -112,7 +112,7 @@ export default function TermsOfService() {
             {/* Sección 7 */}
             <section>
           <h2 className="text-2xl md:text-3xl font-bold text-black mb-4">
-            7. Protección de datos personales
+            Protección de datos personales
           </h2>
           <p className="text-gray-700 mb-4 leading-relaxed">
             El tratamiento de los datos personales de los usuarios se rige por la Política de Privacidad, disponible en el siguiente enlace:{" "}
@@ -128,7 +128,7 @@ export default function TermsOfService() {
             {/* Sección 8 */}
             <section>
           <h2 className="text-2xl md:text-3xl font-bold text-black mb-4">
-            8. Modificaciones de los Términos y Condiciones
+            Modificaciones de los Términos y Condiciones
           </h2>
           <p className="text-gray-700 mb-4 leading-relaxed">
             Orve Capacitación y Desarrollo se reserva el derecho de modificar estos Términos y Condiciones en cualquier momento para adaptarlos a cambios legales o operativos.
@@ -141,7 +141,7 @@ export default function TermsOfService() {
             {/* Sección 9 */}
             <section>
           <h2 className="text-2xl md:text-3xl font-bold text-black mb-4">
-            9. Legislación aplicable y jurisdicción
+            Legislación aplicable y jurisdicción
           </h2>
           <p className="text-gray-700 mb-4 leading-relaxed">
             Estos Términos y Condiciones se rigen por las leyes de la República de Chile. Cualquier controversia será sometida a los tribunales competentes de la ciudad de Santiago de Chile.
@@ -151,7 +151,7 @@ export default function TermsOfService() {
             {/* Sección 10 */}
             <section>
           <h2 className="text-2xl md:text-3xl font-bold text-black mb-4">
-            10. Contacto
+            Contacto
           </h2>
           <p className="text-gray-700 leading-relaxed">
             Para consultas relacionadas con estos Términos y Condiciones, el usuario puede contactar a Orve Capacitación y Desarrollo a través del correo electrónico:{" "}
