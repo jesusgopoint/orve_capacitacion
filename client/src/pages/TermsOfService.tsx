@@ -3,16 +3,19 @@ import Footer from "@/components/Footer";
 
 export default function TermsOfService() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white flex flex-col">
       <Header />
       
-      <main className="container py-12 md:py-16">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-          Términos y Condiciones
-        </h1>
+      <main className="py-16 md:py-24">
+        <div className="container max-w-3xl">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+            Términos y Condiciones
+          </h1>
+          
+          <div className="space-y-8 text-gray-700 leading-relaxed">
 
-        {/* Sección 1 */}
-        <section className="mb-10">
+            {/* Sección 1 */}
+            <section>
           <h2 className="text-2xl md:text-3xl font-bold text-black mb-4">
             1. Información general
           </h2>
@@ -28,8 +31,8 @@ export default function TermsOfService() {
           </p>
         </section>
 
-        {/* Sección 2 */}
-        <section className="mb-10">
+            {/* Sección 2 */}
+            <section>
           <h2 className="text-2xl md:text-3xl font-bold text-black mb-4">
             2. Objeto del sitio web
           </h2>
@@ -41,8 +44,8 @@ export default function TermsOfService() {
           </p>
         </section>
 
-        {/* Sección 3 */}
-        <section className="mb-10">
+            {/* Sección 3 */}
+            <section>
           <h2 className="text-2xl md:text-3xl font-bold text-black mb-4">
             3. Condiciones de uso
           </h2>
@@ -62,8 +65,8 @@ export default function TermsOfService() {
           </p>
         </section>
 
-        {/* Sección 4 */}
-        <section className="mb-10">
+            {/* Sección 4 */}
+            <section>
           <h2 className="text-2xl md:text-3xl font-bold text-black mb-4">
             4. Propiedad intelectual
           </h2>
@@ -75,8 +78,8 @@ export default function TermsOfService() {
           </p>
         </section>
 
-        {/* Sección 5 */}
-        <section className="mb-10">
+            {/* Sección 5 */}
+            <section>
           <h2 className="text-2xl md:text-3xl font-bold text-black mb-4">
             5. Responsabilidad
           </h2>
@@ -96,8 +99,8 @@ export default function TermsOfService() {
           </p>
         </section>
 
-        {/* Sección 6 */}
-        <section className="mb-10">
+            {/* Sección 6 */}
+            <section>
           <h2 className="text-2xl md:text-3xl font-bold text-black mb-4">
             6. Enlaces a sitios de terceros
           </h2>
@@ -106,8 +109,8 @@ export default function TermsOfService() {
           </p>
         </section>
 
-        {/* Sección 7 */}
-        <section className="mb-10">
+            {/* Sección 7 */}
+            <section>
           <h2 className="text-2xl md:text-3xl font-bold text-black mb-4">
             7. Protección de datos personales
           </h2>
@@ -122,8 +125,8 @@ export default function TermsOfService() {
           </p>
         </section>
 
-        {/* Sección 8 */}
-        <section className="mb-10">
+            {/* Sección 8 */}
+            <section>
           <h2 className="text-2xl md:text-3xl font-bold text-black mb-4">
             8. Modificaciones de los Términos y Condiciones
           </h2>
@@ -135,8 +138,8 @@ export default function TermsOfService() {
           </p>
         </section>
 
-        {/* Sección 9 */}
-        <section className="mb-10">
+            {/* Sección 9 */}
+            <section>
           <h2 className="text-2xl md:text-3xl font-bold text-black mb-4">
             9. Legislación aplicable y jurisdicción
           </h2>
@@ -145,8 +148,8 @@ export default function TermsOfService() {
           </p>
         </section>
 
-        {/* Sección 10 */}
-        <section className="mb-10">
+            {/* Sección 10 */}
+            <section>
           <h2 className="text-2xl md:text-3xl font-bold text-black mb-4">
             10. Contacto
           </h2>
@@ -157,6 +160,8 @@ export default function TermsOfService() {
             </a>
           </p>
         </section>
+          </div>
+        </div>
       </main>
 
       <Footer />
