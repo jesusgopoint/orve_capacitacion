@@ -16,13 +16,13 @@ export default function Header() {
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="container flex items-center justify-between h-20">
         {/* Logo */}
-        <div className="flex items-center">
+        <a href="/" className="flex items-center hover:opacity-80 transition-opacity">
           <img 
             src="/images/logo-orve.png" 
             alt="ORVE Logo" 
             className="h-16 w-auto"
           />
-        </div>
+        </a>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
@@ -30,7 +30,7 @@ export default function Header() {
             <a
               key={item.label}
               href={item.href}
-              className={`text-sm font-medium transition-colors ${
+              className={`text-base font-medium transition-colors ${
                 item.label === "Contacto"
                   ? "text-white bg-primary border-2 border-primary px-4 py-2 rounded-lg hover:bg-purple-700 hover:border-purple-700"
                   : "text-gray-700 hover:text-primary"
