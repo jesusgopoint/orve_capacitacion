@@ -13,7 +13,7 @@ export default function TermsOfService() {
 
         {/* Sección 1 */}
         <section className="mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-black mb-4">
             1. Información general
           </h2>
           <p className="text-gray-700 mb-4 leading-relaxed">
@@ -30,7 +30,7 @@ export default function TermsOfService() {
 
         {/* Sección 2 */}
         <section className="mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-black mb-4">
             2. Objeto del sitio web
           </h2>
           <p className="text-gray-700 mb-4 leading-relaxed">
@@ -43,7 +43,7 @@ export default function TermsOfService() {
 
         {/* Sección 3 */}
         <section className="mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-black mb-4">
             3. Condiciones de uso
           </h2>
           <p className="text-gray-700 mb-4 leading-relaxed">
@@ -64,7 +64,7 @@ export default function TermsOfService() {
 
         {/* Sección 4 */}
         <section className="mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-black mb-4">
             4. Propiedad intelectual
           </h2>
           <p className="text-gray-700 mb-4 leading-relaxed">
@@ -77,7 +77,7 @@ export default function TermsOfService() {
 
         {/* Sección 5 */}
         <section className="mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-black mb-4">
             5. Responsabilidad
           </h2>
           <p className="text-gray-700 mb-4 leading-relaxed">
@@ -98,7 +98,7 @@ export default function TermsOfService() {
 
         {/* Sección 6 */}
         <section className="mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-black mb-4">
             6. Enlaces a sitios de terceros
           </h2>
           <p className="text-gray-700 leading-relaxed">
@@ -108,7 +108,7 @@ export default function TermsOfService() {
 
         {/* Sección 7 */}
         <section className="mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-black mb-4">
             7. Protección de datos personales
           </h2>
           <p className="text-gray-700 mb-4 leading-relaxed">
@@ -124,7 +124,7 @@ export default function TermsOfService() {
 
         {/* Sección 8 */}
         <section className="mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-black mb-4">
             8. Modificaciones de los Términos y Condiciones
           </h2>
           <p className="text-gray-700 mb-4 leading-relaxed">
@@ -137,7 +137,7 @@ export default function TermsOfService() {
 
         {/* Sección 9 */}
         <section className="mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-black mb-4">
             9. Legislación aplicable y jurisdicción
           </h2>
           <p className="text-gray-700 mb-4 leading-relaxed">
@@ -147,7 +147,7 @@ export default function TermsOfService() {
 
         {/* Sección 10 */}
         <section className="mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-black mb-4">
             10. Contacto
           </h2>
           <p className="text-gray-700 leading-relaxed">
