@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown, ChevronUp, Heart, Users, TrendingUp, Smile, Zap } from "lucide-react";
 
 export default function WellnessProgramLanding() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
+  const [currentResultIndex, setCurrentResultIndex] = useState(0);
   const [formData, setFormData] = useState({
     nombre: "",
     apellido: "",
@@ -43,12 +44,12 @@ export default function WellnessProgramLanding() {
     },
   ];
 
-  const benefits = [
-    "Mejora del clima laboral y la motivación.",
-    "Reducción del estrés y desgaste emocional.",
-    "Mayor compromiso y sentido de pertenencia.",
-    "Equipos más productivos.",
-    "Mejor percepción de la empresa como lugar para trabajar.",
+  const benefitIcons = [
+    { icon: Smile, title: "Mejora del clima laboral", description: "y la motivación." },
+    { icon: Heart, title: "Reducción del estrés", description: "y desgaste emocional." },
+    { icon: Users, title: "Mayor compromiso", description: "y sentido de pertenencia." },
+    { icon: TrendingUp, title: "Equipos más productivos", description: "" },
+    { icon: Zap, title: "Mejor percepción", description: "de la empresa como lugar para trabajar." },
   ];
 
   const results = [
@@ -58,6 +59,14 @@ export default function WellnessProgramLanding() {
     { metric: "X", description: "actividades ejecutadas al año*" },
     { metric: "X%", description: "clientes con programas anuales*" },
   ];
+
+  // Carrusel de resultados
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentResultIndex((prev) => (prev + 1) % results.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [results.length]);
 
   const scrollToForm = () => {
     const formElement = document.getElementById("contact-form");
@@ -71,16 +80,41 @@ export default function WellnessProgramLanding() {
       <Header />
 
       <main>
-        {/* Hero Section */}
-        <section className="py-16 md:py-24 bg-gradient-to-b from-primary/5 to-white">
-          <div className="container max-w-4xl">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Programa de Bienestar Laboral
-              </h1>
-              <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-                Un programa diseñado para mejorar la calidad de vida de los colaboradores y fortalecer el desempeño de las organizaciones a través del cuidado integral de las personas.
-              </p>
+        {/* Hero Section - Two Column Layout */}
+        <section className="py-16 md:py-24">
+          <div className="container">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              {/* Left Column - Text */}
+              <div>
+                <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                  Programa de Bienestar Laboral
+                </h1>
+                <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-8">
+                  Un programa diseñado para mejorar la calidad de vida de los colaboradores y fortalecer el desempeño de las organizaciones a través del cuidado integral de las personas.
+                </p>
+                <button
+                  onClick={scrollToForm}
+                  className="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+                >
+                  Solicitar información del programa
+                </button>
+              </div>
+
+              {/* Right Column - Images Grid */}
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg h-40 flex items-center justify-center text-white font-semibold">
+                  Imagen 1
+                </div>
+                <div className="bg-gradient-to-br from-green-400 to-green-600 rounded-lg h-40 flex items-center justify-center text-white font-semibold">
+                  Imagen 2
+                </div>
+                <div className="bg-gradient-to-br from-purple-400 to-purple-600 rounded-lg h-40 flex items-center justify-center text-white font-semibold">
+                  Imagen 3
+                </div>
+                <div className="bg-gradient-to-br from-orange-400 to-orange-600 rounded-lg h-40 flex items-center justify-center text-white font-semibold">
+                  Imagen 4
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -109,69 +143,110 @@ export default function WellnessProgramLanding() {
           </div>
         </section>
 
-        {/* Why Section */}
+        {/* Why Section - Two Column Layout */}
         <section className="py-16 md:py-24">
-          <div className="container max-w-4xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Por qué contratar nuestro Programa de Bienestar Laboral
-            </h2>
-            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              El bienestar de los equipos no se construye con acciones aisladas ni iniciativas simbólicas. Nuestro programa se integra a la rutina laboral y genera impacto concreto en personas y organización.
-            </p>
-            <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-              Abordamos salud mental, gestión del estrés, equilibrio vida–trabajo y hábitos saludables. Las actividades se adaptan a cada empresa y se realizan en sus dependencias.
-            </p>
-            <button
-              onClick={scrollToForm}
-              className="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
-            >
-              Solicitar información del programa
-            </button>
+          <div className="container">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              {/* Left Column - Text */}
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                  Por qué contratar nuestro Programa de Bienestar Laboral
+                </h2>
+                <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                  El bienestar de los equipos no se construye con acciones aisladas ni iniciativas simbólicas. Nuestro programa se integra a la rutina laboral y genera impacto concreto en personas y organización.
+                </p>
+                <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+                  Abordamos salud mental, gestión del estrés, equilibrio vida–trabajo y hábitos saludables. Las actividades se adaptan a cada empresa y se realizan en sus dependencias.
+                </p>
+                <button
+                  onClick={scrollToForm}
+                  className="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+                >
+                  Solicitar información del programa
+                </button>
+              </div>
+
+              {/* Right Column - Image */}
+              <div className="bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg h-96 flex items-center justify-center text-gray-500 font-semibold">
+                Imagen de Bienestar
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* Benefits Section */}
+        {/* Benefits Section - Cards Design */}
         <section className="py-16 md:py-24 bg-gray-50">
-          <div className="container max-w-4xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
+          <div className="container max-w-5xl">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
               Beneficios que impactan en las personas y en la empresa
             </h2>
-            <ul className="space-y-4">
-              {benefits.map((benefit, index) => (
-                <li key={index} className="flex items-start gap-4">
-                  <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-white text-sm font-bold">✓</span>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {benefitIcons.map((benefit, index) => {
+                const IconComponent = benefit.icon;
+                return (
+                  <div
+                    key={index}
+                    className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-primary"
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className="bg-primary/10 p-3 rounded-lg flex-shrink-0">
+                        <IconComponent className="w-6 h-6 text-primary" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-gray-900 mb-1">
+                          {benefit.title}
+                        </h3>
+                        {benefit.description && (
+                          <p className="text-sm text-gray-600">{benefit.description}</p>
+                        )}
+                      </div>
+                    </div>
                   </div>
-                  <span className="text-lg text-gray-700">{benefit}</span>
-                </li>
-              ))}
-            </ul>
+                );
+              })}
+            </div>
           </div>
         </section>
 
-        {/* Results Section */}
+        {/* Results Section - Carousel */}
         <section className="py-16 md:py-24">
           <div className="container max-w-4xl">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
               Resultados que respaldan nuestros programas
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-              {results.map((result, index) => (
-                <div
-                  key={index}
-                  className="bg-gradient-to-br from-primary/10 to-primary/5 p-8 rounded-lg text-center border border-primary/20"
-                >
-                  <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
-                    {result.metric}
-                  </div>
-                  <p className="text-gray-700">{result.description}</p>
+            
+            {/* Carousel */}
+            <div className="relative">
+              <div className="bg-gradient-to-br from-primary/10 to-primary/5 p-12 rounded-lg text-center border border-primary/20 min-h-64 flex flex-col items-center justify-center">
+                <div className="text-5xl md:text-6xl font-bold text-primary mb-4">
+                  {results[currentResultIndex].metric}
                 </div>
-              ))}
+                <p className="text-xl text-gray-700 mb-8">
+                  {results[currentResultIndex].description}
+                </p>
+              </div>
+
+              {/* Carousel Indicators */}
+              <div className="flex justify-center gap-2 mt-8">
+                {results.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentResultIndex(index)}
+                    className={`w-3 h-3 rounded-full transition-colors ${
+                      index === currentResultIndex
+                        ? "bg-primary"
+                        : "bg-gray-300 hover:bg-gray-400"
+                    }`}
+                  />
+                ))}
+              </div>
             </div>
-            <p className="text-sm text-gray-500 text-center mb-8">
+
+            <p className="text-sm text-gray-500 text-center mt-8">
               *Datos referenciales a validar con el cliente.
             </p>
-            <div className="text-center">
+
+            <div className="text-center mt-8">
               <button
                 onClick={scrollToForm}
                 className="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
@@ -218,21 +293,15 @@ export default function WellnessProgramLanding() {
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* CTA Section - No Button */}
         <section className="py-16 md:py-24 bg-gradient-to-r from-primary/10 to-primary/5">
           <div className="container max-w-4xl text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Empieza hoy a cuidar a quienes sostienen tu organización
             </h2>
-            <p className="text-lg text-gray-700 mb-8">
+            <p className="text-lg text-gray-700">
               Invertir en bienestar es invertir en personas, cultura y resultados.
             </p>
-            <button
-              onClick={scrollToForm}
-              className="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
-            >
-              Solicitar información
-            </button>
           </div>
         </section>
 
