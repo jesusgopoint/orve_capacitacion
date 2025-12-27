@@ -1,15 +1,20 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   const navItems = [
     { label: "Inicio", href: "/" },
     { label: "Nosotros", href: "#nosotros" },
-    { label: "Servicios", href: "#servicios" },
+    { label: "Servicios", href: "#servicios", hasSubmenu: true },
     { label: "Equipo", href: "#equipo" },
     { label: "Contacto", href: "#contacto" },
+  ];
+
+  const servicesSubmenu = [
+    { label: "Programa de Bienestar Laboral", href: "/programa-de-bienestar" },
   ];
 
   return (
@@ -27,17 +32,36 @@ export default function Header() {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              className={`text-base font-medium transition-colors ${
-                item.label === "Contacto"
-                  ? "text-white bg-primary border-2 border-primary px-4 py-2 rounded-lg hover:bg-purple-700 hover:border-purple-700"
-                  : "text-gray-700 hover:text-primary"
-              }`}
-            >
-              {item.label}
-            </a>
+            <div key={item.label} className="relative group">
+              <a
+                href={item.href}
+                className={`text-base font-medium transition-colors flex items-center gap-1 ${
+                  item.label === "Contacto"
+                    ? "text-white bg-primary border-2 border-primary px-4 py-2 rounded-lg hover:bg-purple-700 hover:border-purple-700"
+                    : "text-gray-700 hover:text-primary"
+                }`}
+              >
+                {item.label}
+                {item.hasSubmenu && (
+                  <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
+                )}
+              </a>
+
+              {/* Desktop Submenu */}
+              {item.hasSubmenu && (
+                <div className="absolute left-0 mt-0 w-56 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-2">
+                  {servicesSubmenu.map((subitem) => (
+                    <a
+                      key={subitem.label}
+                      href={subitem.href}
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors"
+                    >
+                      {subitem.label}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
           ))}
         </nav>
 
@@ -65,14 +89,45 @@ export default function Header() {
         <nav className="md:hidden bg-white border-t border-gray-200">
           <div className="container py-4 flex flex-col gap-4">
             {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                {item.label}
-              </a>
+              <div key={item.label}>
+                {item.hasSubmenu ? (
+                  <>
+                    <button
+                      onClick={() => setIsServicesOpen(!isServicesOpen)}
+                      className="w-full text-left text-sm font-medium text-gray-700 hover:text-primary transition-colors flex items-center justify-between"
+                    >
+                      {item.label}
+                      <ChevronDown
+                        className={`w-4 h-4 transition-transform ${
+                          isServicesOpen ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+                    {isServicesOpen && (
+                      <div className="mt-2 ml-4 space-y-2 border-l-2 border-primary/30 pl-4">
+                        {servicesSubmenu.map((subitem) => (
+                          <a
+                            key={subitem.label}
+                            href={subitem.href}
+                            className="block text-sm text-gray-600 hover:text-primary transition-colors"
+                            onClick={() => setIsOpen(false)}
+                          >
+                            {subitem.label}
+                          </a>
+                        ))}
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  <a
+                    href={item.href}
+                    className="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.label}
+                  </a>
+                )}
+              </div>
             ))}
           </div>
         </nav>
