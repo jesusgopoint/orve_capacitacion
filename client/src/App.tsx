@@ -7,6 +7,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
+import WellnessProgramLanding from "./pages/WellnessProgramLanding";
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
 
 
@@ -16,6 +17,7 @@ function Router() {
       <Route path={"/"} component={Home} />
       <Route path={"/politica-de-privacidad"} component={PrivacyPolicy} />
       <Route path={"/terminos-del-servicio"} component={TermsOfService} />
+      <Route path={"/programa-de-bienestar"} component={WellnessProgramLanding} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
