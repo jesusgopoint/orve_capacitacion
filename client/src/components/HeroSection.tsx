@@ -53,7 +53,7 @@ export default function HeroSection() {
             </div>
 
             <div className="flex gap-4">
-              <a href="#contacto" className="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+              <a href="#contacto" className="bg-blue-400 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary transition-colors">
                 Contáctanos
               </a>
             </div>
