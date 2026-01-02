@@ -201,10 +201,8 @@ export default function Contact() {
                   </svg>
                 </a>
                 {/* WhatsApp */}
-                <a href="https://api.whatsapp.com/send/?phone=56986983439&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center hover:bg-green-600 transition-colors flex-shrink-0">
-                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.782 1.176c-1.592.887-2.793 2.217-3.228 3.746-.59 2.165.455 4.659 2.885 6.042.529.31 1.775.203 2.946-.522l.6-.368c.026-.02.044-.045.067-.045.022 0 .041.022.054.045l.694 1.783c.1.257.39.401.658.401.272 0 .504-.16.576-.425l.613-1.738c.02-.053.047-.1.084-.125.034-.027.077-.027.11 0l.91.56c.49.3 1.631.845 2.583.845 1.228 0 2.231-.624 2.793-1.707.562-1.084.374-2.89-.703-4.236-1.077-1.345-2.917-2.159-4.753-2.159zm11.695-9.282c-5.922 0-10.734 4.812-10.734 10.734 0 1.848.487 3.632 1.414 5.209L.424 23.99a.75.75 0 00.976.976l5.368-1.368c1.577.927 3.361 1.414 5.209 1.414 5.922 0 10.734-4.812 10.734-10.734C23.468 4.812 18.656 0 12.734 0z"/>
-                  </svg>
+                <a href="https://api.whatsapp.com/send/?phone=56986983439&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-lg flex items-center justify-center hover:opacity-80 transition-opacity flex-shrink-0">
+                  <img src="/images/whatsapp-icon.png" alt="WhatsApp" className="w-full h-full object-contain rounded-lg" />
                 </a>
                 {/* YouTube */}
                 <a href="https://www.youtube.com/@ORVECapacitaciónYDesarrollo" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center hover:bg-red-700 transition-colors flex-shrink-0">
@@ -213,10 +211,8 @@ export default function Contact() {
                   </svg>
                 </a>
                 {/* TikTok */}
-                <a href="https://www.tiktok.com/@orve_cyd" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-black rounded-lg flex items-center justify-center hover:bg-gray-800 transition-colors flex-shrink-0">
-                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.68v4.26a2.85 2.85 0 0 1-5.92 0H2.04v3.02h3.02a5.89 5.89 0 0 0 5.96 5.58v4.15a8.5 8.5 0 0 1-5.54-1.97V16.4a5.89 5.89 0 0 0 10.86-3.02h3.02a8.5 8.5 0 0 1-8.34 8.27v-4.15a5.74 5.74 0 0 0 3.77-1.42V22h3.68v-4.15a4.78 4.78 0 0 0 3.77-4.25h-3.02V6.69z"/>
-                  </svg>
+                <a href="https://www.tiktok.com/@orve_cyd" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-lg flex items-center justify-center hover:opacity-80 transition-opacity flex-shrink-0">
+                  <img src="/images/tiktok-icon.png" alt="TikTok" className="w-full h-full object-contain rounded-lg" />
                 </a>
               </div>
             </div>
