@@ -182,31 +182,41 @@ export default function Contact() {
             <div>
               <p className="text-xl font-semibold text-gray-900 mb-4">Síguenos</p>
               <div className="flex gap-4 flex-wrap">
-                <a href="https://www.instagram.com/orve_capacitacionydesarrollo/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white border border-gray-300 rounded-lg flex items-center justify-center hover:border-primary hover:text-primary transition-colors flex-shrink-0">
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                {/* Instagram */}
+                <a href="https://www.instagram.com/orve_capacitacionydesarrollo/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gradient-to-br from-purple-500 via-pink-500 to-red-500 rounded-lg flex items-center justify-center hover:opacity-80 transition-opacity flex-shrink-0">
+                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.322a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/>
                   </svg>
                 </a>
-                <a href="https://www.facebook.com/people/ORVE-Capacitaci%C3%B3n-y-Desarrollo/61573139375844/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white border border-gray-300 rounded-lg flex items-center justify-center hover:border-primary hover:text-primary transition-colors flex-shrink-0">
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                {/* Facebook */}
+                <a href="https://www.facebook.com/people/ORVE-Capacitaci%C3%B3n-y-Desarrollo/61573139375844/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors flex-shrink-0">
+                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                   </svg>
                 </a>
-                <a href="https://www.linkedin.com/company/orve-capacitaci%C3%B3n-y-desarrollo/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white border border-gray-300 rounded-lg flex items-center justify-center hover:border-primary hover:text-primary transition-colors flex-shrink-0">
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                {/* LinkedIn */}
+                <a href="https://www.linkedin.com/company/orve-capacitaci%C3%B3n-y-desarrollo/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-blue-700 rounded-lg flex items-center justify-center hover:bg-blue-800 transition-colors flex-shrink-0">
+                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.475-2.236-1.986-2.236-1.081 0-1.722.722-2.004 1.418-.103.249-.129.597-.129.946v5.441h-3.554s.05-8.736 0-9.646h3.554v1.364c.43-.664 1.199-1.61 2.92-1.61 2.135 0 3.753 1.395 3.753 4.402v5.49zM5.337 9.433c-1.144 0-1.915-.758-1.915-1.707 0-.955.771-1.71 1.958-1.71 1.187 0 1.914.757 1.939 1.71 0 .949-.752 1.707-1.982 1.707zm1.582 11.019H3.771V9.807h3.148v10.645zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
                   </svg>
                 </a>
-                <a href="https://api.whatsapp.com/send/?phone=56986983439&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white border border-gray-300 rounded-lg flex items-center justify-center hover:border-primary hover:text-primary transition-colors flex-shrink-0">
-                  <img src="/images/whatsapp-icon.png" alt="WhatsApp" className="w-6 h-6 object-contain" />
+                {/* WhatsApp */}
+                <a href="https://api.whatsapp.com/send/?phone=56986983439&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center hover:bg-green-600 transition-colors flex-shrink-0">
+                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.782 1.176c-1.592.887-2.793 2.217-3.228 3.746-.59 2.165.455 4.659 2.885 6.042.529.31 1.775.203 2.946-.522l.6-.368c.026-.02.044-.045.067-.045.022 0 .041.022.054.045l.694 1.783c.1.257.39.401.658.401.272 0 .504-.16.576-.425l.613-1.738c.02-.053.047-.1.084-.125.034-.027.077-.027.11 0l.91.56c.49.3 1.631.845 2.583.845 1.228 0 2.231-.624 2.793-1.707.562-1.084.374-2.89-.703-4.236-1.077-1.345-2.917-2.159-4.753-2.159zm11.695-9.282c-5.922 0-10.734 4.812-10.734 10.734 0 1.848.487 3.632 1.414 5.209L.424 23.99a.75.75 0 00.976.976l5.368-1.368c1.577.927 3.361 1.414 5.209 1.414 5.922 0 10.734-4.812 10.734-10.734C23.468 4.812 18.656 0 12.734 0z"/>
+                  </svg>
                 </a>
-                <a href="https://www.youtube.com/@ORVECapacitaciónYDesarrollo" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white border border-gray-300 rounded-lg flex items-center justify-center hover:border-primary hover:text-primary transition-colors flex-shrink-0">
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                {/* YouTube */}
+                <a href="https://www.youtube.com/@ORVECapacitaciónYDesarrollo" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center hover:bg-red-700 transition-colors flex-shrink-0">
+                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                   </svg>
                 </a>
-                <a href="https://www.tiktok.com/@orve_cyd" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white border border-gray-300 rounded-lg flex items-center justify-center hover:border-primary hover:text-primary transition-colors flex-shrink-0">
-                  <img src="/images/tiktok-logo.png" alt="TikTok" className="w-6 h-6 object-contain" />
+                {/* TikTok */}
+                <a href="https://www.tiktok.com/@orve_cyd" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-black rounded-lg flex items-center justify-center hover:bg-gray-800 transition-colors flex-shrink-0">
+                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.68v4.26a2.85 2.85 0 0 1-5.92 0H2.04v3.02h3.02a5.89 5.89 0 0 0 5.96 5.58v4.15a8.5 8.5 0 0 1-5.54-1.97V16.4a5.89 5.89 0 0 0 10.86-3.02h3.02a8.5 8.5 0 0 1-8.34 8.27v-4.15a5.74 5.74 0 0 0 3.77-1.42V22h3.68v-4.15a4.78 4.78 0 0 0 3.77-4.25h-3.02V6.69z"/>
+                  </svg>
                 </a>
               </div>
             </div>
