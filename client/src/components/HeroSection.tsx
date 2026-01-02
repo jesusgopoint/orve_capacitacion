@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 const services = [
   'Formación',
-  'Programa de Bienestar Laboral',
+  'Programa de Calidad de Vida y Bienestar',
   'Desarrollo Organizacional',
   'Hunting',
   'Coaching'

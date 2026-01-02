@@ -32,7 +32,7 @@ export default function Services() {
     },
     {
       id: "bienestar",
-      title: "Programa de Bienestar Laboral",
+      title: "Programa de Calidad de Vida y Bienestar",
       content: [
         {
           text: "En ORVE ofrecemos un programa diseñado para ",

@@ -7,7 +7,7 @@ export default function WellnessPillars() {
       image: "/images/pilar-fisico.jpg"
     },
     {
-      title: "Bienestar Mental",
+      title: "Bienestar Psicoemocional",
       description: "Iniciativas para cuidar la salud emocional y mental del equipo, generando espacios de calma y equilibrio.",
       features: ["Pausas Psicológicas", "Mindfulness (Eating, express, tradicional)", "Yoga", "Entre Otros"],
       image: "/images/pilar-mental.jpg"
@@ -24,7 +24,7 @@ export default function WellnessPillars() {
     <>
       <section className="bg-gray-50 py-16 md:py-24">
         <div className="container">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">Pilares del Programa Bienestar</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">Pilares del Programa de Calidad de Vida y Bienestar</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pillars.map((pillar, index) => (
