@@ -30,17 +30,25 @@ export default function WellnessProgramLanding() {
 
   const faqItems = [
     {
-      question: "¿Qué tipo de actividades incluye el programa?",
+      question: "¿Qué tipo de actividades incluye el programa para mejorar la experiencia del colaborador?",
       answer:
-        "Pausas activas, masajes laborales, charlas de salud mental, nutrición, manejo del estrés y actividades en fechas relevantes.",
+        "El programa contempla una combinación de actividades diseñadas para abordar el bienestar laboral de manera integral dentro del entorno de trabajo. Estas incluyen talleres participativos, charlas y espacios de reflexión orientados a mejorar la salud emocional y relacional de los equipos. Nos enfocamos en temáticas como autocuidado, hábitos saludables y el fortalecimiento de equipos, atacando directamente problemas como la desmotivación y los conflictos laborales para asegurar que cada instancia genere un impacto real en la rutina de la empresa.",
     },
     {
-      question: "¿Se puede adaptar a mi empresa?",
-      answer: "Sí, todas las acciones se diseñan a medida.",
+      question: "¿Cómo ayuda el programa a combatir el Burnout y los riesgos psicosociales?",
+      answer: "Nuestro enfoque preventivo permite identificar y gestionar variables críticas antes de que se conviertan en estrés laboral crónico o burnout. Al aplicar un enfoque psicosocial, el programa ayuda a monitorear los riesgos psicosociales y la sobrecarga laboral, promoviendo un equilibrio sano entre la vida y el trabajo. Esto no solo protege la salud mental, sino que impacta positivamente en la reducción del ausentismo laboral provocado por el agotamiento de los colaboradores.",
     },
     {
-      question: "¿Puedo contratar acciones puntuales o un programa anual?",
-      answer: "Ambas opciones están disponibles.",
+      question: "¿Es efectivo para corregir un liderazgo deficiente y un bajo desempeño?",
+      answer: "Sí. El programa ofrece herramientas para fortalecer la cultura organizacional, transformando situaciones de liderazgo deficiente en liderazgos que inspiran y sostienen. Al mejorar el soporte emocional y la comunicación interna, logramos revertir situaciones de bajo desempeño, alineando nuevamente a los colaboradores con los objetivos estratégicos y potenciando la productividad general del negocio.",
+    },
+    {
+      question: "¿Se puede adaptar el programa a la realidad y tamaño de mi empresa?",
+      answer: "El programa se adapta completamente a la realidad de cada organización, ya sea una pyme o una gran empresa. Antes de la implementación, realizamos un levantamiento de necesidades para comprender la cultura y los desafíos específicos. A partir de este diagnóstico, ajustamos la metodología y la frecuencia de las actividades, asegurando que el programa sea pertinente para la salud ocupacional de su equipo y esté alineado con las prioridades de su negocio.",
+    },
+    {
+      question: "¿Qué modalidades ofrecen y cómo se mide el impacto en el bienestar organizacional?",
+      answer: "Las actividades pueden desarrollarse de manera presencial, online o en formato híbrido, dependiendo de la ubicación de los colaboradores y los objetivos del programa. Para asegurar que la inversión genere valor, definimos indicadores que permiten medir el impacto en el bienestar organizacional y el clima organizacional. Esta información permite ajustar las acciones en el tiempo, garantizando resultados profundos y duraderos tanto para las personas como para los resultados del negocio.",
     },
   ];
 
@@ -100,18 +108,18 @@ export default function WellnessProgramLanding() {
                 </button>
               </div>
 
-              {/* Right Column - Images Grid */}
+              {/* Right Column - Image Grid */}
               <div className="grid grid-cols-2 gap-4">
-                <div className="bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg h-40 flex items-center justify-center text-white font-semibold">
+                <div className="bg-gray-300 rounded-lg h-40 flex items-center justify-center text-gray-500 font-semibold">
                   Imagen 1
                 </div>
-                <div className="bg-gradient-to-br from-green-400 to-green-600 rounded-lg h-40 flex items-center justify-center text-white font-semibold">
+                <div className="bg-gray-300 rounded-lg h-40 flex items-center justify-center text-gray-500 font-semibold">
                   Imagen 2
                 </div>
-                <div className="bg-gradient-to-br from-purple-400 to-purple-600 rounded-lg h-40 flex items-center justify-center text-white font-semibold">
+                <div className="bg-gray-300 rounded-lg h-40 flex items-center justify-center text-gray-500 font-semibold">
                   Imagen 3
                 </div>
-                <div className="bg-gradient-to-br from-orange-400 to-orange-600 rounded-lg h-40 flex items-center justify-center text-white font-semibold">
+                <div className="bg-gray-300 rounded-lg h-40 flex items-center justify-center text-gray-500 font-semibold">
                   Imagen 4
                 </div>
               </div>
@@ -120,13 +128,10 @@ export default function WellnessProgramLanding() {
         </section>
 
         {/* Logos Section */}
-        <section className="py-16 md:py-20 bg-gray-50">
-          <div className="container max-w-4xl">
-            <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-12">
-              Empresas que han confiado en nuestros programas
-            </h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
-              {/* Placeholder para logos */}
+        <section className="py-12 md:py-16 bg-gray-50">
+          <div className="container">
+            <p className="text-center text-gray-600 mb-8">Empresas que confían en ORVE</p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
               <div className="w-24 h-24 bg-gray-200 rounded-lg flex items-center justify-center text-gray-500 text-sm">
                 Logo 1
               </div>
@@ -251,7 +256,7 @@ export default function WellnessProgramLanding() {
                 onClick={scrollToForm}
                 className="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
               >
-                Quiero una propuesta para mi empresa
+                Solicitar información del programa
               </button>
             </div>
           </div>
@@ -259,23 +264,23 @@ export default function WellnessProgramLanding() {
 
         {/* FAQ Section */}
         <section className="py-16 md:py-24 bg-gray-50">
-          <div className="container max-w-4xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
-              Preguntas frecuentes sobre el programa
+          <div className="container max-w-3xl">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+              Preguntas frecuentes sobre el programa de Bienestar Laboral
             </h2>
             <div className="space-y-4">
               {faqItems.map((item, index) => (
                 <div
                   key={index}
-                  className="border border-gray-200 rounded-lg overflow-hidden"
+                  className="bg-white rounded-lg border border-gray-200 overflow-hidden"
                 >
                   <button
                     onClick={() => toggleFAQ(index)}
-                    className="w-full px-6 py-4 bg-white hover:bg-gray-50 flex items-center justify-between transition-colors"
+                    className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors"
                   >
-                    <span className="font-semibold text-gray-900 text-left">
+                    <h3 className="text-lg font-semibold text-gray-900 text-left">
                       {item.question}
-                    </span>
+                    </h3>
                     {openFAQ === index ? (
                       <ChevronUp className="w-5 h-5 text-primary flex-shrink-0" />
                     ) : (
@@ -284,7 +289,7 @@ export default function WellnessProgramLanding() {
                   </button>
                   {openFAQ === index && (
                     <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
-                      <p className="text-gray-700">{item.answer}</p>
+                      <p className="text-gray-700 leading-relaxed">{item.answer}</p>
                     </div>
                   )}
                 </div>
@@ -293,109 +298,80 @@ export default function WellnessProgramLanding() {
           </div>
         </section>
 
-        {/* CTA Section - No Button */}
-        <section className="py-16 md:py-24 bg-gradient-to-r from-primary/10 to-primary/5">
-          <div className="container max-w-4xl text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Empieza hoy a cuidar a quienes sostienen tu organización
+        {/* CTA Section */}
+        <section className="py-16 md:py-24">
+          <div className="container max-w-3xl text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Convierte tus excedentes en bienestar
             </h2>
-            <p className="text-lg text-gray-700">
-              Invertir en bienestar es invertir en personas, cultura y resultados.
+            <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+              Invertir en bienestar laboral es invertir en personas, cultura y resultados.
             </p>
+            <button
+              onClick={scrollToForm}
+              className="bg-blue-400 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary transition-colors"
+            >
+              Contáctanos
+            </button>
           </div>
         </section>
 
         {/* Contact Form Section */}
-        <section id="contact-form" className="py-16 md:py-24">
+        <section id="contact-form" className="py-16 md:py-24 bg-gray-50">
           <div className="container max-w-2xl">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
-              Formulario de contacto
+              Solicita información del programa
             </h2>
-            <form
-              action="https://formspree.io/f/xvgzpzwj"
-              method="POST"
-              className="space-y-6"
-            >
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Nombre *
-                  </label>
-                  <input
-                    type="text"
-                    name="nombre"
-                    value={formData.nombre}
-                    onChange={handleFormChange}
-                    required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition"
-                    placeholder="Tu nombre"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Apellido *
-                  </label>
-                  <input
-                    type="text"
-                    name="apellido"
-                    value={formData.apellido}
-                    onChange={handleFormChange}
-                    required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition"
-                    placeholder="Tu apellido"
-                  />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Correo electrónico *
-                  </label>
-                  <input
-                    type="email"
-                    name="correo"
-                    value={formData.correo}
-                    onChange={handleFormChange}
-                    required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition"
-                    placeholder="tu@email.com"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Teléfono
-                  </label>
-                  <input
-                    type="tel"
-                    name="telefono"
-                    value={formData.telefono}
-                    onChange={handleFormChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition"
-                    placeholder="+56 9 1234 5678"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Mensaje
-                </label>
-                <textarea
-                  name="mensaje"
-                  value={formData.mensaje}
+            <form className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input
+                  type="text"
+                  name="nombre"
+                  placeholder="Nombre"
+                  value={formData.nombre}
                   onChange={handleFormChange}
-                  rows={5}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition resize-none"
-                  placeholder="Cuéntanos sobre tu empresa y tus necesidades..."
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                />
+                <input
+                  type="text"
+                  name="apellido"
+                  placeholder="Apellido"
+                  value={formData.apellido}
+                  onChange={handleFormChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
-
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input
+                  type="email"
+                  name="correo"
+                  placeholder="Correo"
+                  value={formData.correo}
+                  onChange={handleFormChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                />
+                <input
+                  type="tel"
+                  name="telefono"
+                  placeholder="Teléfono"
+                  value={formData.telefono}
+                  onChange={handleFormChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                />
+              </div>
+              <textarea
+                name="mensaje"
+                placeholder="¿Cómo podemos ayudarte?"
+                value={formData.mensaje}
+                onChange={handleFormChange}
+                rows={6}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none"
+              ></textarea>
               <button
                 type="submit"
-                className="w-full bg-primary text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+                className="w-full md:w-auto bg-blue-400 text-white py-3 px-8 rounded-lg font-semibold hover:bg-primary transition-colors"
               >
-                Enviar solicitud
+                Enviar
               </button>
             </form>
           </div>
