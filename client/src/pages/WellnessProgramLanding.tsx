@@ -45,11 +45,11 @@ export default function WellnessProgramLanding() {
   ];
 
   const benefitIcons = [
-    { icon: Smile, title: "Mejora del clima laboral", description: "y la motivación." },
-    { icon: Heart, title: "Reducción del estrés", description: "y desgaste emocional." },
-    { icon: Users, title: "Mayor compromiso", description: "y sentido de pertenencia." },
-    { icon: TrendingUp, title: "Equipos más productivos", description: "" },
-    { icon: Zap, title: "Mejor percepción", description: "de la empresa como lugar para trabajar." },
+    { icon: Smile, title: "Mejora del clima organizacional", description: "Fortalece las relaciones internas y la motivación, creando un entorno colaborativo." },
+    { icon: Heart, title: "Salud mental en el trabajo", description: "Disminuye el desgaste emocional, promoviendo el equilibrio y la salud ocupacional." },
+    { icon: Users, title: "Mayor compromiso", description: "Incrementa el sentido de pertenencia, reduciendo la alta rotación y mejorando la retención de talento." },
+    { icon: TrendingUp, title: "Desempeño laboral optimizado", description: "Colaboradores con mayor bienestar presentan mejor foco y eficiencia diaria." },
+    { icon: Zap, title: "Marca Empleadora", description: "Posiciona a la organización como un lugar atractivo, mitigando riesgos psicosociales." },
   ];
 
   const results = [
@@ -87,10 +87,10 @@ export default function WellnessProgramLanding() {
               {/* Left Column - Text */}
               <div>
                 <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                  Programa de Bienestar Laboral
+                  Programa de Bienestar laboral para empresas
                 </h1>
                 <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-8">
-                  Un programa diseñado para mejorar la calidad de vida de los colaboradores y fortalecer el desempeño de las organizaciones a través del cuidado integral de las personas.
+                  Programa diseñado para mejorar la calidad de vida laboral de los colaboradores y potenciar el desempeño organizacional a través de un enfoque psicosocial integral centrado en personas, cultura y resultados.
                 </p>
                 <button
                   onClick={scrollToForm}
@@ -150,13 +150,13 @@ export default function WellnessProgramLanding() {
               {/* Left Column - Text */}
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                  Por qué contratar nuestro Programa de Bienestar Laboral
+                  Por qué elegir nuestra solución de Bienestar Organizacional
                 </h2>
                 <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                  El bienestar de los equipos no se construye con acciones aisladas ni iniciativas simbólicas. Nuestro programa se integra a la rutina laboral y genera impacto concreto en personas y organización.
+                  El éxito de las compañías modernas no se logra con acciones aisladas. Nuestro programa se integra a la cultura organizacional y a la gestión de personas / RRHH, generando un impacto real en la experiencia del colaborador.
                 </p>
                 <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                  Abordamos salud mental, gestión del estrés, equilibrio vida–trabajo y hábitos saludables. Las actividades se adaptan a cada empresa y se realizan en sus dependencias.
+                  Diseñamos intervenciones alineadas a los objetivos estratégicos, promoviendo el trabajo decente con un enfoque práctico y sostenible en el tiempo.
                 </p>
                 <button
                   onClick={scrollToForm}
@@ -178,7 +178,7 @@ export default function WellnessProgramLanding() {
         <section className="py-16 md:py-24 bg-gray-50">
           <div className="container max-w-5xl">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
-              Beneficios que impactan en las personas y en la empresa
+              Beneficios del Bienestar Laboral para las personas y la empresa
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {benefitIcons.map((benefit, index) => {
