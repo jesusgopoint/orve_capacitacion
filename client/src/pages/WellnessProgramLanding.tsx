@@ -129,18 +129,57 @@ export default function WellnessProgramLanding() {
         <section className="py-12 md:py-16 bg-gray-50">
           <div className="container">
             <p className="text-center text-gray-600 mb-8">Empresas que confían en ORVE</p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
-              <div className="w-24 h-24 bg-gray-200 rounded-lg flex items-center justify-center text-gray-500 text-sm">
-                Logo 1
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center justify-center">
+              <div className="flex items-center justify-center h-20">
+                <img src="/images/celhex-logo.webp" alt="Celhex" className="max-w-full max-h-full object-contain" />
               </div>
-              <div className="w-24 h-24 bg-gray-200 rounded-lg flex items-center justify-center text-gray-500 text-sm">
-                Logo 2
+              <div className="flex items-center justify-center h-20">
+                <img src="/images/saesainnova-logo.webp" alt="Saesa Innova" className="max-w-full max-h-full object-contain" />
               </div>
-              <div className="w-24 h-24 bg-gray-200 rounded-lg flex items-center justify-center text-gray-500 text-sm">
-                Logo 3
+              <div className="flex items-center justify-center h-20">
+                <img src="/images/humboldt-logo.webp" alt="Humboldt" className="max-w-full max-h-full object-contain" />
               </div>
-              <div className="w-24 h-24 bg-gray-200 rounded-lg flex items-center justify-center text-gray-500 text-sm">
-                Logo 4
+              <div className="flex items-center justify-center h-20">
+                <img src="/images/ultranav-logo.webp" alt="Ultranav" className="max-w-full max-h-full object-contain" />
+              </div>
+              <div className="flex items-center justify-center h-20">
+                <img src="/images/siigroup-logo.webp" alt="SII Group" className="max-w-full max-h-full object-contain" />
+              </div>
+              <div className="flex items-center justify-center h-20">
+                <img src="/images/novofarma-logo.webp" alt="Novofarma" className="max-w-full max-h-full object-contain" />
+              </div>
+              <div className="flex items-center justify-center h-20">
+                <img src="/images/santafetransportes-logo.webp" alt="Santa Fe Transportes" className="max-w-full max-h-full object-contain" />
+              </div>
+              <div className="flex items-center justify-center h-20">
+                <img src="/images/crispagold-logo.webp" alt="Crispa Gold" className="max-w-full max-h-full object-contain" />
+              </div>
+              <div className="flex items-center justify-center h-20">
+                <img src="/images/scotiabank-logo.webp" alt="Scotiabank" className="max-w-full max-h-full object-contain" />
+              </div>
+              <div className="flex items-center justify-center h-20">
+                <img src="/images/cydingenieria-logo.webp" alt="C&D Ingeniería" className="max-w-full max-h-full object-contain" />
+              </div>
+              <div className="flex items-center justify-center h-20">
+                <img src="/images/eklipse-logo.webp" alt="Eklipse" className="max-w-full max-h-full object-contain" />
+              </div>
+              <div className="flex items-center justify-center h-20">
+                <img src="/images/iplacex-logo.webp" alt="IPLACEX" className="max-w-full max-h-full object-contain" />
+              </div>
+              <div className="flex items-center justify-center h-20">
+                <img src="/images/trekrental-logo.webp" alt="Trek Rental" className="max-w-full max-h-full object-contain" />
+              </div>
+              <div className="flex items-center justify-center h-20">
+                <img src="/images/nexus-logo.webp" alt="Nexus" className="max-w-full max-h-full object-contain" />
+              </div>
+              <div className="flex items-center justify-center h-20">
+                <img src="/images/imh-logo.webp" alt="IMH" className="max-w-full max-h-full object-contain" />
+              </div>
+              <div className="flex items-center justify-center h-20">
+                <img src="/images/Bata-logo.webp" alt="Bata" className="max-w-full max-h-full object-contain" />
+              </div>
+              <div className="flex items-center justify-center h-20">
+                <img src="/images/Dimacofi-logo.webp" alt="Dimacofi" className="max-w-full max-h-full object-contain" />
               </div>
             </div>
           </div>
