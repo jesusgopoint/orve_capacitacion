@@ -100,7 +100,7 @@ export default function WellnessProgramLanding() {
                 </p>
                 <button
                   onClick={scrollToForm}
-                  className="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+                  className="bg-blue-400 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary transition-colors"
                 >
                   Solicitar información del programa
                 </button>
@@ -163,7 +163,7 @@ export default function WellnessProgramLanding() {
                 </p>
                 <button
                   onClick={scrollToForm}
-                  className="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+                  className="bg-blue-400 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary transition-colors"
                 >
                   Solicitar información del programa
                 </button>
@@ -250,7 +250,7 @@ export default function WellnessProgramLanding() {
             <div className="text-center mt-8">
               <button
                 onClick={scrollToForm}
-                className="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+                className="bg-blue-400 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary transition-colors"
               >
                 Solicitar información del programa
               </button>
