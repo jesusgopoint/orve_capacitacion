@@ -302,7 +302,7 @@ export default function WellnessProgramLanding() {
         <section className="py-16 md:py-24">
           <div className="container max-w-3xl text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Convierte tus excedentes en bienestar
+              Empieza hoy a cuidar a quienes sostienen tu organización
             </h2>
             <p className="text-lg text-gray-700 mb-8 leading-relaxed">
               Invertir en bienestar laboral es invertir en personas, cultura y resultados.
@@ -311,7 +311,7 @@ export default function WellnessProgramLanding() {
               onClick={scrollToForm}
               className="bg-blue-400 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary transition-colors"
             >
-              Contáctanos
+              Solicitar información del programa
             </button>
           </div>
         </section>
