@@ -108,18 +108,26 @@ export default function WellnessProgramLanding() {
 
               {/* Right Column - Image Grid */}
               <div className="grid grid-cols-2 gap-4">
-                <div className="bg-gray-300 rounded-lg h-40 flex items-center justify-center text-gray-500 font-semibold">
-                  Imagen 1
-                </div>
-                <div className="bg-gray-300 rounded-lg h-40 flex items-center justify-center text-gray-500 font-semibold">
-                  Imagen 2
-                </div>
-                <div className="bg-gray-300 rounded-lg h-40 flex items-center justify-center text-gray-500 font-semibold">
-                  Imagen 3
-                </div>
-                <div className="bg-gray-300 rounded-lg h-40 flex items-center justify-center text-gray-500 font-semibold">
-                  Imagen 4
-                </div>
+                <img
+                  src="/images/programadebienestarlaboralparaempresas.webp"
+                  alt="programadebienestarlaboralparaempresas"
+                  className="rounded-lg h-40 object-cover w-full"
+                />
+                <img
+                  src="/images/programasdebienestarlaboralyclimaorganizacional.webp"
+                  alt="programasdebienestarlaboralyclimaorganizacional"
+                  className="rounded-lg h-40 object-cover w-full"
+                />
+                <img
+                  src="/images/bienestarlaboralyproductividadempresarial.webp"
+                  alt="bienestarlaboralyproductividadempresarial"
+                  className="rounded-lg h-40 object-cover w-full"
+                />
+                <img
+                  src="/images/bienestarlaboralysaludmentalenempresas.webp"
+                  alt="bienestarlaboralysaludmentalenempresas"
+                  className="rounded-lg h-40 object-cover w-full"
+                />
               </div>
             </div>
           </div>
