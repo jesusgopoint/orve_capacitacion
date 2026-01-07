@@ -85,10 +85,20 @@ export default function OurStory() {
                 Con más de 15 años de experiencia en la industria del manejo de talento humano, nos hemos dedicado a <span className="font-bold">transformar la vida laboral</span> de aquellos que confían en nuestros programas, academias, charlas y más. Nuestra esencia está <span className="font-bold">centrada en las personas</span>, y es eso lo que nos impulsa cada día a seguir entregando lo mejor de nosotros.
               </p>
 
-              {/* Simplified Certification Badge */}
-              <div className="flex items-center gap-3 animate-shimmer">
-                <Trophy className="w-8 h-8 text-primary flex-shrink-0" />
-                <p className="text-primary font-bold text-lg">Organismo Técnico Certificado y Acreditado</p>
+              {/* Certification Section */}
+              <div className="mt-8">
+                <p className="text-gray-700 text-lg font-semibold mb-4">Certificaciones:</p>
+                <div className="flex items-center gap-6">
+                  <img 
+                    src="/images/certificadoOTEC.png" 
+                    alt="certificadoOTEC" 
+                    className="w-32 h-auto"
+                  />
+                  <div>
+                    <p className="text-primary font-bold text-lg">Organismo Técnico Certificado y Acreditado</p>
+                    <p className="text-gray-600 text-sm mt-2">Acreditación oficial que respalda la calidad de nuestros programas de capacitación.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
