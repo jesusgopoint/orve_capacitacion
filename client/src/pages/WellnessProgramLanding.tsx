@@ -147,7 +147,7 @@ export default function WellnessProgramLanding() {
         {/* Logos Section - Carousel */}
         <section className="py-12 md:py-16 bg-white">
           <div className="container">
-            <p className="text-center text-gray-600 mb-8">Empresas que confían en ORVE</p>
+            <h2 className="text-center text-gray-600 mb-8 text-2xl md:text-3xl font-bold">Empresas que confían en ORVE</h2>
             <style>{`
               @keyframes scroll-left {
                 0% {
