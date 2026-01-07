@@ -124,8 +124,8 @@ export default function WellnessProgramLanding() {
                   className="rounded-lg h-40 object-cover w-full"
                 />
                 <img
-                  src="/images/bienestarlaboralysaludmentalenempresas.webp"
-                  alt="bienestarlaboralysaludmentalenempresas"
+                  src="/images/bienestarlaboralysaludemocionalenempresas.webp"
+                  alt="bienestarlaboralysaludemocionalenempresas"
                   className="rounded-lg h-40 object-cover w-full"
                 />
               </div>
