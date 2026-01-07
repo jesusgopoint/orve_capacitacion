@@ -108,26 +108,37 @@ export default function WellnessProgramLanding() {
 
               {/* Right Column - Image Grid */}
               <div className="grid grid-cols-2 gap-4">
-                <img
-                  src="/images/programadebienestarlaboralparaempresas.webp"
-                  alt="programadebienestarlaboralparaempresas"
-                  className="rounded-lg h-40 object-cover w-full"
-                />
-                <img
-                  src="/images/programasdebienestarlaboralyclimaorganizacional.webp"
-                  alt="programasdebienestarlaboralyclimaorganizacional"
-                  className="rounded-lg h-40 object-cover w-full"
-                />
-                <img
-                  src="/images/bienestarlaboralyproductividadempresarial.webp"
-                  alt="bienestarlaboralyproductividadempresarial"
-                  className="rounded-lg h-40 object-cover w-full"
-                />
-                <img
-                  src="/images/bienestarlaboralysaludemocionalenempresas.webp"
-                  alt="bienestarlaboralysaludemocionalenempresas"
-                  className="rounded-lg h-40 object-cover w-full"
-                />
+                <div className="rounded-lg overflow-hidden h-40 animate-fade-in-scale delay-100">
+                  <img
+                    src="/images/programadebienestarlaboralparaempresas.webp"
+                    alt="programadebienestarlaboralparaempresas"
+                    className="w-full h-full object-cover animate-float"
+                  />
+                </div>
+                <div className="rounded-lg overflow-hidden h-40 mt-4 animate-fade-in-scale delay-200">
+                  <img
+                    src="/images/programasdebienestarlaboralyclimaorganizacional.webp"
+                    alt="programasdebienestarlaboralyclimaorganizacional"
+                    className="w-full h-full object-cover animate-float"
+                    style={{animationDelay: '0.5s'}}
+                  />
+                </div>
+                <div className="rounded-lg overflow-hidden h-40 animate-fade-in-scale delay-300">
+                  <img
+                    src="/images/bienestarlaboralyproductividadempresarial.webp"
+                    alt="bienestarlaboralyproductividadempresarial"
+                    className="w-full h-full object-cover animate-float"
+                    style={{animationDelay: '1s'}}
+                  />
+                </div>
+                <div className="rounded-lg overflow-hidden h-40 mt-4 animate-fade-in-scale delay-400">
+                  <img
+                    src="/images/bienestarlaboralysaludemocionalenempresas.webp"
+                    alt="bienestarlaboralysaludemocionalenempresas"
+                    className="w-full h-full object-cover animate-float"
+                    style={{animationDelay: '1.5s'}}
+                  />
+                </div>
               </div>
             </div>
           </div>
