@@ -3,12 +3,17 @@ export default function Team() {
     {
       name: "Orlando Palma",
       role: "Gerente Comercial",
-      image: "/images/Orlando-Orve.png"
+      image: "/images/Orlando-Palma.webp"
     },
     {
       name: "Tamara Bravo",
-      role: "Coordinadora Capacitación",
-      image: "/images/Tamara-Orve.png"
+      role: "Key Account Manager",
+      image: "/images/Tamara-Bravo.webp"
+    },
+    {
+      name: "Paula Cordero",
+      role: "Customer Success",
+      image: "/images/Paula-Cordero.webp"
     }
   ];
 
@@ -17,7 +22,7 @@ export default function Team() {
       <div className="container">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">Nuestro Equipo</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto md:mx-auto justify-items-center md:justify-items-start">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto md:mx-auto justify-items-center md:justify-items-start">
           {teamMembers.map((member, index) => (
             <div 
               key={index} 
