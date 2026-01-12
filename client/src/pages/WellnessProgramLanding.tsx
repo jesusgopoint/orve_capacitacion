@@ -93,14 +93,14 @@ export default function WellnessProgramLanding() {
               {/* Left Column - Text */}
               <div>
                 <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                  Programa de Bienestar laboral para empresas
+                  Programa de bienestar laboral y calidad de vida
                 </h1>
                 <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-8">
                   Programa diseñado para mejorar la calidad de vida laboral de los colaboradores y potenciar el desempeño organizacional a través de un enfoque psicosocial integral centrado en personas, cultura y resultados.
                 </p>
                 <button
                   onClick={scrollToForm}
-                  className="bg-blue-400 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary transition-colors"
+                  className="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 transition-colors"
                 >
                   Solicitar información del programa
                 </button>
@@ -147,7 +147,7 @@ export default function WellnessProgramLanding() {
         {/* Logos Section - Carousel */}
         <section className="py-12 md:py-16 bg-white">
           <div className="container">
-            <h2 className="text-center text-gray-600 mb-8 text-2xl md:text-3xl font-bold">Empresas que confían en ORVE</h2>
+            <h2 className="text-center text-gray-600 mb-8 text-2xl md:text-3xl font-bold">Empresas que confían en nosotros</h2>
             <style>{`
               @keyframes scroll-left {
                 0% {
@@ -292,7 +292,7 @@ export default function WellnessProgramLanding() {
                 </p>
                 <button
                   onClick={scrollToForm}
-                  className="bg-blue-400 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary transition-colors"
+                  className="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 transition-colors"
                 >
                   Solicitar información del programa
                 </button>
@@ -496,7 +496,7 @@ export default function WellnessProgramLanding() {
               ></textarea>
               <button
                 type="submit"
-                className="w-full md:w-auto bg-blue-400 text-white py-3 px-8 rounded-lg font-semibold hover:bg-primary transition-colors"
+                className="w-full md:w-auto bg-primary text-white py-3 px-8 rounded-lg font-semibold hover:bg-blue-400 transition-colors"
               >
                 Enviar
               </button>

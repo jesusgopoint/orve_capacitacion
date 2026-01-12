@@ -56,7 +56,7 @@ export default function WellnessPillars() {
                     ))}
                   </ul>
 
-                  <a href="#contacto" className="w-full md:w-auto bg-blue-400 text-white py-2 px-4 rounded-lg font-semibold hover:bg-primary transition-colors text-center block text-sm mx-auto md:mx-0">
+                  <a href="#contacto" className="w-full md:w-auto bg-primary text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-400 transition-colors text-center block text-sm mx-auto md:mx-0">
                     Conocer más
                   </a>
                 </div>
@@ -86,7 +86,7 @@ export default function WellnessPillars() {
 
               <a 
                 href="#contacto" 
-                className="inline-block bg-blue-400 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary transition-colors md:inline-block"
+                className="inline-block bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 transition-colors md:inline-block"
               >
                 Contáctanos
               </a>
