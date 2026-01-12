@@ -436,7 +436,7 @@ export default function WellnessProgramLanding() {
             </p>
             <button
               onClick={scrollToForm}
-              className="bg-blue-400 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary transition-colors"
+              className="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 transition-colors"
             >
               Solicitar información del programa
             </button>
