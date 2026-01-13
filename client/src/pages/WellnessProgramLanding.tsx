@@ -338,27 +338,16 @@ export default function WellnessProgramLanding() {
           </div>
         </section>
 
-        {/* Results Section - Static Grid */}
-        <section className="py-16 md:py-24 bg-gradient-to-b from-blue-50 to-white">
+        {/* Results Section - Compact Strip */}
+        <section className="py-8 md:py-12 bg-gradient-to-r from-blue-50 via-blue-25 to-blue-50">
           <div className="container">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
-              Resultados que respaldan nuestros programas
-            </h2>
-            <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-              Datos concretos que demuestran el impacto real de nuestras intervenciones
-            </p>
-            
-            {/* Results Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
               {results.map((result, index) => (
-                <div
-                  key={index}
-                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all p-8 border-t-4 border-primary text-center transform hover:scale-105 transition-transform"
-                >
-                  <div className="text-6xl md:text-7xl font-bold text-primary mb-4">
+                <div key={index} className="text-center">
+                  <div className="text-5xl md:text-6xl font-bold text-primary mb-2">
                     {result.metric}
                   </div>
-                  <p className="text-gray-700 text-lg leading-relaxed">
+                  <p className="text-sm md:text-base text-gray-700 leading-snug">
                     {result.description}
                   </p>
                 </div>
