@@ -5,6 +5,7 @@ import { ChevronDown, ChevronUp, Heart, Users, TrendingUp, Smile, Zap } from "lu
 
 export default function WellnessProgramLanding() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
+  const [selectedActionLine, setSelectedActionLine] = useState(0);
   const [currentResultIndex, setCurrentResultIndex] = useState(0);
   const [formData, setFormData] = useState({
     nombre: "",
@@ -17,6 +18,57 @@ export default function WellnessProgramLanding() {
   const toggleFAQ = (index: number) => {
     setOpenFAQ(openFAQ === index ? null : index);
   };
+
+  const actionLines = [
+    {
+      title: "Salud Mental y Prevención",
+      icon: Smile,
+      color: "primary",
+      focus: "Contención emocional y cumplimiento normativo.",
+      activities: [
+        "Charlas de salud mental y autocuidado",
+        "Gestión de Riesgos Psicosociales (CEAL SM)",
+        "Prevención y manejo del estrés",
+        "Mindfulness y Yoga"
+      ]
+    },
+    {
+      title: "Calidad de Vida Laboral",
+      icon: Heart,
+      color: "blue",
+      focus: "Intervenciones físicas y recreativas para el día a día.",
+      activities: [
+        "Pausas activas y Masajes express",
+        "Charlas de hábitos saludables y nutrición",
+        "Jornadas recreativas",
+        "Celebración de fechas importantes"
+      ]
+    },
+    {
+      title: "Fortalecimiento y Cohesión de Equipos",
+      icon: Users,
+      color: "green",
+      focus: "Actividades lúdicas para mejorar la cultura organizacional.",
+      activities: [
+        "Team Building (Indoor y Outdoor)",
+        "Actividades lúdicas y Role playing",
+        "Talleres de Resolución de Conflictos",
+        "Trabajo en Equipo"
+      ]
+    },
+    {
+      title: "Desarrollo de Liderazgo y Talento",
+      icon: TrendingUp,
+      color: "orange",
+      focus: "Acompañamiento estratégico para mandos medios y jefaturas.",
+      activities: [
+        "Coaching ejecutivo e individual",
+        "Programas de Liderazgo",
+        "Comunicación Efectiva",
+        "Feedback guiado y desarrollo de potencial"
+      ]
+    }
+  ];
 
 
 
@@ -379,82 +431,55 @@ export default function WellnessProgramLanding() {
               </p>
             </div>
 
-            {/* Action Cards Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-              {/* Card 1: Mental Health */}
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all p-8 border-t-4 border-primary">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="bg-primary/10 p-4 rounded-lg">
-                    <Smile className="w-8 h-8 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900">Salud Mental y Prevención</h3>
-                </div>
-                <p className="text-gray-600 mb-6 text-sm">
-                  <strong>Enfoque:</strong> Contención emocional y cumplimiento normativo.
-                </p>
-                <div className="space-y-3">
-                  <p className="text-sm text-gray-700">✓ Charlas de salud mental y autocuidado</p>
-                  <p className="text-sm text-gray-700">✓ Gestión de Riesgos Psicosociales (CEAL SM)</p>
-                  <p className="text-sm text-gray-700">✓ Prevención y manejo del estrés</p>
-                  <p className="text-sm text-gray-700">✓ Mindfulness y Yoga</p>
-                </div>
+            {/* Action Lines Accordion */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              {/* Left Column - Action Line Buttons */}
+              <div className="space-y-3">
+                {actionLines.map((line, index) => {
+                  const isSelected = selectedActionLine === index;
+                  return (
+                    <button
+                      key={index}
+                      onClick={() => setSelectedActionLine(index)}
+                      className={`w-full text-left px-6 py-4 rounded-lg font-semibold transition-all ${
+                        isSelected
+                          ? "bg-primary text-white shadow-lg"
+                          : "bg-gray-100 text-gray-900 hover:bg-gray-200"
+                      }`}
+                    >
+                      {line.title}
+                    </button>
+                  );
+                })}
               </div>
 
-              {/* Card 2: Quality of Life */}
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all p-8 border-t-4 border-blue-500">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="bg-blue-100 p-4 rounded-lg">
-                    <Heart className="w-8 h-8 text-blue-500" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900">Calidad de Vida Laboral</h3>
-                </div>
-                <p className="text-gray-600 mb-6 text-sm">
-                  <strong>Enfoque:</strong> Intervenciones físicas y recreativas para el día a día.
-                </p>
-                <div className="space-y-3">
-                  <p className="text-sm text-gray-700">✓ Pausas activas y Masajes express</p>
-                  <p className="text-sm text-gray-700">✓ Charlas de hábitos saludables y nutrición</p>
-                  <p className="text-sm text-gray-700">✓ Jornadas recreativas</p>
-                  <p className="text-sm text-gray-700">✓ Celebración de fechas importantes</p>
-                </div>
-              </div>
-
-              {/* Card 3: Team Building */}
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all p-8 border-t-4 border-green-500">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="bg-green-100 p-4 rounded-lg">
-                    <Users className="w-8 h-8 text-green-500" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900">Fortalecimiento y Cohesión de Equipos</h3>
-                </div>
-                <p className="text-gray-600 mb-6 text-sm">
-                  <strong>Enfoque:</strong> Actividades lúdicas para mejorar la cultura organizacional.
-                </p>
-                <div className="space-y-3">
-                  <p className="text-sm text-gray-700">✓ Team Building (Indoor y Outdoor)</p>
-                  <p className="text-sm text-gray-700">✓ Actividades lúdicas y Role playing</p>
-                  <p className="text-sm text-gray-700">✓ Talleres de Resolución de Conflictos</p>
-                  <p className="text-sm text-gray-700">✓ Trabajo en Equipo</p>
-                </div>
-              </div>
-
-              {/* Card 4: Leadership */}
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all p-8 border-t-4 border-orange-500">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="bg-orange-100 p-4 rounded-lg">
-                    <TrendingUp className="w-8 h-8 text-orange-500" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900">Desarrollo de Liderazgo y Talento</h3>
-                </div>
-                <p className="text-gray-600 mb-6 text-sm">
-                  <strong>Enfoque:</strong> Acompañamiento estratégico para mandos medios y jefaturas.
-                </p>
-                <div className="space-y-3">
-                  <p className="text-sm text-gray-700">✓ Coaching ejecutivo e individual</p>
-                  <p className="text-sm text-gray-700">✓ Programas de Liderazgo</p>
-                  <p className="text-sm text-gray-700">✓ Comunicación Efectiva</p>
-                  <p className="text-sm text-gray-700">✓ Feedback guiado y desarrollo</p>
-                </div>
+              {/* Right Column - Content Display */}
+              <div className="md:col-span-2">
+                {actionLines.map((line, index) => {
+                  if (selectedActionLine !== index) return null;
+                  const IconComponent = line.icon;
+                  return (
+                    <div key={index} className="bg-white rounded-xl p-8 shadow-lg">
+                      <div className="flex items-center gap-4 mb-6">
+                        <div className={`bg-${line.color}-100 p-4 rounded-lg`}>
+                          <IconComponent className={`w-8 h-8 text-${line.color === 'primary' ? 'primary' : line.color}-500`} />
+                        </div>
+                        <h3 className="text-2xl font-bold text-gray-900">{line.title}</h3>
+                      </div>
+                      <p className="text-gray-600 mb-6">
+                        <strong>Enfoque:</strong> {line.focus}
+                      </p>
+                      <div className="space-y-3">
+                        {line.activities.map((activity, idx) => (
+                          <p key={idx} className="text-gray-700 flex items-start gap-3">
+                            <span className="text-primary font-bold mt-0.5">✓</span>
+                            {activity}
+                          </p>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
 
