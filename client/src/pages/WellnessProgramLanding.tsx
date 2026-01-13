@@ -495,15 +495,12 @@ export default function WellnessProgramLanding() {
 
         {/* Divider Section */}
         <div className="bg-gradient-to-r from-transparent via-gray-300 to-transparent h-1"></div>
-        <div className="bg-gray-100 py-4 text-center">
-          <p className="text-sm text-gray-500 font-medium">Información adicional</p>
-        </div>
 
         {/* FAQ Section */}
         <section className="py-12 md:py-16 bg-gray-50">
           <div className="container max-w-3xl">
-            <h2 className="text-2xl md:text-3xl font-semibold text-gray-700 mb-8 text-center">
-              Preguntas frecuentes
+            <h2 className="text-xl md:text-2xl font-semibold text-gray-700 mb-8 text-center">
+              Preguntas frecuentes Programa de bienestar laboral y calidad de vida
             </h2>
             <div className="space-y-4 mb-12">
               {faqItems.map((item, index) => (
