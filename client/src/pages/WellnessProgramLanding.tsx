@@ -296,8 +296,8 @@ export default function WellnessProgramLanding() {
 
               {/* Right Column - Image */}
               <img
-                src="/images/bienestarlaboralysaludmentalenempresas.webp"
-                alt="bienestarlaboralysaludmentalenempresas"
+                src="/images/equipoenprogramadebienestar.webp"
+                alt="equipoenprogramadebienestar"
                 className="rounded-lg h-96 object-cover w-full"
               />
             </div>
