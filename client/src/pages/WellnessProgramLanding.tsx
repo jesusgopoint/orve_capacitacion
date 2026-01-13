@@ -136,7 +136,7 @@ export default function WellnessProgramLanding() {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="py-16 md:py-24 bg-gradient-to-b from-blue-50 to-white">
+        <section className="py-16 md:py-24 bg-white">
           <div className="container">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               {/* Left Column - Text */}
@@ -275,7 +275,7 @@ export default function WellnessProgramLanding() {
         </section>
 
         {/* Results Section */}
-        <section className="py-8 md:py-12 bg-gradient-to-r from-blue-100 to-blue-50">
+        <section className="py-8 md:py-12 bg-blue-50">
           <div className="container">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {results.map((result, index) => (
@@ -285,10 +285,10 @@ export default function WellnessProgramLanding() {
                     {index === 1 && <TrendingUp className="w-8 h-8 text-primary" />}
                     {index === 2 && <Users className="w-8 h-8 text-primary" />}
                   </div>
-                  <div className="text-5xl md:text-6xl font-bold text-primary mb-3">
+                  <div className="text-3xl md:text-4xl font-bold text-primary mb-3">
                     {result.metric}
                   </div>
-                  <p className="text-sm md:text-base text-gray-700 leading-snug max-w-xs mx-auto">
+                  <p className="text-xs text-gray-700 leading-snug max-w-xs mx-auto">
                     {result.description}
                   </p>
                 </div>
@@ -299,24 +299,40 @@ export default function WellnessProgramLanding() {
 
         {/* Benefits Section */}
         <section className="py-16 md:py-24 bg-white">
-          <div className="container">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
-              Beneficios del Bienestar Laboral para las personas y la empresa
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {[
-                { icon: "😊", title: "Mejora del clima organizacional", description: "Fortalece las relaciones internas y la motivación, creando un entorno colaborativo." },
-                { icon: "💜", title: "Salud mental en el trabajo", description: "Disminuye el desgaste emocional, promoviendo el equilibrio y la salud ocupacional." },
-                { icon: "👥", title: "Mayor compromiso", description: "Incrementa el sentido de pertenencia, reduciendo la alta rotación y mejorando la retención de talento." },
-                { icon: "📈", title: "Desempeño laboral optimizado", description: "Colaboradores con mayor bienestar presentan mejor foco y eficiencia diaria." },
-                { icon: "⚡", title: "Marca Empleadora", description: "Posiciona a la organización como un lugar atractivo, mitigando riesgos psicosociales." },
-              ].map((benefit, index) => (
-                <div key={index} className="bg-gray-50 p-8 rounded-lg">
-                  <div className="text-4xl mb-4">{benefit.icon}</div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
-                  <p className="text-gray-700">{benefit.description}</p>
-                </div>
-              ))}
+          <div className="container max-w-6xl">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">Beneficios del Bienestar Laboral para las personas y la empresa</h2>
+            <div className="overflow-hidden">
+              <style>{`
+                @keyframes benefits-carousel {
+                  0% { transform: translateX(0); }
+                  100% { transform: translateX(calc(-50% - 12px)); }
+                }
+                .benefits-carousel-container {
+                  display: flex;
+                  gap: 24px;
+                  animation: benefits-carousel 45s linear infinite;
+                  width: fit-content;
+                }
+                .benefits-carousel-container:hover {
+                  animation-play-state: paused;
+                }
+              `}</style>
+              <div className="benefits-carousel-container">
+                {[
+                  { title: "Mejora del clima organizacional", desc: "Fortalece las relaciones internas y la motivación, creando un entorno colaborativo." },
+                  { title: "Salud mental en el trabajo", desc: "Disminuye el desgaste emocional, promoviendo el equilibrio y la salud ocupacional." },
+                  { title: "Mayor compromiso", desc: "Incrementa el sentido de pertenencia, reduciendo la alta rotación y mejorando la retención de talento." },
+                  { title: "Desempeño laboral optimizado", desc: "Colaboradores con mayor bienestar presentan mejor foco y eficiencia diaria." },
+                  { title: "Marca Empleadora", desc: "Posiciona a la organización como un lugar atractivo, mitigando riesgos psicosociales." },
+                  { title: "Mejora del clima organizacional", desc: "Fortalece las relaciones internas y la motivación, creando un entorno colaborativo." },
+                  { title: "Salud mental en el trabajo", desc: "Disminuye el desgaste emocional, promoviendo el equilibrio y la salud ocupacional." }
+                ].map((benefit, index) => (
+                  <div key={index} className="bg-gray-50 p-8 rounded-lg flex-shrink-0 w-96">
+                    <h3 className="text-lg font-bold text-gray-900 mb-3">{benefit.title}</h3>
+                    <p className="text-gray-700 text-sm">{benefit.desc}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -409,20 +425,10 @@ export default function WellnessProgramLanding() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 md:py-24">
-          <div className="container max-w-3xl text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Empieza hoy a cuidar a quienes sostienen tu organización
-            </h2>
-            <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-              Invertir en bienestar laboral es invertir en personas, cultura y resultados.
-            </p>
-            <button
-              onClick={scrollToForm}
-              className="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 transition-colors"
-            >
-              Solicitar información del programa
-            </button>
+        <section className="py-16 md:py-24 bg-gradient-to-r from-blue-50 to-purple-50">
+          <div className="container max-w-4xl text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Empieza hoy a cuidar a quienes sostienen tu organización</h2>
+            <p className="text-lg text-gray-700 mt-4">Invertir en bienestar laboral es invertir en personas, cultura y resultados.</p>
           </div>
         </section>
 
