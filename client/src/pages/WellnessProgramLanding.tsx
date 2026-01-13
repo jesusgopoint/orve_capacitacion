@@ -338,8 +338,36 @@ export default function WellnessProgramLanding() {
           </div>
         </section>
 
-        {/* Action Lines Section */}
-        <section className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
+        {/* Results Section - Static Grid */}
+        <section className="py-16 md:py-24 bg-gradient-to-b from-blue-50 to-white">
+          <div className="container">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
+              Resultados que respaldan nuestros programas
+            </h2>
+            <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+              Datos concretos que demuestran el impacto real de nuestras intervenciones
+            </p>
+            
+            {/* Results Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {results.map((result, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all p-8 border-t-4 border-primary text-center transform hover:scale-105 transition-transform"
+                >
+                  <div className="text-6xl md:text-7xl font-bold text-primary mb-4">
+                    {result.metric}
+                  </div>
+                  <p className="text-gray-700 text-lg leading-relaxed">
+                    {result.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Action Lines Section */}        <section className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
           <div className="container">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -452,52 +480,7 @@ export default function WellnessProgramLanding() {
           </div>
         </section>
 
-        {/* Results Section - Carousel */}
-        <section className="py-16 md:py-24">
-          <div className="container max-w-4xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
-              Resultados que respaldan nuestros programas
-            </h2>
-            
-            {/* Carousel */}
-            <div className="relative">
-              <div className="bg-gradient-to-br from-primary/10 to-primary/5 p-12 rounded-lg text-center border border-primary/20 min-h-64 flex flex-col items-center justify-center">
-                <div className="text-5xl md:text-6xl font-bold text-primary mb-4">
-                  {results[currentResultIndex].metric}
-                </div>
-                <p className="text-xl text-gray-700 mb-8">
-                  {results[currentResultIndex].description}
-                </p>
-              </div>
 
-              {/* Carousel Indicators */}
-              <div className="flex justify-center gap-2 mt-8">
-                {results.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentResultIndex(index)}
-                    className={`w-3 h-3 rounded-full transition-colors ${
-                      index === currentResultIndex
-                        ? "bg-primary"
-                        : "bg-gray-300 hover:bg-gray-400"
-                    }`}
-                  />
-                ))}
-              </div>
-            </div>
-
-
-
-            <div className="text-center mt-8">
-              <button
-                onClick={scrollToForm}
-                className="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 transition-colors"
-              >
-                Solicitar información del programa
-              </button>
-            </div>
-          </div>
-        </section>
 
         {/* FAQ Section */}
         <section className="py-16 md:py-24 bg-gray-50">
