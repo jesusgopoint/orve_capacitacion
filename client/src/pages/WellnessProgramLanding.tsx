@@ -159,7 +159,7 @@ export default function WellnessProgramLanding() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="overflow-hidden rounded-lg h-48 md:h-56">
                   <img
-                    src="/programadebienestarlaboralparaempresas.webp"
+                    src="/images/programadebienestarlaboralparaempresas.webp"
                     alt="programadebienestarlaboralparaempresas"
                     className="w-full h-full object-cover animate-fade-in-scale"
                     style={{ animationDelay: "0.1s" }}
@@ -167,7 +167,7 @@ export default function WellnessProgramLanding() {
                 </div>
                 <div className="overflow-hidden rounded-lg h-48 md:h-56">
                   <img
-                    src="/programasdebienestarlaboralyclimaorganizacional.webp"
+                    src="/images/programasdebienestarlaboralyclimaorganizacional.webp"
                     alt="programasdebienestarlaboralyclimaorganizacional"
                     className="w-full h-full object-cover animate-fade-in-scale"
                     style={{ animationDelay: "0.2s" }}
@@ -175,7 +175,7 @@ export default function WellnessProgramLanding() {
                 </div>
                 <div className="overflow-hidden rounded-lg h-48 md:h-56">
                   <img
-                    src="/bienestarlaboralyproductividadempresarial.webp"
+                    src="/images/bienestarlaboralyproductividadempresarial.webp"
                     alt="bienestarlaboralyproductividadempresarial"
                     className="w-full h-full object-cover animate-fade-in-scale"
                     style={{ animationDelay: "0.3s" }}
@@ -183,7 +183,7 @@ export default function WellnessProgramLanding() {
                 </div>
                 <div className="overflow-hidden rounded-lg h-48 md:h-56">
                   <img
-                    src="/bienestarlaboralysaludemocionalenempresas.webp"
+                    src="/images/bienestarlaboralysaludemocionalenempresas.webp"
                     alt="bienestarlaboralysaludemocionalenempresas"
                     className="w-full h-full object-cover animate-fade-in-scale"
                     style={{ animationDelay: "0.4s" }}
@@ -219,22 +219,22 @@ export default function WellnessProgramLanding() {
               `}</style>
               <div className="flex gap-6 carousel-container w-fit">
                 {[
-                  "/dimacofi-logo.webp",
-                  "/CYD-logo.webp",
-                  "/eklipse-logo.webp",
-                  "/nexus-logo.webp",
-                  "/iplacex-logo.webp",
-                  "/trekrental-logo.webp",
-                  "/bata-logo.webp",
-                  "/imh-logo.webp",
-                  "/celhex-logo.webp",
-                  "/humboldt-logo.webp",
-                  "/ultranav-logo.webp",
-                  "/siigroup-logo.webp",
-                  "/scotiabank-logo.webp",
-                  "/crispagold-logo.webp",
-                  "/saesa-logo.webp",
-                  "/santafetransportes-logo.webp",
+                  "/images/dimacofi-logo.webp",
+                  "/images/CYD-logo.webp",
+                  "/images/eklipse-logo.webp",
+                  "/images/nexus-logo.webp",
+                  "/images/iplacex-logo.webp",
+                  "/images/trekrental-logo.webp",
+                  "/images/bata-logo.webp",
+                  "/images/imh-logo.webp",
+                  "/images/celhex-logo.webp",
+                  "/images/humboldt-logo.webp",
+                  "/images/ultranav-logo.webp",
+                  "/images/siigroup-logo.webp",
+                  "/images/scotiabank-logo.webp",
+                  "/images/crispagold-logo.webp",
+                  "/images/saesa-logo.webp",
+                  "/images/santafetransportes-logo.webp",
                 ].map((logo, index) => (
                   <img
                     key={index}
@@ -265,7 +265,7 @@ export default function WellnessProgramLanding() {
               </div>
               <div className="rounded-lg overflow-hidden">
                 <img
-                  src="/bienestarlaboralysaludmentalenempresas.webp"
+                  src="/images/bienestarlaboralysaludmentalenempresas.webp"
                   alt="bienestarlaboralysaludmentalenempresas"
                   className="w-full h-96 object-cover rounded-lg"
                 />
