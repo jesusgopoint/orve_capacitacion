@@ -154,114 +154,114 @@ export default function WellnessProgramLanding() {
                   transform: translateX(0);
                 }
                 100% {
-                  transform: translateX(calc(-25% - 8px));
+                  transform: translateX(calc(-16.666% - 6px));
                 }
               }
               .carousel-track {
-                animation: scroll-left 20s linear infinite;
+                animation: scroll-left 24s linear infinite;
               }
               .carousel-container:hover .carousel-track {
                 animation-play-state: paused;
               }
             `}</style>
             <div className="carousel-container overflow-hidden bg-white rounded-lg" style={{ width: '100%' }}>
-              <div className="carousel-track flex gap-8 py-6 px-4 whitespace-nowrap" style={{ width: 'fit-content' }}>
+              <div className="carousel-track flex gap-6 py-6 px-4 whitespace-nowrap" style={{ width: 'fit-content' }}>
                 {/* First set of logos */}
-                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(25% - 6px)' }}>
+                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(16.666% - 5px)' }}>
                   <img src="/images/dimacofi-logo.webp" alt="Dimacofi" className="max-w-full max-h-full object-contain" />
                 </div>
-                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(25% - 6px)' }}>
+                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(16.666% - 5px)' }}>
                   <img src="/images/CYD-logo.webp" alt="C&D Ingeniería" className="max-w-full max-h-full object-contain" />
                 </div>
-                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(25% - 6px)' }}>
+                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(16.666% - 5px)' }}>
                   <img src="/images/eklipse-logo.webp" alt="Eklipse" className="max-w-full max-h-full object-contain" />
                 </div>
-                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(25% - 6px)' }}>
+                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(16.666% - 5px)' }}>
                   <img src="/images/nexus-logo.webp" alt="Nexus" className="max-w-full max-h-full object-contain" />
                 </div>
-                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(25% - 6px)' }}>
+                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(16.666% - 5px)' }}>
                   <img src="/images/iplacex-logo.webp" alt="IPLACEX" className="max-w-full max-h-full object-contain" />
                 </div>
-                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(25% - 6px)' }}>
+                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(16.666% - 5px)' }}>
                   <img src="/images/trekrental-logo.webp" alt="Trek Rental" className="max-w-full max-h-full object-contain" />
                 </div>
-                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(25% - 6px)' }}>
+                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(16.666% - 5px)' }}>
                   <img src="/images/bata-logo.webp" alt="Bata" className="max-w-full max-h-full object-contain" />
                 </div>
-                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(25% - 6px)' }}>
+                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(16.666% - 5px)' }}>
                   <img src="/images/imh-logo.webp" alt="IMH" className="max-w-full max-h-full object-contain" />
                 </div>
-                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(25% - 6px)' }}>
+                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(16.666% - 5px)' }}>
                   <img src="/images/celhex-logo.webp" alt="Celhex" className="max-w-full max-h-full object-contain" />
                 </div>
-                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(25% - 6px)' }}>
+                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(16.666% - 5px)' }}>
                   <img src="/images/humboldt-logo.webp" alt="Humboldt" className="max-w-full max-h-full object-contain" />
                 </div>
-                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(25% - 6px)' }}>
+                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(16.666% - 5px)' }}>
                   <img src="/images/ultranav-logo.webp" alt="Ultranav" className="max-w-full max-h-full object-contain" />
                 </div>
-                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(25% - 6px)' }}>
+                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(16.666% - 5px)' }}>
                   <img src="/images/siigroup-logo.webp" alt="SII Group" className="max-w-full max-h-full object-contain" />
                 </div>
-                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(25% - 6px)' }}>
+                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(16.666% - 5px)' }}>
                   <img src="/images/scotiabank-logo.webp" alt="Scotiabank" className="max-w-full max-h-full object-contain" />
                 </div>
-                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(25% - 6px)' }}>
+                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(16.666% - 5px)' }}>
                   <img src="/images/crispagold-logo.webp" alt="Crispa Gold" className="max-w-full max-h-full object-contain" />
                 </div>
-                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(25% - 6px)' }}>
+                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(16.666% - 5px)' }}>
                   <img src="/images/saesa-logo.webp" alt="Saesa" className="max-w-full max-h-full object-contain" />
                 </div>
-                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(25% - 6px)' }}>
+                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(16.666% - 5px)' }}>
                   <img src="/images/santafetransportes-logo.webp" alt="Santa Fe Transportes" className="max-w-full max-h-full object-contain" />
                 </div>
                 {/* Duplicate set for seamless loop */}
-                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(25% - 6px)' }}>
+                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(16.666% - 5px)' }}>
                   <img src="/images/dimacofi-logo.webp" alt="Dimacofi" className="max-w-full max-h-full object-contain" />
                 </div>
-                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(25% - 6px)' }}>
+                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(16.666% - 5px)' }}>
                   <img src="/images/CYD-logo.webp" alt="C&D Ingeniería" className="max-w-full max-h-full object-contain" />
                 </div>
-                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(25% - 6px)' }}>
+                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(16.666% - 5px)' }}>
                   <img src="/images/eklipse-logo.webp" alt="Eklipse" className="max-w-full max-h-full object-contain" />
                 </div>
-                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(25% - 6px)' }}>
+                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(16.666% - 5px)' }}>
                   <img src="/images/nexus-logo.webp" alt="Nexus" className="max-w-full max-h-full object-contain" />
                 </div>
-                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(25% - 6px)' }}>
+                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(16.666% - 5px)' }}>
                   <img src="/images/iplacex-logo.webp" alt="IPLACEX" className="max-w-full max-h-full object-contain" />
                 </div>
-                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(25% - 6px)' }}>
+                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(16.666% - 5px)' }}>
                   <img src="/images/trekrental-logo.webp" alt="Trek Rental" className="max-w-full max-h-full object-contain" />
                 </div>
-                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(25% - 6px)' }}>
+                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(16.666% - 5px)' }}>
                   <img src="/images/bata-logo.webp" alt="Bata" className="max-w-full max-h-full object-contain" />
                 </div>
-                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(25% - 6px)' }}>
+                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(16.666% - 5px)' }}>
                   <img src="/images/imh-logo.webp" alt="IMH" className="max-w-full max-h-full object-contain" />
                 </div>
-                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(25% - 6px)' }}>
+                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(16.666% - 5px)' }}>
                   <img src="/images/celhex-logo.webp" alt="Celhex" className="max-w-full max-h-full object-contain" />
                 </div>
-                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(25% - 6px)' }}>
+                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(16.666% - 5px)' }}>
                   <img src="/images/humboldt-logo.webp" alt="Humboldt" className="max-w-full max-h-full object-contain" />
                 </div>
-                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(25% - 6px)' }}>
+                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(16.666% - 5px)' }}>
                   <img src="/images/ultranav-logo.webp" alt="Ultranav" className="max-w-full max-h-full object-contain" />
                 </div>
-                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(25% - 6px)' }}>
+                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(16.666% - 5px)' }}>
                   <img src="/images/siigroup-logo.webp" alt="SII Group" className="max-w-full max-h-full object-contain" />
                 </div>
-                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(25% - 6px)' }}>
+                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(16.666% - 5px)' }}>
                   <img src="/images/scotiabank-logo.webp" alt="Scotiabank" className="max-w-full max-h-full object-contain" />
                 </div>
-                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(25% - 6px)' }}>
+                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(16.666% - 5px)' }}>
                   <img src="/images/crispagold-logo.webp" alt="Crispa Gold" className="max-w-full max-h-full object-contain" />
                 </div>
-                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(25% - 6px)' }}>
+                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(16.666% - 5px)' }}>
                   <img src="/images/saesa-logo.webp" alt="Saesa" className="max-w-full max-h-full object-contain" />
                 </div>
-                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(25% - 6px)' }}>
+                <div className="flex items-center justify-center h-20 flex-shrink-0" style={{ width: 'calc(16.666% - 5px)' }}>
                   <img src="/images/santafetransportes-logo.webp" alt="Santa Fe Transportes" className="max-w-full max-h-full object-contain" />
                 </div>
               </div>
