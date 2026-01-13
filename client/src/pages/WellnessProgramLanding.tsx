@@ -158,7 +158,7 @@ export default function WellnessProgramLanding() {
                 }
               }
               .carousel-track {
-                animation: scroll-left 24s linear infinite;
+                animation: scroll-left 14s linear infinite;
               }
               .carousel-container:hover .carousel-track {
                 animation-play-state: paused;
