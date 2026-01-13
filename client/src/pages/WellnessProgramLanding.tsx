@@ -154,11 +154,11 @@ export default function WellnessProgramLanding() {
                   transform: translateX(0);
                 }
                 100% {
-                  transform: translateX(calc(-16.666% - 6px));
+                  transform: translateX(calc(-100% - 96px));
                 }
               }
               .carousel-track {
-                animation: scroll-left 14s linear infinite;
+                animation: scroll-left 32s linear infinite;
               }
               .carousel-container:hover .carousel-track {
                 animation-play-state: paused;
