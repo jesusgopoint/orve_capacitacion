@@ -18,6 +18,8 @@ export default function WellnessProgramLanding() {
     setOpenFAQ(openFAQ === index ? null : index);
   };
 
+
+
   const handleFormChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -332,6 +334,120 @@ export default function WellnessProgramLanding() {
                   </div>
                 );
               })}
+            </div>
+          </div>
+        </section>
+
+        {/* Action Lines Section */}
+        <section className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
+          <div className="container">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Líneas de Acción
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Cuatro pilares estratégicos diseñados para transformar el bienestar organizacional
+              </p>
+            </div>
+
+            {/* Action Cards Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+              {/* Card 1: Mental Health */}
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all p-8 border-t-4 border-primary">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="bg-primary/10 p-4 rounded-lg">
+                    <Smile className="w-8 h-8 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900">Salud Mental y Prevención</h3>
+                </div>
+                <p className="text-gray-600 mb-6 text-sm">
+                  <strong>Enfoque:</strong> Contención emocional y cumplimiento normativo.
+                </p>
+                <div className="space-y-3">
+                  <p className="text-sm text-gray-700">✓ Charlas de salud mental y autocuidado</p>
+                  <p className="text-sm text-gray-700">✓ Gestión de Riesgos Psicosociales (CEAL SM)</p>
+                  <p className="text-sm text-gray-700">✓ Prevención y manejo del estrés</p>
+                  <p className="text-sm text-gray-700">✓ Mindfulness y Yoga</p>
+                </div>
+              </div>
+
+              {/* Card 2: Quality of Life */}
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all p-8 border-t-4 border-blue-500">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="bg-blue-100 p-4 rounded-lg">
+                    <Heart className="w-8 h-8 text-blue-500" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900">Calidad de Vida Laboral</h3>
+                </div>
+                <p className="text-gray-600 mb-6 text-sm">
+                  <strong>Enfoque:</strong> Intervenciones físicas y recreativas para el día a día.
+                </p>
+                <div className="space-y-3">
+                  <p className="text-sm text-gray-700">✓ Pausas activas y Masajes express</p>
+                  <p className="text-sm text-gray-700">✓ Charlas de hábitos saludables y nutrición</p>
+                  <p className="text-sm text-gray-700">✓ Jornadas recreativas</p>
+                  <p className="text-sm text-gray-700">✓ Celebración de fechas importantes</p>
+                </div>
+              </div>
+
+              {/* Card 3: Team Building */}
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all p-8 border-t-4 border-green-500">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="bg-green-100 p-4 rounded-lg">
+                    <Users className="w-8 h-8 text-green-500" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900">Fortalecimiento y Cohesión de Equipos</h3>
+                </div>
+                <p className="text-gray-600 mb-6 text-sm">
+                  <strong>Enfoque:</strong> Actividades lúdicas para mejorar la cultura organizacional.
+                </p>
+                <div className="space-y-3">
+                  <p className="text-sm text-gray-700">✓ Team Building (Indoor y Outdoor)</p>
+                  <p className="text-sm text-gray-700">✓ Actividades lúdicas y Role playing</p>
+                  <p className="text-sm text-gray-700">✓ Talleres de Resolución de Conflictos</p>
+                  <p className="text-sm text-gray-700">✓ Trabajo en Equipo</p>
+                </div>
+              </div>
+
+              {/* Card 4: Leadership */}
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all p-8 border-t-4 border-orange-500">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="bg-orange-100 p-4 rounded-lg">
+                    <TrendingUp className="w-8 h-8 text-orange-500" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900">Desarrollo de Liderazgo y Talento</h3>
+                </div>
+                <p className="text-gray-600 mb-6 text-sm">
+                  <strong>Enfoque:</strong> Acompañamiento estratégico para mandos medios y jefaturas.
+                </p>
+                <div className="space-y-3">
+                  <p className="text-sm text-gray-700">✓ Coaching ejecutivo e individual</p>
+                  <p className="text-sm text-gray-700">✓ Programas de Liderazgo</p>
+                  <p className="text-sm text-gray-700">✓ Comunicación Efectiva</p>
+                  <p className="text-sm text-gray-700">✓ Feedback guiado y desarrollo</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Sence Certification Banner */}
+            <div className="bg-gradient-to-r from-primary/5 to-blue-50 rounded-xl p-8 mb-12 border-2 border-primary/20">
+              <div className="flex items-center justify-center gap-4">
+                <Zap className="w-8 h-8 text-primary flex-shrink-0" />
+                <div>
+                  <p className="font-bold text-gray-900 text-lg">Franquicia Sence</p>
+                  <p className="text-sm text-gray-600">Este programa de bienestar es imputable a la Franquicia Sence, permitiendo a las empresas utilizar sus recursos de capacitación de forma estratégica.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA Button */}
+            <div className="text-center">
+              <button
+                onClick={scrollToForm}
+                className="bg-primary text-white px-10 py-4 rounded-lg font-semibold hover:bg-blue-400 transition-colors text-lg"
+              >
+                Cotiza tu programa aquí
+              </button>
             </div>
           </div>
         </section>
