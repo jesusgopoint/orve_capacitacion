@@ -63,9 +63,9 @@ export default function WellnessProgramLanding() {
   ];
 
   const results = [
-    { metric: "90%", description: "de empresas clientes declaran estar satisfechas o muy satisfechas con los programas de capacitación ejecutados por ORVE" },
-    { metric: "35%", description: "de reducción del estrés percibido, según encuestas post-capacitación en programas de bienestar, comunicación y liderazgo" },
-    { metric: "+100", description: "actividades de capacitación ejecutadas en el año, entre cursos, talleres, relatorías y programas especiales" },
+    { metric: "90%", description: "Empresas satisfechas" },
+    { metric: "35%", description: "Reducción de estrés" },
+    { metric: "+100", description: "Actividades ejecutadas" },
   ];
 
   // Carrusel de resultados
@@ -323,7 +323,7 @@ export default function WellnessProgramLanding() {
                       {result.metric}
                     </div>
                     <p className="text-sm md:text-base text-gray-700 leading-snug max-w-xs mx-auto">
-                      {result.description.split(',')[0]}
+                      {result.description}
                     </p>
                   </div>
                 );
