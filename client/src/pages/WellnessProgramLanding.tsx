@@ -265,8 +265,8 @@ export default function WellnessProgramLanding() {
               </div>
               <div className="rounded-lg overflow-hidden">
                 <img
-                  src="/images/bienestarlaboralysaludmentalenempresas.webp"
-                  alt="bienestarlaboralysaludmentalenempresas"
+                  src="/images/equipoenprogramadebienestar2.webp"
+                  alt="equipoenprogramadebienestar"
                   className="w-full h-96 object-cover rounded-lg"
                 />
               </div>
@@ -275,7 +275,7 @@ export default function WellnessProgramLanding() {
         </section>
 
         {/* Results Section */}
-        <section className="py-8 md:py-12 bg-blue-50">
+        <section className="py-8 md:py-12 bg-gradient-to-r from-purple-50 to-blue-50 border-t-4 border-purple-200">
           <div className="container">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {results.map((result, index) => (
