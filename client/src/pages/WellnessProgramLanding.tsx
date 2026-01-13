@@ -304,6 +304,34 @@ export default function WellnessProgramLanding() {
           </div>
         </section>
 
+        {/* Results Section - Compact Strip with Icons */}
+        <section className="py-12 md:py-16 bg-gradient-to-r from-blue-50 via-blue-25 to-blue-50">
+          <div className="container">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+              {results.map((result, index) => {
+                const icons = [
+                  <Heart key="heart" className="w-8 h-8 text-primary" />,
+                  <TrendingUp key="trending" className="w-8 h-8 text-primary" />,
+                  <Users key="users" className="w-8 h-8 text-primary" />,
+                ];
+                return (
+                  <div key={index} className="text-center">
+                    <div className="flex justify-center mb-4">
+                      {icons[index]}
+                    </div>
+                    <div className="text-5xl md:text-6xl font-bold text-primary mb-3">
+                      {result.metric}
+                    </div>
+                    <p className="text-sm md:text-base text-gray-700 leading-snug max-w-xs mx-auto">
+                      {result.description.split(',')[0]}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
         {/* Benefits Section - Cards Design */}
         <section className="py-16 md:py-24 bg-gray-50">
           <div className="container max-w-5xl">
@@ -338,23 +366,7 @@ export default function WellnessProgramLanding() {
           </div>
         </section>
 
-        {/* Results Section - Compact Strip */}
-        <section className="py-8 md:py-12 bg-gradient-to-r from-blue-50 via-blue-25 to-blue-50">
-          <div className="container">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-              {results.map((result, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-5xl md:text-6xl font-bold text-primary mb-2">
-                    {result.metric}
-                  </div>
-                  <p className="text-sm md:text-base text-gray-700 leading-snug">
-                    {result.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+
 
         {/* Action Lines Section */}        <section className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
           <div className="container">
