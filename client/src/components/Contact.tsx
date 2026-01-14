@@ -46,10 +46,13 @@ export default function Contact() {
       const formElement = e.currentTarget as HTMLFormElement;
       const formDataObj = new FormData(formElement);
       
+      // Crear asunto personalizado con nombre y apellido
+      const fullName = `${formData.firstName} ${formData.lastName}`;
+      const subject = `Nuevo formulario desde Web | ${fullName}`;
+      
       // Agregar destinatarios
-      formDataObj.append('_to', 'comercial@orvecapacitacion.cl,seo@gopointagency.com');
-      formDataObj.append('_cc', 'seo@gopointagency.com');
-      formDataObj.append('_subject', 'Nuevo mensaje de contacto desde Orve Capacitación');
+      formDataObj.append('_to', 'seo@gopointagency.com');
+      formDataObj.append('_subject', subject);
       formDataObj.append('_captcha', 'false');
       
       const response = await fetch('https://formspree.io/f/myzgwbzr', {

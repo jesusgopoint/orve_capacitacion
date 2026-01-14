@@ -82,9 +82,41 @@ export default function WellnessProgramLanding() {
     }));
   };
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    
+    try {
+      // Enviar el formulario a través de Formspree
+      const formElement = e.currentTarget as HTMLFormElement;
+      const formDataObj = new FormData(formElement);
+      
+      // Crear asunto personalizado con nombre y apellido
+      const fullName = `${formData.nombre} ${formData.apellido}`;
+      const subject = `Nuevo formulario desde Web | ${fullName}`;
+      
+      // Agregar destinatarios
+      formDataObj.append('_to', 'seo@gopointagency.com');
+      formDataObj.append('_subject', subject);
+      formDataObj.append('_captcha', 'false');
+      
+      const response = await fetch('https://formspree.io/f/myzgwbzr', {
+        method: 'POST',
+        body: formDataObj,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      
+      if (response.ok) {
+        alert('¡Mensaje enviado exitosamente! Nos pondremos en contacto pronto.');
+        setFormData({ nombre: "", apellido: "", correo: "", telefono: "", mensaje: "" });
+      } else {
+        alert('Hubo un error al enviar el mensaje. Por favor, intenta de nuevo.');
+      }
+    } catch (error) {
+      console.error('Error al enviar formulario:', error);
+      alert('Error al enviar el formulario. Por favor, intenta de nuevo.');
+    }
   };
 
   const scrollToForm = () => {
