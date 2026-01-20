@@ -86,32 +86,31 @@ export default function WellnessProgramLanding() {
     e.preventDefault();
     
     try {
-      // Enviar el formulario a través de Formspree
-      const formElement = e.currentTarget as HTMLFormElement;
-      const formDataObj = new FormData(formElement);
-      
-      // Crear asunto personalizado con nombre y apellido
       const fullName = `${formData.nombre} ${formData.apellido}`;
       const subject = `Nuevo formulario desde Web | ${fullName}`;
       
-      // Agregar destinatarios
-      formDataObj.append('_to', 'seo@gopointagency.com');
-      formDataObj.append('_subject', subject);
-      formDataObj.append('_captcha', 'false');
+      const emailContent = `<h2>Nuevo formulario - Programa de Bienestar</h2><p><strong>Nombre:</strong> ${formData.nombre}</p><p><strong>Apellido:</strong> ${formData.apellido}</p><p><strong>Email:</strong> ${formData.correo}</p><p><strong>Telefono:</strong> ${formData.telefono}</p><p><strong>Mensaje:</strong></p><p>${formData.mensaje.replace(/\n/g, '<br>')}</p>`;
       
-      const response = await fetch('https://formspree.io/f/myzgwbzr', {
+      const response = await fetch('/api/send-email', {
         method: 'POST',
-        body: formDataObj,
         headers: {
-          'Accept': 'application/json'
-        }
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          to: 'seo@gopointagency.com',
+          from: 'comercial@orvecapacitacion.cl',
+          subject: subject,
+          html: emailContent,
+          replyTo: formData.correo
+        })
       });
       
       if (response.ok) {
         alert('¡Mensaje enviado exitosamente! Nos pondremos en contacto pronto.');
         setFormData({ nombre: "", apellido: "", correo: "", telefono: "", mensaje: "" });
       } else {
-        alert('Hubo un error al enviar el mensaje. Por favor, intenta de nuevo.');
+        const error = await response.json();
+        alert('Hubo un error al enviar el mensaje: ' + (error.message || 'Por favor, intenta de nuevo.'));
       }
     } catch (error) {
       console.error('Error al enviar formulario:', error);

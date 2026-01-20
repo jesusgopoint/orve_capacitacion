@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { Resend } from "resend";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -42,32 +43,45 @@ export default function Contact() {
     e.preventDefault();
     
     try {
-      // Enviar el formulario a través de FormSubmit
-      const formElement = e.currentTarget as HTMLFormElement;
-      const formDataObj = new FormData(formElement);
-      
       // Crear asunto personalizado con nombre y apellido
       const fullName = `${formData.firstName} ${formData.lastName}`;
       const subject = `Nuevo formulario desde Web | ${fullName}`;
       
-      // Agregar destinatarios
-      formDataObj.append('_to', 'seo@gopointagency.com');
-      formDataObj.append('_subject', subject);
-      formDataObj.append('_captcha', 'false');
+      // Crear contenido del email
+      const emailContent = `
+        <h2>Nuevo formulario de contacto</h2>
+        <p><strong>Nombre:</strong> ${formData.firstName}</p>
+        <p><strong>Apellido:</strong> ${formData.lastName}</p>
+        <p><strong>Email:</strong> ${formData.email}</p>
+        <p><strong>Teléfono:</strong> ${formData.phone}</p>
+        <p><strong>Mensaje:</strong></p>
+        <p>${formData.message.replace(/\n/g, '<br>')}</p>
+        ${formData.utm_source ? `<p><strong>UTM Source:</strong> ${formData.utm_source}</p>` : ''}
+        ${formData.utm_medium ? `<p><strong>UTM Medium:</strong> ${formData.utm_medium}</p>` : ''}
+        ${formData.utm_campaign ? `<p><strong>UTM Campaign:</strong> ${formData.utm_campaign}</p>` : ''}
+      `;
       
-      const response = await fetch('https://formspree.io/f/myzgwbzr', {
+      // Enviar a través de API backend
+      const response = await fetch('/api/send-email', {
         method: 'POST',
-        body: formDataObj,
         headers: {
-          'Accept': 'application/json'
-        }
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          to: 'seo@gopointagency.com',
+          from: 'comercial@orvecapacitacion.cl',
+          subject: subject,
+          html: emailContent,
+          replyTo: formData.email
+        })
       });
       
       if (response.ok) {
         alert('¡Mensaje enviado exitosamente! Nos pondremos en contacto pronto.');
         setFormData({ firstName: "", lastName: "", email: "", phone: "", message: "", utm_source: "", utm_medium: "", utm_campaign: "", utm_content: "", utm_term: "", campaign_id: "" });
       } else {
-        alert('Hubo un error al enviar el mensaje. Por favor, intenta de nuevo.');
+        const error = await response.json();
+        alert('Hubo un error al enviar el mensaje: ' + (error.message || 'Por favor, intenta de nuevo.'));
       }
     } catch (error) {
       console.error('Error al enviar formulario:', error);
