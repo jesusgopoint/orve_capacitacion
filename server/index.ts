@@ -2,7 +2,6 @@ import express from "express";
 import { createServer } from "http";
 import path from "path";
 import { fileURLToPath } from "url";
-import { sendEmail } from "./send-email.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -19,28 +18,6 @@ async function startServer() {
 
   app.use(express.static(staticPath));
   app.use(express.json());
-
-  // Email API endpoint
-  app.post("/api/send-email", async (req, res) => {
-    try {
-      const { to, from, subject, html, replyTo } = req.body;
-
-      if (!to || !from || !subject || !html) {
-        return res.status(400).json({ message: "Missing required fields" });
-      }
-
-      const result = await sendEmail(to, from, subject, html, replyTo);
-
-      if (result.error) {
-        return res.status(400).json({ message: result.error.message });
-      }
-
-      res.json({ success: true, id: result.data?.id });
-    } catch (error) {
-      console.error("Error sending email:", error);
-      res.status(500).json({ message: "Error sending email" });
-    }
-  });
 
   // Handle client-side routing - serve index.html for all routes
   app.get("*", (_req, res) => {

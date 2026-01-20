@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ChevronDown, ChevronUp, Heart, Users, TrendingUp, Smile, Zap } from "lucide-react";
+import { Resend } from "resend";
+
+const resend = new Resend(import.meta.env.VITE_RESEND_API_KEY);
 
 export default function WellnessProgramLanding() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
@@ -91,26 +94,19 @@ export default function WellnessProgramLanding() {
       
       const emailContent = `<h2>Nuevo formulario - Programa de Bienestar</h2><p><strong>Nombre:</strong> ${formData.nombre}</p><p><strong>Apellido:</strong> ${formData.apellido}</p><p><strong>Email:</strong> ${formData.correo}</p><p><strong>Telefono:</strong> ${formData.telefono}</p><p><strong>Mensaje:</strong></p><p>${formData.mensaje.replace(/\n/g, '<br>')}</p>`;
       
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          to: 'seo@gopointagency.com',
-          from: 'comercial@orvecapacitacion.cl',
-          subject: subject,
-          html: emailContent,
-          replyTo: formData.correo
-        })
+      const response = await resend.emails.send({
+        from: 'comercial@orvecapacitacion.cl',
+        to: 'seo@gopointagency.com',
+        subject: subject,
+        html: emailContent,
+        replyTo: formData.correo
       });
       
-      if (response.ok) {
+      if (response.error) {
+        alert('Hubo un error al enviar el mensaje: ' + response.error.message);
+      } else {
         alert('¡Mensaje enviado exitosamente! Nos pondremos en contacto pronto.');
         setFormData({ nombre: "", apellido: "", correo: "", telefono: "", mensaje: "" });
-      } else {
-        const error = await response.json();
-        alert('Hubo un error al enviar el mensaje: ' + (error.message || 'Por favor, intenta de nuevo.'));
       }
     } catch (error) {
       console.error('Error al enviar formulario:', error);

@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { Resend } from "resend";
 
+const resend = new Resend(import.meta.env.VITE_RESEND_API_KEY);
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -43,11 +45,9 @@ export default function Contact() {
     e.preventDefault();
     
     try {
-      // Crear asunto personalizado con nombre y apellido
       const fullName = `${formData.firstName} ${formData.lastName}`;
       const subject = `Nuevo formulario desde Web | ${fullName}`;
       
-      // Crear contenido del email
       const emailContent = `
         <h2>Nuevo formulario de contacto</h2>
         <p><strong>Nombre:</strong> ${formData.firstName}</p>
@@ -61,27 +61,19 @@ export default function Contact() {
         ${formData.utm_campaign ? `<p><strong>UTM Campaign:</strong> ${formData.utm_campaign}</p>` : ''}
       `;
       
-      // Enviar a través de API backend
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          to: 'seo@gopointagency.com',
-          from: 'comercial@orvecapacitacion.cl',
-          subject: subject,
-          html: emailContent,
-          replyTo: formData.email
-        })
+      const response = await resend.emails.send({
+        from: 'comercial@orvecapacitacion.cl',
+        to: 'seo@gopointagency.com',
+        subject: subject,
+        html: emailContent,
+        replyTo: formData.email
       });
       
-      if (response.ok) {
+      if (response.error) {
+        alert('Hubo un error al enviar el mensaje: ' + response.error.message);
+      } else {
         alert('¡Mensaje enviado exitosamente! Nos pondremos en contacto pronto.');
         setFormData({ firstName: "", lastName: "", email: "", phone: "", message: "", utm_source: "", utm_medium: "", utm_campaign: "", utm_content: "", utm_term: "", campaign_id: "" });
-      } else {
-        const error = await response.json();
-        alert('Hubo un error al enviar el mensaje: ' + (error.message || 'Por favor, intenta de nuevo.'));
       }
     } catch (error) {
       console.error('Error al enviar formulario:', error);
