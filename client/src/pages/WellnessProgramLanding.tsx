@@ -15,7 +15,27 @@ export default function WellnessProgramLanding() {
     correo: "",
     telefono: "",
     mensaje: "",
+    utm_source: "",
+    utm_medium: "",
+    utm_campaign: "",
+    utm_content: "",
+    utm_term: "",
+    campaign_id: ""
   });
+
+  // Capturar parámetros UTM de la URL
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    setFormData(prev => ({
+      ...prev,
+      utm_source: params.get('utm_source') || '',
+      utm_medium: params.get('utm_medium') || '',
+      utm_campaign: params.get('utm_campaign') || '',
+      utm_content: params.get('utm_content') || '',
+      utm_term: params.get('utm_term') || '',
+      campaign_id: params.get('campaign_id') || ''
+    }));
+  }, []);
 
   const toggleFAQ = (index: number) => {
     setOpenFAQ(openFAQ === index ? null : index);
@@ -107,7 +127,13 @@ export default function WellnessProgramLanding() {
           correo: formData.correo,
           telefono: formData.telefono,
           mensaje: formData.mensaje,
-          replyTo: formData.correo
+          replyTo: formData.correo,
+          utm_source: formData.utm_source,
+          utm_medium: formData.utm_medium,
+          utm_campaign: formData.utm_campaign,
+          utm_content: formData.utm_content,
+          utm_term: formData.utm_term,
+          campaign_id: formData.campaign_id
         })
       });
       
@@ -121,7 +147,7 @@ export default function WellnessProgramLanding() {
           });
         }
         
-        setFormData({ nombre: "", apellido: "", correo: "", telefono: "", mensaje: "" });
+        setFormData({ nombre: "", apellido: "", correo: "", telefono: "", mensaje: "", utm_source: "", utm_medium: "", utm_campaign: "", utm_content: "", utm_term: "", campaign_id: "" });
         setLocation('/gracias');
       } else {
         const error = await response.json();
@@ -529,8 +555,16 @@ export default function WellnessProgramLanding() {
                 rows={6}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none"
               ></textarea>
-              <button
-                type="submit"
+
+              {/* Campos ocultos UTM */}
+              <input type="hidden" name="utm_source" id="utm_source" value={formData.utm_source} />
+              <input type="hidden" name="utm_medium" id="utm_medium" value={formData.utm_medium} />
+              <input type="hidden" name="utm_campaign" id="utm_campaign" value={formData.utm_campaign} />
+              <input type="hidden" name="utm_content" id="utm_content" value={formData.utm_content} />
+              <input type="hidden" name="utm_term" id="utm_term" value={formData.utm_term} />
+              <input type="hidden" name="campaign_id" id="campaign_id" value={formData.campaign_id} />
+
+              <button                type="submit"
                 className="w-full md:w-auto bg-primary text-white py-3 px-8 rounded-lg font-semibold hover:bg-blue-400 transition-colors"
               >
                 Enviar
