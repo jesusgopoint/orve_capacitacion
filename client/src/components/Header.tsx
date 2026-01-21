@@ -66,6 +66,16 @@ export default function Header() {
           ))}
         </nav>
 
+        {/* Orve Learning Button */}
+        <a
+          href="https://orvelearning.cl/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden md:inline-block px-4 py-2 border-2 border-primary text-primary font-medium rounded-lg hover:bg-primary/5 transition-colors"
+        >
+          Orve Learning
+        </a>
+
         {/* Experience Badge */}
         <div className="hidden md:flex items-center gap-3 bg-primary/10 px-6 py-3 rounded-full">
           <span className="text-lg font-bold text-primary">15+</span>

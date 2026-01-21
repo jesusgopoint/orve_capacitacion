@@ -26,3 +26,4 @@
 - [x] Modificar formularios para enviar correos a seo@gopointagency.com y comercial@orvecapacitacion.cl
 - [x] Crear página /capacitacion-laboral replicando exactamente el diseño de /programa-de-bienestar
 - [x] Agregar enlace a Capacitación Laboral en menú de Servicios
+- [x] Agregar botón Orve Learning transparente con borde en Header y Footer
