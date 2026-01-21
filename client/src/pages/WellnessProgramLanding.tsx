@@ -556,13 +556,13 @@ export default function WellnessProgramLanding() {
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none"
               ></textarea>
 
-              {/* Campos ocultos UTM */}
-              <input type="hidden" name="utm_source" id="utm_source" value={formData.utm_source} />
-              <input type="hidden" name="utm_medium" id="utm_medium" value={formData.utm_medium} />
-              <input type="hidden" name="utm_campaign" id="utm_campaign" value={formData.utm_campaign} />
-              <input type="hidden" name="utm_content" id="utm_content" value={formData.utm_content} />
-              <input type="hidden" name="utm_term" id="utm_term" value={formData.utm_term} />
-              <input type="hidden" name="campaign_id" id="campaign_id" value={formData.campaign_id} />
+              {/* Campos ocultos UTM - No controlados para que GTM pueda modificarlos */}
+              <input type="hidden" name="utm_source" id="utm_source" defaultValue={formData.utm_source} />
+              <input type="hidden" name="utm_medium" id="utm_medium" defaultValue={formData.utm_medium} />
+              <input type="hidden" name="utm_campaign" id="utm_campaign" defaultValue={formData.utm_campaign} />
+              <input type="hidden" name="utm_content" id="utm_content" defaultValue={formData.utm_content} />
+              <input type="hidden" name="utm_term" id="utm_term" defaultValue={formData.utm_term} />
+              <input type="hidden" name="campaign_id" id="campaign_id" defaultValue={formData.campaign_id} />
 
               <button                type="submit"
                 className="w-full md:w-auto bg-primary text-white py-3 px-8 rounded-lg font-semibold hover:bg-blue-400 transition-colors"
