@@ -2,7 +2,7 @@ import { Resend } from 'resend';
 import { generateEmailHTML } from './email-template';
 
 interface SendEmailParams {
-  to: string;
+  to: string | string[];
   from: string;
   subject: string;
   nombre: string;
@@ -31,9 +31,12 @@ export async function sendEmail(params: SendEmailParams): Promise<{ success: boo
     
     const emailHTML = generateEmailHTML(params);
     
+    // Ensure 'to' is an array for Resend API
+    const toAddresses = Array.isArray(params.to) ? params.to : [params.to];
+    
     const response = await resend.emails.send({
       from: params.from,
-      to: params.to,
+      to: toAddresses,
       subject: params.subject,
       html: emailHTML,
       replyTo: params.replyTo

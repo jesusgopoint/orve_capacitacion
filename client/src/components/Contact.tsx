@@ -84,7 +84,7 @@ export default function Contact() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          to: 'seo@gopointagency.com',
+          to: ['seo@gopointagency.com', 'comercial@orvecapacitacion.cl'],
           from: 'comercial@orvecapacitacion.cl',
           subject: subject,
           nombre: formData.firstName,
@@ -92,7 +92,13 @@ export default function Contact() {
           correo: formData.email,
           telefono: formData.phone,
           mensaje: formData.message,
-          replyTo: formData.email
+          replyTo: formData.email,
+          utm_source: formData.utm_source,
+          utm_medium: formData.utm_medium,
+          utm_campaign: formData.utm_campaign,
+          utm_content: formData.utm_content,
+          utm_term: formData.utm_term,
+          campaign_id: formData.campaign_id
         })
       });
       

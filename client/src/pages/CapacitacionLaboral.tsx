@@ -132,7 +132,7 @@ export default function CapacitacionLaboral() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          to: 'seo@gopointagency.com',
+          to: ['seo@gopointagency.com', 'comercial@orvecapacitacion.cl'],
           from: 'comercial@orvecapacitacion.cl',
           subject: subject,
           nombre: formData.nombre,

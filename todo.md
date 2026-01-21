@@ -23,5 +23,6 @@
 - [x] Campos UTM cambiados a inputs no controlados para que GTM pueda inyectar valores
 - [x] Evento personalizado 'gtmFormReady' agregado para activar radar de GTM cuando formularios estan listos
 - [ ] Test published website to verify forms and GTM events working correctly
+- [x] Modificar formularios para enviar correos a seo@gopointagency.com y comercial@orvecapacitacion.cl
 - [x] Crear página /capacitacion-laboral replicando exactamente el diseño de /programa-de-bienestar
 - [x] Agregar enlace a Capacitación Laboral en menú de Servicios
