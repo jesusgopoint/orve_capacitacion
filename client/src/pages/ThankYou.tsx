@@ -2,6 +2,8 @@ import { useEffect } from 'react';
 import { useLocation } from 'wouter';
 import { CheckCircle, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 export default function ThankYou() {
   const [, setLocation] = useLocation();
@@ -12,8 +14,10 @@ export default function ThankYou() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center px-4 py-20">
-      <div className="max-w-md w-full text-center">
+    <div className="min-h-screen flex flex-col bg-white">
+      <Header />
+      <main className="flex-1 bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center px-4 py-20">
+        <div className="max-w-md w-full text-center">
         {/* Icono de éxito */}
         <div className="mb-8 flex justify-center">
           <div className="relative">
@@ -45,7 +49,9 @@ export default function ThankYou() {
           Volver al inicio
           <ArrowRight className="w-4 h-4" />
         </Button>
-      </div>
+        </div>
+      </main>
+      <Footer />
     </div>
   );
 }
