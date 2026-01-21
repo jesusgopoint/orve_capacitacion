@@ -17,7 +17,6 @@ export default function CapacitacionLaboral() {
   const [, setLocation] = useLocation();
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
   const [selectedActionLine, setSelectedActionLine] = useState(0);
-  const [currentResultIndex, setCurrentResultIndex] = useState(0);
   const [formData, setFormData] = useState({
     nombre: "",
     apellido: "",
@@ -186,14 +185,6 @@ export default function CapacitacionLaboral() {
     { metric: "+100%", description: "Participación" },
   ];
 
-  // Carrusel de resultados
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentResultIndex((prev) => (prev + 1) % results.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [results.length]);
-
   const faqItems = [
     {
       question: "¿Qué temáticas aborda el programa de capacitación laboral?",
@@ -217,14 +208,6 @@ export default function CapacitacionLaboral() {
     }
   ];
 
-  const benefits = [
-    "Mejora del desempeño laboral: Colaboradores más preparados ejecutan sus tareas con mayor eficiencia y precisión.",
-    "Clima organizacional positivo: El aprendizaje grupal fortalece los vínculos y la motivación de los equipos.",
-    "Retención de talento: Invertir en desarrollo reduce la alta rotación al aumentar el compromiso y sentido de pertenencia.",
-    "Salud mental en el trabajo: Reducimos la desmotivación y el desgaste emocional al brindar herramientas para afrontar nuevos desafíos.",
-    "Marca empleadora: Una empresa que capacita es vista como un lugar de excelencia, mitigando riesgos psicosociales."
-  ];
-
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -243,26 +226,100 @@ export default function CapacitacionLaboral() {
                 </p>
                 <button
                   onClick={scrollToForm}
-                  className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors"
+                  className="bg-primary text-white px-10 py-4 rounded-lg font-semibold hover:bg-blue-400 transition-colors text-lg"
                 >
                   Solicitar información del programa
                 </button>
               </div>
 
-              {/* Right Column - Images Grid */}
+              {/* Right Column - Image Grid */}
               <div className="grid grid-cols-2 gap-4">
-                <div className="bg-gray-200 h-48 rounded-lg flex items-center justify-center">
-                  <span className="text-gray-500">Imagen 1</span>
+                <div className="overflow-hidden rounded-lg h-48 md:h-56">
+                  <img
+                    src="/images/programadebienestarlaboralparaempresas.webp"
+                    alt="capacitacion-laboral-1"
+                    className="w-full h-full object-cover animate-fade-in-scale"
+                    style={{ animationDelay: "0.1s" }}
+                  />
                 </div>
-                <div className="bg-gray-200 h-48 rounded-lg flex items-center justify-center">
-                  <span className="text-gray-500">Imagen 2</span>
+                <div className="overflow-hidden rounded-lg h-48 md:h-56">
+                  <img
+                    src="/images/programasdebienestarlaboralyclimaorganizacional.webp"
+                    alt="capacitacion-laboral-2"
+                    className="w-full h-full object-cover animate-fade-in-scale"
+                    style={{ animationDelay: "0.2s" }}
+                  />
                 </div>
-                <div className="bg-gray-200 h-48 rounded-lg flex items-center justify-center">
-                  <span className="text-gray-500">Imagen 3</span>
+                <div className="overflow-hidden rounded-lg h-48 md:h-56">
+                  <img
+                    src="/images/bienestarlaboralyproductividadempresarial.webp"
+                    alt="capacitacion-laboral-3"
+                    className="w-full h-full object-cover animate-fade-in-scale"
+                    style={{ animationDelay: "0.3s" }}
+                  />
                 </div>
-                <div className="bg-gray-200 h-48 rounded-lg flex items-center justify-center">
-                  <span className="text-gray-500">Imagen 4</span>
+                <div className="overflow-hidden rounded-lg h-48 md:h-56">
+                  <img
+                    src="/images/bienestarlaboralysaludemocionalenempresas.webp"
+                    alt="capacitacion-laboral-4"
+                    className="w-full h-full object-cover animate-fade-in-scale"
+                    style={{ animationDelay: "0.4s" }}
+                  />
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Companies Carousel Section */}
+        <section className="py-12 md:py-16 bg-white">
+          <div className="container">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
+              Empresas que confían en nosotros
+            </h2>
+            <div className="relative overflow-hidden bg-white rounded-lg">
+              <style>{`
+                @keyframes scroll-logos {
+                  0% {
+                    transform: translateX(0);
+                  }
+                  100% {
+                    transform: translateX(-2560px);
+                  }
+                }
+                .carousel-container {
+                  animation: scroll-logos 14s linear infinite;
+                }
+                .carousel-container:hover {
+                  animation-play-state: paused;
+                }
+              `}</style>
+              <div className="flex gap-6 carousel-container w-fit">
+                {[
+                  "/images/dimacofi-logo.webp",
+                  "/images/CYD-logo.webp",
+                  "/images/eklipse-logo.webp",
+                  "/images/nexus-logo.webp",
+                  "/images/iplacex-logo.webp",
+                  "/images/trekrental-logo.webp",
+                  "/images/bata-logo.webp",
+                  "/images/imh-logo.webp",
+                  "/images/celhex-logo.webp",
+                  "/images/humboldt-logo.webp",
+                  "/images/ultranav-logo.webp",
+                  "/images/siigroup-logo.webp",
+                  "/images/scotiabank-logo.webp",
+                  "/images/crispagold-logo.webp",
+                  "/images/saesa-logo.webp",
+                  "/images/santafetransportes-logo.webp",
+                ].map((logo, index) => (
+                  <img
+                    key={index}
+                    src={logo}
+                    alt={`Logo ${index + 1}`}
+                    className="h-20 w-40 object-contain flex-shrink-0"
+                  />
+                ))}
               </div>
             </div>
           </div>
@@ -271,42 +328,46 @@ export default function CapacitacionLaboral() {
         {/* Why Choose Section */}
         <section className="py-16 md:py-24 bg-gray-50">
           <div className="container">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
-              Por qué elegir nuestra Capacitación Laboral
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+              Por qué elegir nuestra Capacitación Laboral Estratégica
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                   La formación continua no es un gasto, sino la base de una <strong>cultura organizacional</strong> sólida. Nuestro programa se integra a la <strong>gestión de personas / RRHH</strong>, transformando la <strong>experiencia del colaborador</strong> en un camino de crecimiento constante que promueve el <strong>trabajo decente</strong> y la competitividad.
                 </p>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  Diseñamos intervenciones alineadas a los objetivos estratégicos, promoviendo el aprendizaje con un enfoque práctico y sostenible en el tiempo.
+                </p>
               </div>
-              <div className="bg-gray-300 h-96 rounded-lg flex items-center justify-center">
-                <span className="text-gray-600">Imagen grande - Grupo celebrando</span>
+              <div className="rounded-lg overflow-hidden">
+                <img
+                  src="/images/equipoenprogramadebienestar2.webp"
+                  alt="capacitacion-laboral-equipo"
+                  className="w-full h-96 object-cover rounded-lg"
+                />
               </div>
             </div>
           </div>
         </section>
 
         {/* Results Section */}
-        <section className="py-16 md:py-24 bg-white">
+        <section className="py-8 md:py-12 bg-gradient-to-r from-purple-50 to-blue-50 border-t-4 border-purple-200">
           <div className="container">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
-              Resultados que hablan por sí solos
-            </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {results.map((result, index) => (
-                <div
-                  key={index}
-                  className={`p-8 rounded-lg text-center transition-all ${
-                    index === currentResultIndex
-                      ? "bg-purple-600 text-white scale-105"
-                      : "bg-gray-100 text-gray-900"
-                  }`}
-                >
-                  <div className="text-4xl md:text-5xl font-bold mb-4">
+                <div key={index} className="text-center">
+                  <div className="flex justify-center mb-3">
+                    {index === 0 && <Briefcase className="w-8 h-8 text-primary" />}
+                    {index === 1 && <Target className="w-8 h-8 text-primary" />}
+                    {index === 2 && <Users className="w-8 h-8 text-primary" />}
+                  </div>
+                  <div className="text-3xl md:text-4xl font-bold text-primary mb-3">
                     {result.metric}
                   </div>
-                  <p className="text-lg font-semibold">{result.description}</p>
+                  <p className="text-xs text-gray-700 leading-snug max-w-xs mx-auto">
+                    {result.description}
+                  </p>
                 </div>
               ))}
             </div>
@@ -314,68 +375,38 @@ export default function CapacitacionLaboral() {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-16 md:py-24 bg-gray-50">
-          <div className="container">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
-              Beneficios de la Capacitación para las personas y la empresa
-            </h2>
-            <div className="space-y-6">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex gap-4">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-purple-600 text-white flex items-center justify-center font-bold">
-                    •
-                  </div>
-                  <p className="text-lg text-gray-700">{benefit}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Action Lines Section */}
         <section className="py-16 md:py-24 bg-white">
-          <div className="container">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Líneas de acción
-            </h2>
-            <p className="text-lg text-gray-700 mb-12">
-              Impulsa el crecimiento de tu equipo a través de cuatro ejes estratégicos diseñados para transformar el conocimiento en resultados.
-            </p>
-
-            {/* Action Lines Tabs */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-12">
-              {actionLines.map((line, index) => {
-                const Icon = line.icon;
-                return (
-                  <button
-                    key={index}
-                    onClick={() => setSelectedActionLine(index)}
-                    className={`p-6 rounded-lg text-left transition-all ${
-                      selectedActionLine === index
-                        ? "bg-purple-600 text-white shadow-lg"
-                        : "bg-gray-100 text-gray-900 hover:bg-gray-200"
-                    }`}
-                  >
-                    <Icon className="w-8 h-8 mb-3" />
-                    <h3 className="font-bold text-lg">{line.title}</h3>
-                  </button>
-                );
-              })}
-            </div>
-
-            {/* Selected Action Line Details */}
-            <div className="bg-gray-50 p-8 rounded-lg">
-              <h3 className="text-2xl font-bold mb-4">
-                {actionLines[selectedActionLine].title}
-              </h3>
-              <p className="text-lg text-gray-700 mb-6">
-                <strong>Enfoque:</strong> {actionLines[selectedActionLine].focus}
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {actionLines[selectedActionLine].activities.map((activity, index) => (
-                  <div key={index} className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0" />
-                    <p className="text-gray-700">{activity}</p>
+          <div className="container max-w-6xl">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">Beneficios de la Capacitación Laboral para las personas y la empresa</h2>
+            <div className="overflow-hidden">
+              <style>{`
+                @keyframes benefits-carousel {
+                  0% { transform: translateX(0); }
+                  100% { transform: translateX(calc(-50% - 12px)); }
+                }
+                .benefits-carousel-container {
+                  display: flex;
+                  gap: 24px;
+                  animation: benefits-carousel 45s linear infinite;
+                  width: fit-content;
+                }
+                .benefits-carousel-container:hover {
+                  animation-play-state: paused;
+                }
+              `}</style>
+              <div className="benefits-carousel-container">
+                {[
+                  { title: "Mejora del desempeño laboral", desc: "Colaboradores más preparados ejecutan sus tareas con mayor eficiencia y precisión." },
+                  { title: "Clima organizacional positivo", desc: "El aprendizaje grupal fortalece los vínculos y la motivación de los equipos." },
+                  { title: "Retención de talento", desc: "Invertir en desarrollo reduce la alta rotación al aumentar el compromiso y sentido de pertenencia." },
+                  { title: "Salud mental en el trabajo", desc: "Reducimos la desmotivación y el desgaste emocional al brindar herramientas para nuevos desafíos." },
+                  { title: "Marca empleadora", desc: "Una empresa que capacita es vista como un lugar de excelencia, mitigando riesgos psicosociales." },
+                  { title: "Mejora del desempeño laboral", desc: "Colaboradores más preparados ejecutan sus tareas con mayor eficiencia y precisión." },
+                  { title: "Clima organizacional positivo", desc: "El aprendizaje grupal fortalece los vínculos y la motivación de los equipos." }
+                ].map((benefit, index) => (
+                  <div key={index} className="bg-gray-50 p-8 rounded-lg flex-shrink-0 w-96">
+                    <h3 className="text-lg font-bold text-gray-900 mb-3">{benefit.title}</h3>
+                    <p className="text-gray-700 text-sm">{benefit.desc}</p>
                   </div>
                 ))}
               </div>
@@ -383,32 +414,109 @@ export default function CapacitacionLaboral() {
           </div>
         </section>
 
+        {/* Action Lines Section */}
+        <section className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
+          <div className="container">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Líneas de Acción
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Cuatro pilares estratégicos diseñados para transformar el talento y potenciar el desempeño laboral
+              </p>
+            </div>
+
+            {/* Action Lines Accordion */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              {/* Left Column - Action Line Buttons */}
+              <div className="space-y-3">
+                {actionLines.map((line, index) => {
+                  const isSelected = selectedActionLine === index;
+                  return (
+                    <button
+                      key={index}
+                      onClick={() => setSelectedActionLine(index)}
+                      className={`w-full text-left px-6 py-4 rounded-lg font-semibold transition-all ${
+                        isSelected
+                          ? "bg-primary text-white shadow-lg"
+                          : "bg-gray-100 text-gray-900 hover:bg-gray-200"
+                      }`}
+                    >
+                      {line.title}
+                    </button>
+                  );
+                })}
+              </div>
+
+              {/* Right Column - Content Display */}
+              <div className="md:col-span-2">
+                {actionLines.map((line, index) => {
+                  if (selectedActionLine !== index) return null;
+                  const IconComponent = line.icon;
+                  return (
+                    <div key={index} className="bg-white rounded-xl p-8 shadow-lg">
+                      <div className="flex items-center gap-4 mb-6">
+                        <div className={`bg-${line.color}-100 p-4 rounded-lg`}>
+                          <IconComponent className={`w-8 h-8 text-${line.color === 'primary' ? 'primary' : line.color}-500`} />
+                        </div>
+                        <h3 className="text-2xl font-bold text-gray-900">{line.title}</h3>
+                      </div>
+                      <p className="text-gray-600 mb-6">
+                        <strong>Enfoque:</strong> {line.focus}
+                      </p>
+                      <div className="space-y-3">
+                        {line.activities.map((activity, idx) => (
+                          <p key={idx} className="text-gray-700 flex items-start gap-3">
+                            <span className="text-primary font-bold mt-0.5">✓</span>
+                            {activity}
+                          </p>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Sence Certification Banner */}
+            <div className="bg-gradient-to-r from-primary/5 to-blue-50 rounded-xl p-8 mb-12 border-2 border-primary/20">
+              <div className="flex items-center justify-center gap-4">
+                <Zap className="w-8 h-8 text-primary flex-shrink-0" />
+                <div>
+                  <p className="font-bold text-gray-900 text-lg">Franquicia Sence</p>
+                  <p className="text-sm text-gray-600">Este programa de capacitación laboral es imputable a la Franquicia Sence, permitiendo a las empresas utilizar sus recursos de capacitación de forma estratégica.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA Button */}
+            <div className="text-center">
+              <button
+                onClick={scrollToForm}
+                className="bg-primary text-white px-10 py-4 rounded-lg font-semibold hover:bg-blue-400 transition-colors text-lg"
+              >
+                Cotiza tu programa aquí
+              </button>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
-        <section className="py-16 md:py-24 bg-purple-600 text-white">
-          <div className="container text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Empieza hoy a transformar el talento de tu organización
-            </h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Invertir en capacitación laboral es asegurar el futuro de tu cultura y tus resultados.
-            </p>
-            <button
-              onClick={scrollToForm}
-              className="bg-white text-purple-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors"
-            >
-              Solicitar información del programa
-            </button>
+        <section className="py-16 md:py-24 bg-gradient-to-r from-blue-50 to-purple-50">
+          <div className="container max-w-4xl text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Empieza hoy a transformar el talento de tu organización</h2>
+            <p className="text-lg text-gray-700 mt-4">Invertir en capacitación laboral es invertir en personas, cultura y resultados.</p>
           </div>
         </section>
 
         {/* Contact Form Section */}
-        <section id="contact-form" className="py-16 md:py-24 bg-white">
+        <section id="contact-form" className="py-16 md:py-24 bg-gray-50">
           <div className="container max-w-2xl">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
-              Contacta con nosotros
+              Solicita información del programa
             </h2>
-            <form onSubmit={handleFormSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <form className="space-y-6" onSubmit={handleFormSubmit} id="contact-form-capacitacion">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <input
                   type="text"
                   name="nombre"
@@ -416,7 +524,7 @@ export default function CapacitacionLaboral() {
                   value={formData.nombre}
                   onChange={handleFormChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 />
                 <input
                   type="text"
@@ -425,36 +533,38 @@ export default function CapacitacionLaboral() {
                   value={formData.apellido}
                   onChange={handleFormChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
-              <input
-                type="email"
-                name="correo"
-                placeholder="Correo electrónico"
-                value={formData.correo}
-                onChange={handleFormChange}
-                required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600"
-              />
-              <input
-                type="tel"
-                name="telefono"
-                placeholder="Teléfono"
-                value={formData.telefono}
-                onChange={handleFormChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600"
-              />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input
+                  type="email"
+                  name="correo"
+                  placeholder="Correo"
+                  value={formData.correo}
+                  onChange={handleFormChange}
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                />
+                <input
+                  type="tel"
+                  name="telefono"
+                  placeholder="Teléfono"
+                  value={formData.telefono}
+                  onChange={handleFormChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                />
+              </div>
               <textarea
                 name="mensaje"
-                placeholder="Mensaje"
+                placeholder="¿Cómo podemos ayudarte?"
                 value={formData.mensaje}
                 onChange={handleFormChange}
-                rows={5}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600"
-              />
+                rows={6}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none"
+              ></textarea>
 
-              {/* Hidden UTM fields */}
+              {/* Campos ocultos UTM - No controlados para que GTM pueda modificarlos */}
               <input type="hidden" name="utm_source" id="utm_source" defaultValue={formData.utm_source} />
               <input type="hidden" name="utm_medium" id="utm_medium" defaultValue={formData.utm_medium} />
               <input type="hidden" name="utm_campaign" id="utm_campaign" defaultValue={formData.utm_campaign} />
@@ -464,7 +574,7 @@ export default function CapacitacionLaboral() {
 
               <button
                 type="submit"
-                className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors"
+                className="w-full md:w-auto bg-primary text-white py-3 px-8 rounded-lg font-semibold hover:bg-blue-400 transition-colors"
               >
                 Enviar
               </button>
@@ -472,37 +582,54 @@ export default function CapacitacionLaboral() {
           </div>
         </section>
 
+        {/* Divider Section */}
+        <div className="bg-gradient-to-r from-transparent via-gray-300 to-transparent h-1"></div>
+
         {/* FAQ Section */}
-        <section className="py-16 md:py-24 bg-gray-50">
+        <section className="py-12 md:py-16 bg-gray-50">
           <div className="container max-w-3xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
-              Preguntas frecuentes sobre el programa de Capacitación Laboral
+            <h2 className="text-xl md:text-2xl font-semibold text-gray-700 mb-8 text-center">
+              Preguntas frecuentes Capacitación Laboral Estratégica
             </h2>
-            <div className="space-y-4">
+            <div className="space-y-4 mb-12">
               {faqItems.map((item, index) => (
-                <div key={index} className="border border-gray-300 rounded-lg overflow-hidden">
+                <div
+                  key={index}
+                  className="bg-white rounded-lg border border-gray-200 overflow-hidden"
+                >
                   <button
                     onClick={() => toggleFAQ(index)}
-                    className="w-full px-6 py-4 bg-white hover:bg-gray-50 flex items-center justify-between transition-colors"
+                    className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors"
                   >
-                    <h3 className="font-semibold text-gray-900 text-left">{item.question}</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 text-left">
+                      {item.question}
+                    </h3>
                     {openFAQ === index ? (
-                      <ChevronUp className="w-5 h-5 text-purple-600 flex-shrink-0" />
+                      <ChevronUp className="w-5 h-5 text-primary flex-shrink-0" />
                     ) : (
                       <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0" />
                     )}
                   </button>
                   {openFAQ === index && (
-                    <div className="px-6 py-4 bg-gray-50 border-t border-gray-300">
-                      <p className="text-gray-700">{item.answer}</p>
+                    <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
+                      <p className="text-gray-700 leading-relaxed">{item.answer}</p>
                     </div>
                   )}
                 </div>
               ))}
             </div>
+            <div className="text-center">
+              <button
+                onClick={scrollToForm}
+                className="bg-primary text-white px-10 py-4 rounded-lg font-semibold hover:bg-blue-400 transition-colors text-lg"
+              >
+                Solicitar información
+              </button>
+            </div>
           </div>
         </section>
       </main>
+
       <Footer />
     </div>
   );
