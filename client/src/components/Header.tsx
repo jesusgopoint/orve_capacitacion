@@ -43,7 +43,7 @@ export default function Header() {
                   item.label === "Contacto"
                     ? "text-white bg-primary border-2 border-primary px-4 py-2 rounded-lg hover:bg-blue-400 hover:border-blue-400"
                     : item.isPrimary
-                    ? "text-primary hover:text-blue-400"
+                    ? "text-primary hover:text-blue-400 underline"
                     : "text-gray-700 hover:text-primary"
                 }`}
               >
