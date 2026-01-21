@@ -11,6 +11,7 @@ export default function Header() {
     { label: "Servicios", href: "#servicios", hasSubmenu: true },
     { label: "Equipo", href: "#equipo" },
     { label: "Contacto", href: "#contacto" },
+    { label: "Orve Learning", href: "https://orvelearning.cl/", isExternal: true, isPrimary: true },
   ];
 
   const servicesSubmenu = [
@@ -36,9 +37,13 @@ export default function Header() {
             <div key={item.label} className="relative group">
               <a
                 href={item.href}
+                target={item.isExternal ? "_blank" : undefined}
+                rel={item.isExternal ? "noopener noreferrer" : undefined}
                 className={`text-base font-medium transition-colors flex items-center gap-1 ${
                   item.label === "Contacto"
                     ? "text-white bg-primary border-2 border-primary px-4 py-2 rounded-lg hover:bg-blue-400 hover:border-blue-400"
+                    : item.isPrimary
+                    ? "text-white bg-primary px-4 py-2 rounded-lg hover:bg-blue-400"
                     : "text-gray-700 hover:text-primary"
                 }`}
               >
@@ -65,16 +70,6 @@ export default function Header() {
             </div>
           ))}
         </nav>
-
-        {/* Orve Learning Button */}
-        <a
-          href="https://orvelearning.cl/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden md:inline-block px-4 py-2 border-2 border-primary text-primary font-medium rounded-lg hover:bg-primary/5 transition-colors"
-        >
-          Orve Learning
-        </a>
 
         {/* Experience Badge */}
         <div className="hidden md:flex items-center gap-3 bg-primary/10 px-6 py-3 rounded-full">

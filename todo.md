@@ -28,3 +28,4 @@
 - [x] Agregar enlace a Capacitación Laboral en menú de Servicios
 - [x] Agregar botón Orve Learning transparente con borde en Header y Footer
 - [x] Agregar etiqueta meta de Google Search Console en index.html
+- [x] Mover botón Orve Learning al menú del Header con color morado
