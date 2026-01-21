@@ -37,45 +37,14 @@ export default function ThankYou() {
           Nos pondremos en contacto contigo a la brevedad posible. Revisa tu correo electrónico para actualizaciones.
         </p>
 
-        {/* Botones */}
-        <div className="flex flex-col gap-3">
-          <Button
-            onClick={() => setLocation('/')}
-            className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 rounded-lg transition-all duration-200 flex items-center justify-center gap-2"
-          >
-            Volver al inicio
-            <ArrowRight className="w-4 h-4" />
-          </Button>
-
-          <Button
-            onClick={() => setLocation('/servicios')}
-            variant="outline"
-            className="w-full border-2 border-slate-300 hover:border-purple-600 hover:bg-purple-50 text-slate-700 font-semibold py-3 rounded-lg transition-all duration-200"
-          >
-            Explorar servicios
-          </Button>
-        </div>
-
-        {/* Información adicional */}
-        <div className="mt-12 pt-8 border-t border-slate-200">
-          <p className="text-sm text-slate-500 mb-4">
-            ¿Tienes preguntas? Contáctanos directamente
-          </p>
-          <div className="flex flex-col gap-2 text-sm">
-            <a
-              href="mailto:comercial@orvecapacitacion.cl"
-              className="text-purple-600 hover:text-purple-700 font-medium transition-colors"
-            >
-              comercial@orvecapacitacion.cl
-            </a>
-            <a
-              href="tel:+56912345678"
-              className="text-purple-600 hover:text-purple-700 font-medium transition-colors"
-            >
-              +56 9 1234 5678
-            </a>
-          </div>
-        </div>
+        {/* Botón */}
+        <Button
+          onClick={() => setLocation('/')}
+          className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 rounded-lg transition-all duration-200 flex items-center justify-center gap-2"
+        >
+          Volver al inicio
+          <ArrowRight className="w-4 h-4" />
+        </Button>
       </div>
     </div>
   );
