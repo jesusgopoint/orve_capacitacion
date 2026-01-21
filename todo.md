@@ -21,4 +21,5 @@
 - [x] Evento 'form_ready' agregado para notificar a GTM cuando formularios estan listos
 - [x] Header y Footer agregados a página de gracias
 - [x] Campos UTM cambiados a inputs no controlados para que GTM pueda inyectar valores
+- [x] Evento personalizado 'gtmFormReady' agregado para activar radar de GTM cuando formularios estan listos
 - [ ] Test published website to verify forms and GTM events working correctly

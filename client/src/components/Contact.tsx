@@ -41,7 +41,11 @@ export default function Contact() {
     }));
     
     // Disparar evento a GTM indicando que el formulario esta listo
-    setTimeout(() => triggerGTMEvent('form_ready'), 100);
+    setTimeout(() => {
+      triggerGTMEvent('form_ready');
+      // Disparar evento personalizado para activar el radar de GTM
+      window.dispatchEvent(new Event('gtmFormReady'));
+    }, 100);
   }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {

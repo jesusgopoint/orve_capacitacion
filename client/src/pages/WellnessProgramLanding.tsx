@@ -4,6 +4,15 @@ import Footer from "@/components/Footer";
 import { ChevronDown, ChevronUp, Heart, Users, TrendingUp, Smile, Zap } from "lucide-react";
 import { useLocation } from "wouter";
 
+// Función para disparar evento personalizado a GTM
+const triggerGTMEvent = (eventName: string) => {
+  if (typeof window !== 'undefined' && (window as any).dataLayer) {
+    (window as any).dataLayer.push({
+      event: eventName
+    });
+  }
+};
+
 export default function WellnessProgramLanding() {
   const [, setLocation] = useLocation();
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
@@ -23,7 +32,7 @@ export default function WellnessProgramLanding() {
     campaign_id: ""
   });
 
-  // Capturar parámetros UTM de la URL
+  // Capturar parámetros UTM de la URL y notificar a GTM
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     setFormData(prev => ({
@@ -35,6 +44,13 @@ export default function WellnessProgramLanding() {
       utm_term: params.get('utm_term') || '',
       campaign_id: params.get('campaign_id') || ''
     }));
+    
+    // Disparar evento a GTM indicando que el formulario esta listo
+    setTimeout(() => {
+      triggerGTMEvent('form_ready');
+      // Disparar evento personalizado para activar el radar de GTM
+      window.dispatchEvent(new Event('gtmFormReady'));
+    }, 100);
   }, []);
 
   const toggleFAQ = (index: number) => {
