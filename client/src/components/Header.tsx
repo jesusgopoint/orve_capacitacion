@@ -15,6 +15,7 @@ export default function Header() {
 
   const servicesSubmenu = [
     { label: "Programa de Bienestar Laboral", href: "/programa-de-bienestar" },
+    { label: "Capacitación Laboral", href: "/capacitacion-laboral" },
   ];
 
   return (

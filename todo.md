@@ -23,3 +23,5 @@
 - [x] Campos UTM cambiados a inputs no controlados para que GTM pueda inyectar valores
 - [x] Evento personalizado 'gtmFormReady' agregado para activar radar de GTM cuando formularios estan listos
 - [ ] Test published website to verify forms and GTM events working correctly
+- [x] Crear página /capacitacion-laboral basada en diseño de /programa-de-bienestar
+- [x] Agregar enlace a Capacitación Laboral en menú de Servicios
