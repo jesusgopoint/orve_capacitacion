@@ -2,8 +2,10 @@ import { useState, useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ChevronDown, ChevronUp, Heart, Users, TrendingUp, Smile, Zap } from "lucide-react";
+import { useLocation } from "wouter";
 
 export default function WellnessProgramLanding() {
+  const [, setLocation] = useLocation();
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
   const [selectedActionLine, setSelectedActionLine] = useState(0);
   const [currentResultIndex, setCurrentResultIndex] = useState(0);
@@ -100,14 +102,18 @@ export default function WellnessProgramLanding() {
           to: 'seo@gopointagency.com',
           from: 'comercial@orvecapacitacion.cl',
           subject: subject,
-          html: emailContent,
+          nombre: formData.nombre,
+          apellido: formData.apellido,
+          correo: formData.correo,
+          telefono: formData.telefono,
+          mensaje: formData.mensaje,
           replyTo: formData.correo
         })
       });
       
       if (response.ok) {
-        alert('¡Mensaje enviado exitosamente! Nos pondremos en contacto pronto.');
         setFormData({ nombre: "", apellido: "", correo: "", telefono: "", mensaje: "" });
+        setLocation('/gracias');
       } else {
         const error = await response.json();
         alert('Hubo un error al enviar el mensaje: ' + (error.message || 'Por favor, intenta de nuevo.'));

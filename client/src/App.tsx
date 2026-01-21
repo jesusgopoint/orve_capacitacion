@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import WellnessProgramLanding from "./pages/WellnessProgramLanding";
+import ThankYou from "./pages/ThankYou";
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
 
 
@@ -15,6 +16,7 @@ function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
+      <Route path={"/gracias"} component={ThankYou} />
       <Route path={"/politica-de-privacidad"} component={PrivacyPolicy} />
       <Route path={"/terminos-del-servicio"} component={TermsOfService} />
       <Route path={"/programa-de-bienestar"} component={WellnessProgramLanding} />

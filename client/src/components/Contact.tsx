@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { Mail, Phone, MapPin } from "lucide-react";
-import { Resend } from "resend";
+import { useLocation } from "wouter";
 
 export default function Contact() {
+  const [, setLocation] = useLocation();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -61,7 +62,6 @@ export default function Contact() {
         ${formData.utm_campaign ? `<p><strong>UTM Campaign:</strong> ${formData.utm_campaign}</p>` : ''}
       `;
       
-      // Enviar a través de API backend
       const response = await fetch('/api/send-email', {
         method: 'POST',
         headers: {
@@ -71,14 +71,18 @@ export default function Contact() {
           to: 'seo@gopointagency.com',
           from: 'comercial@orvecapacitacion.cl',
           subject: subject,
-          html: emailContent,
+          nombre: formData.firstName,
+          apellido: formData.lastName,
+          correo: formData.email,
+          telefono: formData.phone,
+          mensaje: formData.message,
           replyTo: formData.email
         })
       });
       
       if (response.ok) {
-        alert('¡Mensaje enviado exitosamente! Nos pondremos en contacto pronto.');
         setFormData({ firstName: "", lastName: "", email: "", phone: "", message: "", utm_source: "", utm_medium: "", utm_campaign: "", utm_content: "", utm_term: "", campaign_id: "" });
+        setLocation('/gracias');
       } else {
         const error = await response.json();
         alert('Hubo un error al enviar el mensaje: ' + (error.message || 'Por favor, intenta de nuevo.'));

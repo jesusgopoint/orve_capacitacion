@@ -23,13 +23,19 @@ async function startServer() {
   // Email API endpoint
   app.post("/api/send-email", async (req, res) => {
     try {
-      const { to, from, subject, html, replyTo } = req.body;
+      const { to, from, subject, nombre, apellido, correo, telefono, mensaje, replyTo } = req.body;
 
-      if (!to || !from || !subject || !html) {
+      if (!to || !from || !subject || !nombre || !apellido || !correo || !telefono || !mensaje) {
         return res.status(400).json({ message: "Missing required fields" });
       }
 
-      const result = await sendEmail(to, from, subject, html, replyTo);
+      const result = await sendEmail(to, from, subject, {
+        nombre,
+        apellido,
+        correo,
+        telefono,
+        mensaje
+      }, replyTo);
 
       if (result.error) {
         return res.status(400).json({ message: result.error.message });
@@ -47,7 +53,7 @@ async function startServer() {
     res.sendFile(path.join(staticPath, "index.html"));
   });
 
-  const port = process.env.PORT || 3000;
+  const port = process.env.PORT || 3001;
 
   server.listen(port, () => {
     console.log(`Server running on http://localhost:${port}/`);
