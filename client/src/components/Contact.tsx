@@ -81,6 +81,15 @@ export default function Contact() {
       });
       
       if (response.ok) {
+        // Push event to GTM dataLayer
+        if (typeof window !== 'undefined' && (window as any).dataLayer) {
+          (window as any).dataLayer.push({
+            event: 'form_submission',
+            form_type: 'contact',
+            form_name: `${formData.firstName} ${formData.lastName}`
+          });
+        }
+        
         setFormData({ firstName: "", lastName: "", email: "", phone: "", message: "", utm_source: "", utm_medium: "", utm_campaign: "", utm_content: "", utm_term: "", campaign_id: "" });
         setLocation('/gracias');
       } else {

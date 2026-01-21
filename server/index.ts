@@ -23,25 +23,35 @@ async function startServer() {
   // Email API endpoint
   app.post("/api/send-email", async (req, res) => {
     try {
-      const { to, from, subject, nombre, apellido, correo, telefono, mensaje, replyTo } = req.body;
+      const { to, from, subject, nombre, apellido, correo, telefono, mensaje, replyTo, utm_source, utm_medium, utm_campaign, utm_content, utm_term, campaign_id } = req.body;
 
       if (!to || !from || !subject || !nombre || !apellido || !correo || !telefono || !mensaje) {
         return res.status(400).json({ message: "Missing required fields" });
       }
 
-      const result = await sendEmail(to, from, subject, {
+      const result = await sendEmail({
+        to,
+        from,
+        subject,
         nombre,
         apellido,
         correo,
         telefono,
-        mensaje
-      }, replyTo);
+        mensaje,
+        replyTo,
+        utm_source,
+        utm_medium,
+        utm_campaign,
+        utm_content,
+        utm_term,
+        campaign_id
+      });
 
       if (result.error) {
-        return res.status(400).json({ message: result.error.message });
+        return res.status(400).json({ message: result.error });
       }
 
-      res.json({ success: true, id: result.data?.id });
+      res.json({ success: true });
     } catch (error) {
       console.error("Error sending email:", error);
       res.status(500).json({ message: "Error sending email" });

@@ -112,6 +112,15 @@ export default function WellnessProgramLanding() {
       });
       
       if (response.ok) {
+        // Push event to GTM dataLayer
+        if (typeof window !== 'undefined' && (window as any).dataLayer) {
+          (window as any).dataLayer.push({
+            event: 'form_submission',
+            form_type: 'wellness_program',
+            form_name: `${formData.nombre} ${formData.apellido}`
+          });
+        }
+        
         setFormData({ nombre: "", apellido: "", correo: "", telefono: "", mensaje: "" });
         setLocation('/gracias');
       } else {

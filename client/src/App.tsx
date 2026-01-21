@@ -11,8 +11,8 @@ import WellnessProgramLanding from "./pages/WellnessProgramLanding";
 import ThankYou from "./pages/ThankYou";
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
 
-
 function Router() {
+  // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
       <Route path={"/"} component={Home} />
