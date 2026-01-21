@@ -510,7 +510,7 @@ export default function WellnessProgramLanding() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
               Solicita información del programa
             </h2>
-            <form className="space-y-6" onSubmit={handleFormSubmit}>
+            <form className="space-y-6" onSubmit={handleFormSubmit} id="contact-form-wellness">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <input
                   type="text"

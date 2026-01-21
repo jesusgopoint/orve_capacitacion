@@ -18,4 +18,5 @@
 
 - [x] Fix forms on published website (backend endpoint agregado a server/_core/index.ts)
 - [x] Campos ocultos UTM agregados a WellnessProgramLanding.tsx
+- [x] Evento 'form_ready' agregado para notificar a GTM cuando formularios estan listos
 - [ ] Test published website to verify forms and GTM events working correctly

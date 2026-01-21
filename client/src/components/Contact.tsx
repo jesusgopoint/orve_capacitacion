@@ -2,6 +2,15 @@ import { useState, useEffect } from "react";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { useLocation } from "wouter";
 
+// Función para disparar evento personalizado a GTM
+const triggerGTMEvent = (eventName: string) => {
+  if (typeof window !== 'undefined' && (window as any).dataLayer) {
+    (window as any).dataLayer.push({
+      event: eventName
+    });
+  }
+};
+
 export default function Contact() {
   const [, setLocation] = useLocation();
   const [formData, setFormData] = useState({
@@ -18,7 +27,7 @@ export default function Contact() {
     campaign_id: ""
   });
 
-  // Capturar parámetros UTM de la URL
+  // Capturar parámetros UTM de la URL y notificar a GTM
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     setFormData(prev => ({
@@ -30,6 +39,9 @@ export default function Contact() {
       utm_term: params.get('utm_term') || '',
       campaign_id: params.get('campaign_id') || ''
     }));
+    
+    // Disparar evento a GTM indicando que el formulario esta listo
+    setTimeout(() => triggerGTMEvent('form_ready'), 100);
   }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -110,7 +122,7 @@ export default function Contact() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6" id="contact-form-homepage">
               {/* Fila 1: Nombre y Apellido */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <input
