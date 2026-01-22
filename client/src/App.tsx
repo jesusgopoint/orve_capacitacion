@@ -9,6 +9,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import WellnessProgramLanding from "./pages/WellnessProgramLanding";
 import CapacitacionLaboral from "./pages/CapacitacionLaboral";
+import TeamBuildingLanding from "./pages/TeamBuildingLanding";
 import ThankYou from "./pages/ThankYou";
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
 
@@ -22,6 +23,7 @@ function Router() {
       <Route path={"/terminos-del-servicio"} component={TermsOfService} />
       <Route path={"/programa-de-bienestar"} component={WellnessProgramLanding} />
       <Route path={"/capacitacion-laboral"} component={CapacitacionLaboral} />
+      <Route path={"/team-building"} component={TeamBuildingLanding} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

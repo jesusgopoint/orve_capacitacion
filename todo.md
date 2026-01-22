@@ -29,3 +29,5 @@
 - [x] Agregar botón Orve Learning transparente con borde en Header y Footer
 - [x] Agregar etiqueta meta de Google Search Console en index.html
 - [x] Mover botón Orve Learning al menú del Header con color morado
+- [x] Crear página /team-building duplicando /programa-de-bienestar
+- [x] Agregar Team Building al menú de Servicios
