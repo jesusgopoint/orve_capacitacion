@@ -10,7 +10,7 @@ export default function Header() {
     { label: "Nosotros", href: "#nosotros" },
     { label: "Servicios", href: "#servicios", hasSubmenu: true },
     { label: "Equipo", href: "#equipo" },
-    { label: "Orve Learning", href: "https://orvelearning.cl/", isExternal: true, isPrimary: true },
+    { label: "Orve E-Learning", href: "https://orvelearning.cl/", isExternal: true, isPrimary: true },
     { label: "Contacto", href: "#contacto" },
   ];
 
