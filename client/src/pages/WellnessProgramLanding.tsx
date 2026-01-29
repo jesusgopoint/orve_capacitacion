@@ -369,59 +369,7 @@ export default function WellnessProgramLanding() {
           </div>
         </section>
 
-        {/* Companies Carousel Section */}
-        <section className="py-12 md:py-16 bg-white">
-          <div className="container">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
-              Empresas que confían en nosotros
-            </h2>
-            <div className="relative overflow-hidden bg-white rounded-lg">
-              <style>{`
-                @keyframes scroll-logos {
-                  0% {
-                    transform: translateX(0);
-                  }
-                  100% {
-                    transform: translateX(-2560px);
-                  }
-                }
-                .carousel-container {
-                  animation: scroll-logos 14s linear infinite;
-                }
-                .carousel-container:hover {
-                  animation-play-state: paused;
-                }
-              `}</style>
-              <div className="flex gap-6 carousel-container w-fit">
-                {[
-                  "/images/dimacofi-logo.webp",
-                  "/images/CYD-logo.webp",
-                  "/images/eklipse-logo.webp",
-                  "/images/nexus-logo.webp",
-                  "/images/iplacex-logo.webp",
-                  "/images/trekrental-logo.webp",
-                  "/images/bata-logo.webp",
-                  "/images/imh-logo.webp",
-                  "/images/celhex-logo.webp",
-                  "/images/humboldt-logo.webp",
-                  "/images/ultranav-logo.webp",
-                  "/images/siigroup-logo.webp",
-                  "/images/scotiabank-logo.webp",
-                  "/images/crispagold-logo.webp",
-                  "/images/saesa-logo.webp",
-                  "/images/santafetransportes-logo.webp",
-                ].map((logo, index) => (
-                  <img
-                    key={index}
-                    src={logo}
-                    alt={`Logo ${index + 1}`}
-                    className="h-20 w-40 object-contain flex-shrink-0"
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
+
 
         {/* Why Choose Section */}
         <section className="py-16 md:py-24 bg-gray-50">
@@ -512,89 +460,56 @@ export default function WellnessProgramLanding() {
           </div>
         </section>
 
-        {/* Action Lines Section */}
-        <section className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
+        {/* Companies Carousel Section */}
+        <section className="py-12 md:py-16 bg-white">
           <div className="container">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Líneas de Acción
-              </h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Cuatro pilares estratégicos diseñados para transformar el bienestar organizacional
-              </p>
-            </div>
-
-            {/* Action Lines Accordion */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              {/* Left Column - Action Line Buttons */}
-              <div className="space-y-3">
-                {actionLines.map((line, index) => {
-                  const isSelected = selectedActionLine === index;
-                  return (
-                    <button
-                      key={index}
-                      onClick={() => setSelectedActionLine(index)}
-                      className={`w-full text-left px-6 py-4 rounded-lg font-semibold transition-all ${
-                        isSelected
-                          ? "bg-primary text-white shadow-lg"
-                          : "bg-gray-100 text-gray-900 hover:bg-gray-200"
-                      }`}
-                    >
-                      {line.title}
-                    </button>
-                  );
-                })}
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
+              Empresas que confían en nosotros
+            </h2>
+            <div className="relative overflow-hidden bg-white rounded-lg">
+              <style>{`
+                @keyframes scroll-logos {
+                  0% {
+                    transform: translateX(0);
+                  }
+                  100% {
+                    transform: translateX(-2560px);
+                  }
+                }
+                .carousel-container {
+                  animation: scroll-logos 14s linear infinite;
+                }
+                .carousel-container:hover {
+                  animation-play-state: paused;
+                }
+              `}</style>
+              <div className="flex gap-6 carousel-container w-fit">
+                {[
+                  "/images/dimacofi-logo.webp",
+                  "/images/CYD-logo.webp",
+                  "/images/eklipse-logo.webp",
+                  "/images/nexus-logo.webp",
+                  "/images/iplacex-logo.webp",
+                  "/images/trekrental-logo.webp",
+                  "/images/bata-logo.webp",
+                  "/images/imh-logo.webp",
+                  "/images/celhex-logo.webp",
+                  "/images/humboldt-logo.webp",
+                  "/images/ultranav-logo.webp",
+                  "/images/siigroup-logo.webp",
+                  "/images/scotiabank-logo.webp",
+                  "/images/crispagold-logo.webp",
+                  "/images/saesa-logo.webp",
+                  "/images/santafetransportes-logo.webp",
+                ].map((logo, index) => (
+                  <img
+                    key={index}
+                    src={logo}
+                    alt={`Logo ${index + 1}`}
+                    className="h-20 w-40 object-contain flex-shrink-0"
+                  />
+                ))}
               </div>
-
-              {/* Right Column - Content Display */}
-              <div className="md:col-span-2">
-                {actionLines.map((line, index) => {
-                  if (selectedActionLine !== index) return null;
-                  const IconComponent = line.icon;
-                  return (
-                    <div key={index} className="bg-white rounded-xl p-8 shadow-lg">
-                      <div className="flex items-center gap-4 mb-6">
-                        <div className={`bg-${line.color}-100 p-4 rounded-lg`}>
-                          <IconComponent className={`w-8 h-8 text-${line.color === 'primary' ? 'primary' : line.color}-500`} />
-                        </div>
-                        <h3 className="text-2xl font-bold text-gray-900">{line.title}</h3>
-                      </div>
-                      <p className="text-gray-600 mb-6">
-                        <strong>Enfoque:</strong> {line.focus}
-                      </p>
-                      <div className="space-y-3">
-                        {line.activities.map((activity, idx) => (
-                          <p key={idx} className="text-gray-700 flex items-start gap-3">
-                            <span className="text-primary font-bold mt-0.5">✓</span>
-                            {activity}
-                          </p>
-                        ))}
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-
-            {/* Sence Certification Banner */}
-            <div className="bg-gradient-to-r from-primary/5 to-blue-50 rounded-xl p-8 mb-12 border-2 border-primary/20">
-              <div className="flex items-center justify-center gap-4">
-                <Zap className="w-8 h-8 text-primary flex-shrink-0" />
-                <div>
-                  <p className="font-bold text-gray-900 text-lg">Franquicia Sence</p>
-                  <p className="text-sm text-gray-600">Este programa de bienestar es imputable a la Franquicia Sence, permitiendo a las empresas utilizar sus recursos de capacitación de forma estratégica.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* CTA Button */}
-            <div className="text-center">
-              <button
-                onClick={scrollToForm}
-                className="bg-primary text-white px-10 py-4 rounded-lg font-semibold hover:bg-blue-400 transition-colors text-lg"
-              >
-                Cotiza tu programa aquí
-              </button>
             </div>
           </div>
         </section>
