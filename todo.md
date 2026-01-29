@@ -32,3 +32,4 @@
 - [x] Crear página /team-building duplicando /programa-de-bienestar
 - [x] Agregar Team Building al menú de Servicios
 - [x] Cambiar "Orve Learning" por "Orve E-Learning" en el header
+- [x] Ocultar página /team-building comentando ruta en App.tsx y removiendo del menú de Servicios
