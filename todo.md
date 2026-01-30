@@ -39,3 +39,4 @@
 - [x] Reemplazar 4 imágenes de la primera sección de /programa-de-bienestar
 - [x] Cambiar "Líneas de Acción" por "6 Pilares de Impacto" en /programa-de-bienestar
 - [x] Implementar scroll interno en tarjetas de pilares para mostrar todas las actividades
+- [x] Ajustar contenido de los últimos 3 pilares (Psicoemocional, Equilibrio Vida-Trabajo, Sustentabilidad)

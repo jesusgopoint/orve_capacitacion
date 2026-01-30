@@ -109,6 +109,7 @@ export default function WellnessProgramLanding() {
       color: "orange",
       focus: "Cultura organizacional, liderazgo positivo y clima laboral saludable.",
       activities: [
+        "Talleres y charlas de desarrollo profesional",
         "Administración del tiempo",
         "Manejo de conflictos",
         "Liderazgo positivo",
@@ -116,8 +117,10 @@ export default function WellnessProgramLanding() {
         "Adaptación al cambio",
         "Comunicación efectiva",
         "Charlas sobre riesgos psicosociales",
-        "Team Building (Scape Room, Lego Serious Play, Dinámicas)",
-        "Actividades lúdicas y Role playing"
+        "Team Building (Scape Room, Lego Serious Play, Dinámicas con tambores y bambú)",
+        "Actividad '¿Conoces el color de tu cerebro?'",
+        "'Hit del momento' actividad lúdica y tendencia",
+        "Team Building Temáticos (cocina, Olimpiadas, Karting)"
       ]
     },
     {
@@ -127,14 +130,14 @@ export default function WellnessProgramLanding() {
       focus: "Conciliación laboral, bienestar familiar y gestión del tiempo.",
       activities: [
         "Actividades de integración familiar",
-        "Fechas importantes (Día de la mujer, padre, niño, etc.)",
+        "Fechas importantes (Día de la mujer, día del hombre, día de la madre, día del padre, día del niño, fiestas patrias)",
         "Soporte para la vida personal y familiar",
-        "Conciliación trabajo-familia",
-        "Control parental",
-        "Tenencia responsable de mascotas",
-        "Finanzas personales",
-        "Orientación sobre beneficios sociales",
-        "Talleres recreativos (cocina, asados, cocteleria, maquillaje, risoterapia)"
+        "Charlas formativas (Conciliación trabajo-familia, Control parental, Tenencia responsable de mascotas, Finanzas personales, Orientación sobre beneficios sociales)",
+        "Taller de cocina",
+        "Taller de asados a la parrilla",
+        "Taller de cocteléría",
+        "Taller de maquillaje",
+        "Taller de Risoterapia"
       ]
     },
     {
@@ -144,18 +147,8 @@ export default function WellnessProgramLanding() {
       focus: "Bienestar sostenible, impacto social y sentido del trabajo.",
       activities: [
         "Charlas de sensibilización ambiental",
-        "Cómo reducir mi huella de carbono",
-        "Compromiso con el medio ambiente",
-        "Impacto en la comunidad",
-        "Economía circular",
-        "Reemplaquémos el plástico",
-        "Curso de sustentabilidad",
-        "Taller de compostaje",
-        "Taller 'Cómo impactan nuestras acciones'",
-        "Ciclo de huertos urbanos",
-        "Reforestemos Santiago",
-        "Participación en iniciativas locales sustentables",
-        "Voluntariados ambientales corporativos"
+        "Cursos y talleres prácticos",
+        "Actividades de impacto social y ecológico"
       ]
     }
   ];
