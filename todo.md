@@ -38,3 +38,4 @@
 - [x] Eliminar duplicado de "Líneas de Acción" y reemplazar con "Empresas que confían en nosotros" en /programa-de-bienestar
 - [x] Reemplazar 4 imágenes de la primera sección de /programa-de-bienestar
 - [x] Cambiar "Líneas de Acción" por "6 Pilares de Impacto" en /programa-de-bienestar
+- [x] Implementar scroll interno en tarjetas de pilares para mostrar todas las actividades

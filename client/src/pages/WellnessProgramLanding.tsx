@@ -67,7 +67,11 @@ export default function WellnessProgramLanding() {
         "Feria de Salud y Bienestar",
         "Operativos de salud",
         "Consultas nutricionales",
-        "Masajes Express"
+        "Masajes Express",
+        "Snack Saludable",
+        "Charlas educativas",
+        "Taller de cocina saludable",
+        "Canastas de fruta"
       ]
     },
     {
@@ -79,7 +83,10 @@ export default function WellnessProgramLanding() {
         "Pausas lúdicas",
         "Pausas activas de yoga",
         "Pausas activas mindfulness",
-        "Pilates Trekking"
+        "Kick-off de inicio de jornada Yoga",
+        "Pilates Trekking",
+        "Defensa personal",
+        "Torneos deportivos"
       ]
     },
     {
@@ -91,7 +98,9 @@ export default function WellnessProgramLanding() {
         "Manejo del estrés y la ansiedad",
         "Mindfulness y meditación",
         "Acompañamiento psicológico",
-        "Operativo de salud mental"
+        "Operativo de salud mental",
+        "Pausas activas psicológicas",
+        "Charlas y cursos de salud mental"
       ]
     },
     {
@@ -100,10 +109,15 @@ export default function WellnessProgramLanding() {
       color: "orange",
       focus: "Cultura organizacional, liderazgo positivo y clima laboral saludable.",
       activities: [
-        "Talleres de desarrollo profesional",
+        "Administración del tiempo",
+        "Manejo de conflictos",
+        "Liderazgo positivo",
+        "Inclusión laboral",
+        "Adaptación al cambio",
+        "Comunicación efectiva",
         "Charlas sobre riesgos psicosociales",
-        "Team Building",
-        "Dinámicas de cohesión"
+        "Team Building (Scape Room, Lego Serious Play, Dinámicas)",
+        "Actividades lúdicas y Role playing"
       ]
     },
     {
@@ -113,9 +127,14 @@ export default function WellnessProgramLanding() {
       focus: "Conciliación laboral, bienestar familiar y gestión del tiempo.",
       activities: [
         "Actividades de integración familiar",
-        "Charlas formativas",
-        "Talleres recreativos",
-        "Soporte para la vida personal"
+        "Fechas importantes (Día de la mujer, padre, niño, etc.)",
+        "Soporte para la vida personal y familiar",
+        "Conciliación trabajo-familia",
+        "Control parental",
+        "Tenencia responsable de mascotas",
+        "Finanzas personales",
+        "Orientación sobre beneficios sociales",
+        "Talleres recreativos (cocina, asados, cocteleria, maquillaje, risoterapia)"
       ]
     },
     {
@@ -125,9 +144,18 @@ export default function WellnessProgramLanding() {
       focus: "Bienestar sostenible, impacto social y sentido del trabajo.",
       activities: [
         "Charlas de sensibilización ambiental",
-        "Cursos y talleres prácticos",
-        "Actividades de impacto social",
-        "Voluntariados ambientales"
+        "Cómo reducir mi huella de carbono",
+        "Compromiso con el medio ambiente",
+        "Impacto en la comunidad",
+        "Economía circular",
+        "Reemplaquémos el plástico",
+        "Curso de sustentabilidad",
+        "Taller de compostaje",
+        "Taller 'Cómo impactan nuestras acciones'",
+        "Ciclo de huertos urbanos",
+        "Reforestemos Santiago",
+        "Participación en iniciativas locales sustentables",
+        "Voluntariados ambientales corporativos"
       ]
     }
   ];
@@ -346,17 +374,17 @@ export default function WellnessProgramLanding() {
                   if (selectedActionLine !== index) return null;
                   const IconComponent = line.icon;
                   return (
-                    <div key={index} className="bg-white rounded-xl p-8 shadow-lg">
-                      <div className="flex items-center gap-4 mb-6">
+                    <div key={index} className="bg-white rounded-xl p-8 shadow-lg flex flex-col h-96">
+                      <div className="flex items-center gap-4 mb-6 flex-shrink-0">
                         <div className={`bg-${line.color}-100 p-4 rounded-lg`}>
                           <IconComponent className={`w-8 h-8 text-${line.color === 'primary' ? 'primary' : line.color}-500`} />
                         </div>
                         <h3 className="text-2xl font-bold text-gray-900">{line.title}</h3>
                       </div>
-                      <p className="text-gray-600 mb-6">
+                      <p className="text-gray-600 mb-6 flex-shrink-0">
                         <strong>Enfoque:</strong> {line.focus}
                       </p>
-                      <div className="space-y-3">
+                      <div className="space-y-3 overflow-y-auto pr-4 flex-1">
                         {line.activities.map((activity, idx) => (
                           <p key={idx} className="text-gray-700 flex items-start gap-3">
                             <span className="text-primary font-bold mt-0.5">✓</span>
