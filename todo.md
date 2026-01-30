@@ -36,3 +36,4 @@
 - [ ] Intercambiar posiciones del carrusel de logos y líneas de acción en /team-building
 - [x] Intercambiar posiciones del carrusel de logos y líneas de acción en /programa-de-bienestar
 - [x] Eliminar duplicado de "Líneas de Acción" y reemplazar con "Empresas que confían en nosotros" en /programa-de-bienestar
+- [x] Reemplazar 4 imágenes de la primera sección de /programa-de-bienestar

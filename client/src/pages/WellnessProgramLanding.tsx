@@ -247,32 +247,32 @@ export default function WellnessProgramLanding() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="overflow-hidden rounded-lg h-48 md:h-56">
                   <img
-                    src="/images/programadebienestarlaboralparaempresas.webp"
-                    alt="programadebienestarlaboralparaempresas"
+                    src="/images/payaso.webp"
+                    alt="Diversión en el trabajo"
                     className="w-full h-full object-cover animate-fade-in-scale"
                     style={{ animationDelay: "0.1s" }}
                   />
                 </div>
                 <div className="overflow-hidden rounded-lg h-48 md:h-56">
                   <img
-                    src="/images/programasdebienestarlaboralyclimaorganizacional.webp"
-                    alt="programasdebienestarlaboralyclimaorganizacional"
+                    src="/images/elongar.webp"
+                    alt="Bienestar y estiramiento"
                     className="w-full h-full object-cover animate-fade-in-scale"
                     style={{ animationDelay: "0.2s" }}
                   />
                 </div>
                 <div className="overflow-hidden rounded-lg h-48 md:h-56">
                   <img
-                    src="/images/bienestarlaboralyproductividadempresarial.webp"
-                    alt="bienestarlaboralyproductividadempresarial"
+                    src="/images/fruta.webp"
+                    alt="Nutrición y bienestar"
                     className="w-full h-full object-cover animate-fade-in-scale"
                     style={{ animationDelay: "0.3s" }}
                   />
                 </div>
                 <div className="overflow-hidden rounded-lg h-48 md:h-56">
                   <img
-                    src="/images/bienestarlaboralysaludemocionalenempresas.webp"
-                    alt="bienestarlaboralysaludemocionalenempresas"
+                    src="/images/calidaddevida8.webp"
+                    alt="Calidad de vida laboral"
                     className="w-full h-full object-cover animate-fade-in-scale"
                     style={{ animationDelay: "0.4s" }}
                   />
