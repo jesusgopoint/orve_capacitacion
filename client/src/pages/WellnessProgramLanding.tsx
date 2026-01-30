@@ -59,51 +59,75 @@ export default function WellnessProgramLanding() {
 
   const actionLines = [
     {
-      title: "Salud Mental y Prevención",
-      icon: Smile,
-      color: "primary",
-      focus: "Contención emocional y cumplimiento normativo.",
-      activities: [
-        "Charlas de salud mental y autocuidado",
-        "Gestión de Riesgos Psicosociales (CEAL SM)",
-        "Prevención y manejo del estrés",
-        "Mindfulness y Yoga"
-      ]
-    },
-    {
-      title: "Calidad de Vida Laboral",
+      title: "Salud",
       icon: Heart,
-      color: "blue",
-      focus: "Intervenciones físicas y recreativas para el día a día.",
+      color: "primary",
+      focus: "Autocuidado, prevención integral y promoción de hábitos de vida saludables.",
       activities: [
-        "Pausas activas y Masajes express",
-        "Charlas de hábitos saludables y nutrición",
-        "Jornadas recreativas",
-        "Celebración de fechas importantes"
+        "Feria de Salud y Bienestar",
+        "Operativos de salud",
+        "Consultas nutricionales",
+        "Masajes Express"
       ]
     },
     {
-      title: "Fortalecimiento y Cohesión de Equipos",
-      icon: Users,
-      color: "green",
-      focus: "Actividades lúdicas para mejorar la cultura organizacional.",
-      activities: [
-        "Team Building (Indoor y Outdoor)",
-        "Actividades lúdicas y Role playing",
-        "Talleres de Resolución de Conflictos",
-        "Trabajo en Equipo"
-      ]
-    },
-    {
-      title: "Desarrollo de Liderazgo y Talento",
+      title: "Físico",
       icon: TrendingUp,
-      color: "orange",
-      focus: "Acompañamiento estratégico para mandos medios y jefaturas.",
+      color: "blue",
+      focus: "Bienestar corporal, movimiento consciente y entornos de trabajo saludables.",
       activities: [
-        "Coaching ejecutivo e individual",
-        "Programas de Liderazgo",
-        "Comunicación Efectiva",
-        "Feedback guiado y desarrollo de potencial"
+        "Pausas lúdicas",
+        "Pausas activas de yoga",
+        "Pausas activas mindfulness",
+        "Pilates Trekking"
+      ]
+    },
+    {
+      title: "Psicoemocional",
+      icon: Smile,
+      color: "green",
+      focus: "Salud mental, equilibrio emocional y prevención de riesgos psicosociales.",
+      activities: [
+        "Manejo del estrés y la ansiedad",
+        "Mindfulness y meditación",
+        "Acompañamiento psicológico",
+        "Operativo de salud mental"
+      ]
+    },
+    {
+      title: "Organizacional",
+      icon: Users,
+      color: "orange",
+      focus: "Cultura organizacional, liderazgo positivo y clima laboral saludable.",
+      activities: [
+        "Talleres de desarrollo profesional",
+        "Charlas sobre riesgos psicosociales",
+        "Team Building",
+        "Dinámicas de cohesión"
+      ]
+    },
+    {
+      title: "Equilibrio Vida-Trabajo",
+      icon: Heart,
+      color: "red",
+      focus: "Conciliación laboral, bienestar familiar y gestión del tiempo.",
+      activities: [
+        "Actividades de integración familiar",
+        "Charlas formativas",
+        "Talleres recreativos",
+        "Soporte para la vida personal"
+      ]
+    },
+    {
+      title: "Sustentabilidad",
+      icon: Zap,
+      color: "green",
+      focus: "Bienestar sostenible, impacto social y sentido del trabajo.",
+      activities: [
+        "Charlas de sensibilización ambiental",
+        "Cursos y talleres prácticos",
+        "Actividades de impacto social",
+        "Voluntariados ambientales"
       ]
     }
   ];
@@ -287,15 +311,15 @@ export default function WellnessProgramLanding() {
           <div className="container">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Líneas de Acción
+                Programa de Bienestar y Calidad de Vida: 6 Pilares de Impacto
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Cuatro pilares estratégicos diseñados para transformar el bienestar organizacional
+                Potenciamos el contexto psicolaboral y el desarrollo humano mediante soluciones personalizadas que integran salud, cultura organizacional y sustentabilidad.
               </p>
             </div>
 
             {/* Action Lines Accordion */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
               {/* Left Column - Action Line Buttons */}
               <div className="space-y-3">
                 {actionLines.map((line, index) => {
@@ -317,7 +341,7 @@ export default function WellnessProgramLanding() {
               </div>
 
               {/* Right Column - Content Display */}
-              <div className="md:col-span-2">
+              <div className="md:col-span-1">
                 {actionLines.map((line, index) => {
                   if (selectedActionLine !== index) return null;
                   const IconComponent = line.icon;
