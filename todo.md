@@ -42,3 +42,5 @@
 - [x] Ajustar contenido de los últimos 3 pilares (Psicoemocional, Equilibrio Vida-Trabajo, Sustentabilidad)
 - [x] Cambiar sección "Líneas de Acción" por "Programa de Capacitación: Potenciamos el Talento y el Desempeño" en /capacitacion-laboral
 - [x] Actualizar items de la ficha "Charlas" en /capacitacion-laboral
+- [x] Descomentar ruta /team-building para mostrar en desarrollo
+- [x] Copiar estructura y diseño de /programa-de-bienestar a /team-building
