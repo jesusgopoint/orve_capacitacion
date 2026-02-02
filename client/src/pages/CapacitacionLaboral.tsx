@@ -271,6 +271,149 @@ export default function CapacitacionLaboral() {
           </div>
         </section>
 
+        {/* Companies Carousel Section */}
+        <section className="py-12 md:py-16 bg-white">
+          <div className="container">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
+              Empresas que confían en nosotros
+            </h2>
+            <div className="relative overflow-hidden bg-white rounded-lg">
+              <style>{`
+                @keyframes scroll-logos {
+                  0% {
+                    transform: translateX(0);
+                  }
+                  100% {
+                    transform: translateX(-2560px);
+                  }
+                }
+                .carousel-container {
+                  animation: scroll-logos 14s linear infinite;
+                }
+                .carousel-container:hover {
+                  animation-play-state: paused;
+                }
+              `}</style>
+              <div className="flex gap-6 carousel-container w-fit">
+                {[
+                  "/images/dimacofi-logo.webp",
+                  "/images/CYD-logo.webp",
+                  "/images/eklipse-logo.webp",
+                  "/images/nexus-logo.webp",
+                  "/images/iplacex-logo.webp",
+                  "/images/trekrental-logo.webp",
+                  "/images/bata-logo.webp",
+                  "/images/imh-logo.webp",
+                  "/images/celhex-logo.webp",
+                  "/images/humboldt-logo.webp",
+                  "/images/ultranav-logo.webp",
+                  "/images/siigroup-logo.webp",
+                  "/images/scotiabank-logo.webp",
+                  "/images/crispagold-logo.webp",
+                  "/images/saesa-logo.webp",
+                  "/images/santafetransportes-logo.webp",
+                ].map((logo, index) => (
+                  <img
+                    key={index}
+                    src={logo}
+                    alt={`Logo ${index + 1}`}
+                    className="h-20 w-40 object-contain flex-shrink-0"
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Why Choose Section */}
+        <section className="py-16 md:py-24 bg-gray-50">
+          <div className="container">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+              Por qué elegir nuestra Capacitación Laboral Estratégica
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              <div>
+                <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                  La formación continua no es un gasto, sino la base de una <strong>cultura organizacional</strong> sólida. Nuestro programa se integra a la <strong>gestión de personas / RRHH</strong>, transformando la <strong>experiencia del colaborador</strong> en un camino de crecimiento constante que promueve el <strong>trabajo decente</strong> y la competitividad.
+                </p>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  Diseñamos intervenciones alineadas a los objetivos estratégicos, promoviendo el aprendizaje con un enfoque práctico y sostenible en el tiempo.
+                </p>
+              </div>
+              <div className="rounded-lg overflow-hidden">
+                <img
+                  src="/images/equipoenprogramadebienestar2.webp"
+                  alt="capacitacion-laboral-equipo"
+                  className="w-full h-96 object-cover rounded-lg"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Results Section */}
+        <section className="py-8 md:py-12 bg-gradient-to-r from-purple-50 to-blue-50 border-t-4 border-purple-200">
+          <div className="container">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {results.map((result, index) => (
+                <div key={index} className="text-center">
+                  <div className="flex justify-center mb-3">
+                    {index === 0 && <Briefcase className="w-8 h-8 text-primary" />}
+                    {index === 1 && <Target className="w-8 h-8 text-primary" />}
+                    {index === 2 && <Users className="w-8 h-8 text-primary" />}
+                  </div>
+                  <div className="text-3xl md:text-4xl font-bold text-primary mb-3">
+                    {result.metric}
+                  </div>
+                  <p className="text-xs text-gray-700 leading-snug max-w-xs mx-auto">
+                    {result.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-16 md:py-24 bg-white">
+          <div className="container max-w-6xl">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">Beneficios de la Capacitación Laboral para las personas y la empresa</h2>
+            <div className="overflow-hidden">
+              <style>{`
+                @keyframes benefits-carousel {
+                  0% { transform: translateX(0); }
+                  100% { transform: translateX(calc(-50% - 12px)); }
+                }
+                .benefits-carousel-container {
+                  display: flex;
+                  gap: 24px;
+                  animation: benefits-carousel 45s linear infinite;
+                  width: fit-content;
+                }
+                .benefits-carousel-container:hover {
+                  animation-play-state: paused;
+                }
+              `}</style>
+              <div className="benefits-carousel-container">
+                {[
+                  { title: "Mejora del desempeño laboral", desc: "Colaboradores más preparados ejecutan sus tareas con mayor eficiencia y precisión." },
+                  { title: "Clima organizacional positivo", desc: "El aprendizaje grupal fortalece los vínculos y la motivación de los equipos." },
+                  { title: "Retención de talento", desc: "Invertir en desarrollo reduce la alta rotación al aumentar el compromiso y sentido de pertenencia." },
+                  { title: "Salud mental en el trabajo", desc: "Reducimos la desmotivación y el desgaste emocional al brindar herramientas para nuevos desafíos." },
+                  { title: "Marca empleadora", desc: "Una empresa que capacita es vista como un lugar de excelencia, mitigando riesgos psicosociales." },
+                  { title: "Mejora del desempeño laboral", desc: "Colaboradores más preparados ejecutan sus tareas con mayor eficiencia y precisión." },
+                  { title: "Clima organizacional positivo", desc: "El aprendizaje grupal fortalece los vínculos y la motivación de los equipos." }
+                ].map((benefit, index) => (
+                  <div key={index} className="bg-gray-50 p-8 rounded-lg flex-shrink-0 w-96">
+                    <h3 className="text-lg font-bold text-gray-900 mb-3">{benefit.title}</h3>
+                    <p className="text-gray-700 text-sm">{benefit.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Action Lines Section */}
         <section className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
           <div className="container">
@@ -354,60 +497,6 @@ export default function CapacitacionLaboral() {
               >
                 Cotiza tu programa aquí
               </button>
-            </div>
-          </div>
-        </section>
-
-        {/* Companies Carousel Section */}
-        <section className="py-12 md:py-16 bg-white">
-          <div className="container">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
-              Empresas que confían en nosotros
-            </h2>
-            <div className="relative overflow-hidden bg-white rounded-lg">
-              <style>{`
-                @keyframes scroll-logos {
-                  0% {
-                    transform: translateX(0);
-                  }
-                  100% {
-                    transform: translateX(-2560px);
-                  }
-                }
-                .carousel-container {
-                  animation: scroll-logos 14s linear infinite;
-                }
-                .carousel-container:hover {
-                  animation-play-state: paused;
-                }
-              `}</style>
-              <div className="flex gap-6 carousel-container w-fit">
-                {[
-                  "/images/dimacofi-logo.webp",
-                  "/images/CYD-logo.webp",
-                  "/images/eklipse-logo.webp",
-                  "/images/nexus-logo.webp",
-                  "/images/iplacex-logo.webp",
-                  "/images/trekrental-logo.webp",
-                  "/images/bata-logo.webp",
-                  "/images/imh-logo.webp",
-                  "/images/celhex-logo.webp",
-                  "/images/humboldt-logo.webp",
-                  "/images/ultranav-logo.webp",
-                  "/images/siigroup-logo.webp",
-                  "/images/scotiabank-logo.webp",
-                  "/images/crispagold-logo.webp",
-                  "/images/saesa-logo.webp",
-                  "/images/santafetransportes-logo.webp",
-                ].map((logo, index) => (
-                  <img
-                    key={index}
-                    src={logo}
-                    alt={`Logo ${index + 1}`}
-                    className="h-20 w-40 object-contain flex-shrink-0"
-                  />
-                ))}
-              </div>
             </div>
           </div>
         </section>
