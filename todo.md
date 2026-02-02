@@ -40,3 +40,4 @@
 - [x] Cambiar "Líneas de Acción" por "6 Pilares de Impacto" en /programa-de-bienestar
 - [x] Implementar scroll interno en tarjetas de pilares para mostrar todas las actividades
 - [x] Ajustar contenido de los últimos 3 pilares (Psicoemocional, Equilibrio Vida-Trabajo, Sustentabilidad)
+- [x] Intercambiar posiciones de "Líneas de Acción" y "Empresas que confían en nosotros" en /capacitacion-laboral
