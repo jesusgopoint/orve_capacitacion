@@ -58,10 +58,10 @@ export default function CapacitacionLaboral() {
 
   const actionLines = [
     {
-      title: "Desarrollo de Competencias Técnicas",
+      title: "Cursos",
       icon: Briefcase,
       color: "primary",
-      focus: "Actualización profesional y eficiencia operativa para potenciar el desempeño laboral.",
+      focus: "Formaciones estructuradas con enfoque teórico-práctico para adquirir conocimientos profundos en áreas concretas.",
       activities: [
         "Programas de especialización por área",
         "Nivelación de habilidades críticas",
@@ -70,39 +70,39 @@ export default function CapacitacionLaboral() {
       ]
     },
     {
-      title: "Fortalecimiento de Soft Skills",
+      title: "Talleres",
       icon: Users,
       color: "blue",
-      focus: "Enfoque psicosocial aplicado a la efectividad relacional y clima organizacional.",
+      focus: "Sesiones interactivas y lúdicas centradas en la resolución de problemas y el aprendizaje colaborativo.",
       activities: [
-        "Comunicación asertiva y efectiva",
-        "Gestión del tiempo y priorización",
-        "Resiliencia y agilidad emocional",
-        "Trabajo colaborativo"
+        "Solución de problemas prácticos",
+        "Aprendizaje colaborativo",
+        "Dinamismos interactivos",
+        "Aplicación inmediata de conocimientos"
       ]
     },
     {
-      title: "Formación de Liderazgo Estratégico",
+      title: "Academia",
       icon: Target,
       color: "green",
-      focus: "Transformación de la gestión de personas / RRHH desde el mando medio.",
+      focus: "Programas extensos y profundos diseñados para generar un impacto significativo y un cambio a largo plazo en las habilidades.",
       activities: [
-        "Liderazgo Empático y Motivador",
-        "Gestión de la Experiencia del Colaborador",
-        "Detección temprana de riesgos",
-        "Toma de decisiones estratégica"
+        "Programas extensos y profundos",
+        "Impacto significativo a largo plazo",
+        "Seguimiento y evaluación continua",
+        "Certificación de competencias"
       ]
     },
     {
-      title: "Salud y Prevención en el Trabajo",
+      title: "Charlas",
       icon: Zap,
       color: "orange",
-      focus: "Integración de la salud ocupacional en el aprendizaje continuo.",
+      focus: "Sesiones dinámicas de 1 a 2 horas para transmitir conocimientos clave y motivación sobre temas específicos.",
       activities: [
-        "Educación en Salud Mental",
-        "Talleres de manejo de carga mental",
-        "Prevención de Ausentismo Laboral",
-        "Promoción de Marca Empleadora"
+        "Sesiones de 1 a 2 horas",
+        "Transmisión de conocimientos clave",
+        "Motivación sobre temas específicos",
+        "Contenido actualizado y relevante"
       ]
     }
   ];
@@ -276,10 +276,10 @@ export default function CapacitacionLaboral() {
           <div className="container">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Líneas de Acción
+                Programa de Capacitación: Potenciamos el Talento y el Desempeño
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Cuatro pilares estratégicos diseñados para transformar el talento y potenciar el desempeño laboral
+                Ofrecemos soluciones de formación personalizadas que se adaptan a las necesidades reales de tu empresa, integrando metodologías prácticas para el fortalecimiento de habilidades críticas.
               </p>
             </div>
 
