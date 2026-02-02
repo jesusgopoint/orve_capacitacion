@@ -59,96 +59,49 @@ export default function TeamBuildingLanding() {
 
   const actionLines = [
     {
-      title: "Salud",
-      icon: Heart,
+      title: "Misión Posible",
+      icon: Users,
       color: "primary",
-      focus: "Autocuidado, prevención integral y promoción de hábitos de vida saludables.",
+      focus: "Jornada de alineamiento y conexión para impulsar competencias transversales de manera integral y colaborativa.",
       activities: [
-        "Feria de Salud y Bienestar",
-        "Operativos de salud",
-        "Consultas nutricionales",
-        "Masajes Express",
-        "Snack Saludable",
-        "Charlas educativas",
-        "Taller de cocina saludable",
-        "Canastas de fruta"
+        "Dinámicas de activación: Juegos lúdicos para conectar a los participantes y generar apertura.",
+        "Método DISC: Neuro-herramienta para identificar estilos de personalidad y mejorar vínculos.",
+        "Desafíos Experienciales: Misiones simultáneas (Nitrovluómetro, Nación Secreta, Protocolo Fantasma) que demandan coordinación máxima.",
+        "Misión Final: Construcción de un circuito de movimiento continuo para activar el 'Código del éxito'."
       ]
     },
     {
-      title: "Físico",
+      title: "Adrenalina y Naturaleza",
       icon: TrendingUp,
       color: "blue",
-      focus: "Bienestar corporal, movimiento consciente y entornos de trabajo saludables.",
+      focus: "Experiencias de alto impacto que combinan estrategia, diversión y entorno natural en el Cajón del Maipo.",
       activities: [
-        "Pausas lúdicas",
-        "Pausas activas de yoga",
-        "Pausas activas mindfulness",
-        "Kick-off de inicio de jornada Yoga",
-        "Pilates Trekking",
-        "Defensa personal",
-        "Torneos deportivos"
+        "Rafting: Descenso por aguas rápidas para poner a prueba la unión del equipo ante la corriente.",
+        "Paintball: Dinámica de estrategia y táctica en un entorno seguro y lleno de energía.",
+        "Canopy: Velocidad y altura recorriendo circuitos sobre el Río Maipo.",
+        "Combo Aventura: Jornadas completas con asado campestre, piscina y stand de hidratación."
       ]
     },
     {
-      title: "Psicoemocional",
+      title: "Desafíos de Construcción",
       icon: Smile,
       color: "green",
-      focus: "Salud mental, equilibrio emocional y prevención de riesgos psicosociales.",
+      focus: "Resolución de problemas complejos mediante la creatividad y el liderazgo situacional.",
       activities: [
-        "Manejo del estrés y la ansiedad",
-        "Mindfulness y meditación",
-        "Acompañamiento psicológico",
-        "Operativo de salud mental",
-        "Pausas activas psicológicas",
-        "Charlas y cursos de salud mental"
+        "Escape Room Corporativo: Resolver acertijos y enigmas bajo presión para completar una misión.",
+        "Puente de Bambú: Reto de ingeniería grupal donde el éxito culmina al cruzar la estructura construida por todos.",
+        "Barco Vikingo: Diseño y navegación de embarcaciones con recursos limitados."
       ]
     },
     {
-      title: "Organizacional",
-      icon: Users,
-      color: "orange",
-      focus: "Cultura organizacional, liderazgo positivo y clima laboral saludable.",
-      activities: [
-        "Talleres y charlas de desarrollo profesional",
-        "Administración del tiempo",
-        "Manejo de conflictos",
-        "Liderazgo positivo",
-        "Inclusión laboral",
-        "Adaptación al cambio",
-        "Comunicación efectiva",
-        "Charlas sobre riesgos psicosociales",
-        "Team Building (Scape Room, Lego Serious Play, Dinámicas con tambores y bambú)",
-        "Actividad '¿Conoces el color de tu cerebro?'",
-        "'Hit del momento' actividad lúdica y tendencia",
-        "Team Building Temáticos (cocina, Olimpiadas, Karting)"
-      ]
-    },
-    {
-      title: "Equilibrio Vida-Trabajo",
-      icon: Heart,
-      color: "red",
-      focus: "Conciliación laboral, bienestar familiar y gestión del tiempo.",
-      activities: [
-        "Actividades de integración familiar",
-        "Fechas importantes (Día de la mujer, día del hombre, día de la madre, día del padre, día del niño, fiestas patrias)",
-        "Soporte para la vida personal y familiar",
-        "Charlas formativas (Conciliación trabajo-familia, Control parental, Tenencia responsable de mascotas, Finanzas personales, Orientación sobre beneficios sociales)",
-        "Taller de cocina",
-        "Taller de asados a la parrilla",
-        "Taller de cocteléría",
-        "Taller de maquillaje",
-        "Taller de Risoterapia"
-      ]
-    },
-    {
-      title: "Sustentabilidad",
+      title: "Integración Lúdica",
       icon: Zap,
-      color: "green",
-      focus: "Bienestar sostenible, impacto social y sentido del trabajo.",
+      color: "orange",
+      focus: "Fortalecimiento de la comunicación efectiva y la identidad grupal a través del juego.",
       activities: [
-        "Charlas de sensibilización ambiental",
-        "Cursos y talleres prácticos",
-        "Actividades de impacto social y ecológico"
+        "Búsqueda del Tesoro (Geo Cooking): Superar desafíos para encontrar ingredientes y cocinar en equipo.",
+        "El Hit del Momento: Ejercicio colaborativo de reescritura de canciones vinculadas a la cultura de la empresa.",
+        "Campeonato de Karting: Fomento del compañerismo en un ambiente de velocidad y sana competencia."
       ]
     }
   ];
@@ -228,9 +181,9 @@ export default function TeamBuildingLanding() {
   };
 
   const results = [
-    { metric: "90%", description: "Empresas satisfechas" },
-    { metric: "35%", description: "Reducción de estrés" },
-    { metric: "+100", description: "Actividades ejecutadas" },
+    { metric: "85%", description: "Aplicabilidad directa" },
+    { metric: "75%", description: "Mejora en liderazgo" },
+    { metric: "+100%", description: "Participación activa" },
   ];
 
   // Carrusel de resultados
@@ -243,24 +196,24 @@ export default function TeamBuildingLanding() {
 
   const faqItems = [
     {
-      question: "¿Qué tipo de actividades incluye el programa para mejorar la experiencia del colaborador?",
-      answer: "El programa contempla una combinación de actividades diseñadas para abordar el bienestar laboral de manera integral dentro del entorno de trabajo. Estas incluyen talleres participativos, charlas y espacios de reflexión orientados a mejorar la salud emocional y relacional de los equipos. Nos enfocamos en temáticas como autocuidado, hábitos saludables y el fortalecimiento de equipos, atacando directamente problemas como la desmotivación y los conflictos laborales para asegurar que cada instancia genere un impacto real en la rutina de la empresa."
+      question: "¿Cómo impacta un programa de Team Building en el desempeño laboral a largo plazo?",
+      answer: "Nuestras intervenciones no son eventos aislados, sino herramientas diseñadas para generar un cambio real en la cultura organizacional. Al fortalecer la sinergia grupal y la confianza, los equipos optimizan sus procesos internos, lo que se traduce en un desempeño laboral más eficiente, una reducción de errores por falta de comunicación y una mayor agilidad en la consecución de objetivos estratégicos."
     },
     {
-      question: "¿Cómo ayuda el programa a combatir el Burnout y los riesgos psicosociales?",
-      answer: "Nuestro enfoque preventivo permite identificar y gestionar variables críticas antes de que se conviertan en estrés laboral crónico o burnout. Al aplicar un enfoque psicosocial, el programa ayuda a monitorear los riesgos psicosociales y la sobrecarga laboral, promoviendo un equilibrio sano entre la vida y el trabajo. Esto no solo protege la salud mental, sino que impacta positivamente en la reducción del ausentismo laboral provocado por el agotamiento de los colaboradores."
+      question: "¿Es posible resolver conflictos laborales mediante estas dinámicas?",
+      answer: "Absolutamente. Utilizamos un enfoque psicosocial para identificar las raíces de las tensiones y transformarlas en oportunidades de aprendizaje. A través de la comunicación asertiva y ejercicios de empatía, los colaboradores desarrollan habilidades para gestionar diferencias de opinión de forma constructiva, mejorando drásticamente el clima organizacional y la armonía en la oficina."
     },
     {
-      question: "¿Es efectivo para corregir un liderazgo deficiente y un bajo desempeño?",
-      answer: "Sí. El programa ofrece herramientas para fortalecer la cultura organizacional, transformando situaciones de liderazgo deficiente en liderazgos que inspiran y sostienen. Al mejorar el soporte emocional y la comunicación interna, logramos revertir situaciones de bajo desempeño, alineando nuevamente a los colaboradores con los objetivos estratégicos y potenciando la productividad general del negocio."
+      question: "¿Cómo ayuda el Team Building a reducir la alta rotación de personal?",
+      answer: "La alta rotación suele ser síntoma de una desconexión emocional con la empresa. Nuestras jornadas mejoran la experiencia del colaborador, logrando que se sienta valorado y parte fundamental de un propósito común. Al incrementar el sentido de pertenencia y el bienestar, los talentos clave eligen permanecer en la organización, fortaleciendo la retención y la estabilidad de los equipos."
     },
     {
-      question: "¿Se puede adaptar el programa a la realidad y tamaño de mi empresa?",
-      answer: "El programa se adapta completamente a la realidad de cada organización, ya sea una pyme o una gran empresa. Antes de la implementación, realizamos un levantamiento de necesidades para comprender la cultura y los desafíos específicos. A partir de este diagnóstico, ajustamos la metodología y la frecuencia de las actividades, asegurando que el programa sea pertinente para la salud ocupacional de su equipo y esté alineado con las prioridades de su negocio."
+      question: "¿Qué rol juegan los líderes en estas jornadas de capacitación?",
+      answer: "El liderazgo es el pilar de la cohesión. En cada actividad, fomentamos un liderazgo inspirador que permite a los jefes y gerentes conectar de forma auténtica con sus equipos. El programa les entrega herramientas de gestión de personas para que puedan motivar al personal, detectar riesgos de desmotivación a tiempo y guiar a sus colaboradores bajo los principios del trabajo decente y el respeto mutuo."
     },
     {
-      question: "¿Qué modalidades ofrecen y cómo se mide el impacto en el bienestar organizacional?",
-      answer: "Las actividades pueden desarrollarse de manera presencial, online o en formato híbrido, dependiendo de la ubicación de los colaboradores y los objetivos del programa. Para asegurar que la inversión genere valor, definimos indicadores que permiten medir el impacto en el bienestar organizacional y el clima organizacional. Esta información permite ajustar las acciones en el tiempo, garantizando resultados profundos y duraderos tanto para las personas como para los resultados del negocio."
+      question: "¿Sus programas se adaptan a la realidad de cada bienestar organizacional?",
+      answer: "Sí, diseñamos cada intervención alineada a la salud ocupacional y las necesidades específicas de su empresa. Ya sea que busquen potenciar el desarrollo de talento, mejorar la salud mental del equipo o simplemente celebrar un hito importante, nuestras dinámicas se ajustan para promover un bienestar organizacional integral que sea sostenible y coherente con sus valores corporativos."
     }
   ];
 
@@ -275,10 +228,10 @@ export default function TeamBuildingLanding() {
               {/* Left Column - Text */}
               <div>
                 <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                  Programa de bienestar laboral y calidad de vida
+                  Team Building Estratégico para Empresas
                 </h1>
                 <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                  Programa diseñado para mejorar la calidad de vida laboral de los colaboradores y potenciar el desempeño organizacional a través de un enfoque psicosocial integral centrado en personas, cultura y resultados.
+                  Programa diseñado para fortalecer el clima organizacional y la sinergia mediante dinámicas vivenciales de alto impacto. Potenciamos el desempeño laboral a través de un enfoque psicosocial que transforma los conflictos laborales en oportunidades de colaboración y confianza.
                 </p>
                 <button
                   onClick={scrollToForm}
@@ -292,32 +245,32 @@ export default function TeamBuildingLanding() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="overflow-hidden rounded-lg h-48 md:h-56">
                   <img
-                    src="/images/payaso.webp"
-                    alt="Diversión en el trabajo"
+                    src="/teambuilding-img1.png"
+                    alt="Dinámicas de Team Building"
                     className="w-full h-full object-cover animate-fade-in-scale"
                     style={{ animationDelay: "0.1s" }}
                   />
                 </div>
                 <div className="overflow-hidden rounded-lg h-48 md:h-56">
                   <img
-                    src="/images/elongar.webp"
-                    alt="Bienestar y estiramiento"
+                    src="/teambuilding-img2.png"
+                    alt="Actividades de integración"
                     className="w-full h-full object-cover animate-fade-in-scale"
                     style={{ animationDelay: "0.2s" }}
                   />
                 </div>
                 <div className="overflow-hidden rounded-lg h-48 md:h-56">
                   <img
-                    src="/images/fruta.webp"
-                    alt="Nutrición y bienestar"
+                    src="/teambuilding-img3.png"
+                    alt="Experiencias de alto impacto"
                     className="w-full h-full object-cover animate-fade-in-scale"
                     style={{ animationDelay: "0.3s" }}
                   />
                 </div>
                 <div className="overflow-hidden rounded-lg h-48 md:h-56">
                   <img
-                    src="/images/calidaddevida8.webp"
-                    alt="Calidad de vida laboral"
+                    src="/teambuilding-img4.jpg"
+                    alt="Fortalecimiento de equipos"
                     className="w-full h-full object-cover animate-fade-in-scale"
                     style={{ animationDelay: "0.4s" }}
                   />
