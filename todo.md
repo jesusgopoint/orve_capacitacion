@@ -41,3 +41,4 @@
 - [x] Implementar scroll interno en tarjetas de pilares para mostrar todas las actividades
 - [x] Ajustar contenido de los últimos 3 pilares (Psicoemocional, Equilibrio Vida-Trabajo, Sustentabilidad)
 - [x] Cambiar sección "Líneas de Acción" por "Programa de Capacitación: Potenciamos el Talento y el Desempeño" en /capacitacion-laboral
+- [x] Actualizar items de la ficha "Charlas" en /capacitacion-laboral

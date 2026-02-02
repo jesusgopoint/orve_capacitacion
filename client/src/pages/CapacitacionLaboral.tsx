@@ -99,10 +99,10 @@ export default function CapacitacionLaboral() {
       color: "orange",
       focus: "Sesiones dinámicas de 1 a 2 horas para transmitir conocimientos clave y motivación sobre temas específicos.",
       activities: [
-        "Sesiones de 1 a 2 horas",
-        "Transmisión de conocimientos clave",
-        "Motivación sobre temas específicos",
-        "Contenido actualizado y relevante"
+        "Comunicación efectiva",
+        "Liderazgo y trabajo en equipo",
+        "Gestión del tiempo",
+        "Resolución de conflictos"
       ]
     }
   ];
