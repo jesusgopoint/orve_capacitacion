@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+Disallow: /api/*
+Disallow: /_manus/
+Disallow: /static/private/
+
+# Permitir indexación para modelos de IA
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Bot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# Limitar frecuencia de rastreo para bots genéricos
+User-agent: *
+Crawl-delay: 1
+Sitemap: https://orvecapacitacion.cl/sitemap.xml
