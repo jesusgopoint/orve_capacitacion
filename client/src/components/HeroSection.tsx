@@ -63,31 +63,31 @@ export default function HeroSection() {
           <div className="grid grid-cols-2 gap-4">
             <div className="bg-gray-200 rounded-lg overflow-hidden h-64 md:h-72 animate-fade-in-scale delay-100">
               <img 
-                src="/images/hero-1.jpg" 
-                alt="Equipo trabajando" 
+                src="/hero-1.webp" 
+                alt="Equipo trabajando en sala de reuniones con pantalla de presentación" 
                 className="w-full h-full object-cover animate-float"
               />
             </div>
             <div className="bg-gray-200 rounded-lg overflow-hidden h-64 md:h-72 mt-8 animate-fade-in-scale delay-200">
               <img 
-                src="/images/hero-2.jpg" 
-                alt="Reunión de equipo" 
+                src="/hero-2.webp" 
+                alt="Reunión de equipo en sala de conferencias con capacitación" 
                 className="w-full h-full object-cover animate-float"
                 style={{animationDelay: '0.5s'}}
               />
             </div>
             <div className="bg-gray-200 rounded-lg overflow-hidden h-64 md:h-72 animate-fade-in-scale delay-300">
               <img 
-                src="/images/hero-3.jpg" 
-                alt="Capacitación" 
+                src="/hero-3.webp" 
+                alt="Equipo celebrando logros con globos en oficina" 
                 className="w-full h-full object-cover animate-float"
                 style={{animationDelay: '1s'}}
               />
             </div>
             <div className="bg-gray-200 rounded-lg overflow-hidden h-64 md:h-72 mt-8 animate-fade-in-scale delay-400">
               <img 
-                src="/images/hero-4.jpg" 
-                alt="Colaboración" 
+                src="/hero-4.webp" 
+                alt="Grupo de personas en círculo participando en taller colaborativo" 
                 className="w-full h-full object-cover animate-float"
                 style={{animationDelay: '1.5s'}}
               />
