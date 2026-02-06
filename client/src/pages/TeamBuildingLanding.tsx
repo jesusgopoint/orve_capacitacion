@@ -245,32 +245,32 @@ export default function TeamBuildingLanding() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="overflow-hidden rounded-lg h-48 md:h-56">
                   <img
-                    src="/teambuilding-img1.png"
-                    alt="Dinámicas de Team Building"
+                    src="/teambuilding-hero-1.webp"
+                    alt="Equipo corporativo celebrando con brazos levantados en campo verde"
                     className="w-full h-full object-cover animate-fade-in-scale"
                     style={{ animationDelay: "0.1s" }}
                   />
                 </div>
                 <div className="overflow-hidden rounded-lg h-48 md:h-56">
                   <img
-                    src="/teambuilding-img2.png"
-                    alt="Actividades de integración"
+                    src="/teambuilding-hero-2.webp"
+                    alt="Colaboradores realizando dinámica de integración con sogas en oficina"
                     className="w-full h-full object-cover animate-fade-in-scale"
                     style={{ animationDelay: "0.2s" }}
                   />
                 </div>
                 <div className="overflow-hidden rounded-lg h-48 md:h-56">
                   <img
-                    src="/teambuilding-img3.png"
-                    alt="Experiencias de alto impacto"
+                    src="/teambuilding-hero-3.webp"
+                    alt="Equipo de trabajo colaborando con bloques de colores en sala de reuniones"
                     className="w-full h-full object-cover animate-fade-in-scale"
                     style={{ animationDelay: "0.3s" }}
                   />
                 </div>
                 <div className="overflow-hidden rounded-lg h-48 md:h-56">
                   <img
-                    src="/teambuilding-img4.jpg"
-                    alt="Fortalecimiento de equipos"
+                    src="/teambuilding-hero-4.webp"
+                    alt="Actividad de team building outdoor con equipo en campo verde"
                     className="w-full h-full object-cover animate-fade-in-scale"
                     style={{ animationDelay: "0.4s" }}
                   />
