@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+// Team Building Landing - Última actualización: Feb 2026
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ChevronDown, ChevronUp, Heart, Users, TrendingUp, Smile, Zap } from "lucide-react";
