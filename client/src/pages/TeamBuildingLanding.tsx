@@ -373,21 +373,29 @@ export default function TeamBuildingLanding() {
         <section className="py-16 md:py-24 bg-gray-50">
           <div className="container">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
-              Por qué elegir nuestra solución de Bienestar Organizacional
+              Por qué elegir nuestra solución de Team Building Estratégico
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                  El éxito de las compañías modernas no se logra con acciones aisladas. Nuestro programa se integra a la cultura organizacional y a la gestión de personas / RRHH, generando un impacto real en la experiencia del colaborador.
+                  El éxito de los equipos de alto desempeño no surge de la casualidad, sino de la construcción de vínculos sólidos. Nuestro programa de <strong>Team Building se integra a la cultura organizacional y a la gestión de personas / RRHH</strong>, transformando grupos de trabajo en equipos cohesionados que potencian los resultados del negocio.
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  Diseñamos intervenciones alineadas a los objetivos estratégicos, promoviendo el trabajo decente con un enfoque práctico y sostenible en el tiempo.
+                  Diseñamos dinámicas vivenciales de alto impacto alineadas a los objetivos estratégicos, promoviendo la confianza, la comunicación asertiva y el sentido de pertenencia con un enfoque práctico y sostenible en el tiempo.
                 </p>
+                <div className="mt-8">
+                  <button
+                    onClick={scrollToForm}
+                    className="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 transition-colors"
+                  >
+                    Solicitar información del programa
+                  </button>
+                </div>
               </div>
               <div className="rounded-lg overflow-hidden">
                 <img
-                  src="/images/equipoenprogramadebienestar2.webp"
-                  alt="equipoenprogramadebienestar"
+                  src="/team-building-activdad-5.webp"
+                  alt="Equipo en taller de Team Building Estratégico"
                   className="w-full h-96 object-cover rounded-lg"
                 />
               </div>
@@ -421,7 +429,7 @@ export default function TeamBuildingLanding() {
         {/* Benefits Section */}
         <section className="py-16 md:py-24 bg-white">
           <div className="container max-w-6xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">Beneficios del Bienestar Laboral para las personas y la empresa</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">Habilidades a trabajar con el team building</h2>
             <div className="overflow-hidden">
               <style>{`
                 @keyframes benefits-carousel {
@@ -440,13 +448,13 @@ export default function TeamBuildingLanding() {
               `}</style>
               <div className="benefits-carousel-container">
                 {[
-                  { title: "Mejora del clima organizacional", desc: "Fortalece las relaciones internas y la motivación, creando un entorno colaborativo." },
-                  { title: "Salud mental en el trabajo", desc: "Disminuye el desgaste emocional, promoviendo el equilibrio y la salud ocupacional." },
-                  { title: "Mayor compromiso", desc: "Incrementa el sentido de pertenencia, reduciendo la alta rotación y mejorando la retención de talento." },
-                  { title: "Desempeño laboral optimizado", desc: "Colaboradores con mayor bienestar presentan mejor foco y eficiencia diaria." },
-                  { title: "Marca Empleadora", desc: "Posiciona a la organización como un lugar atractivo, mitigando riesgos psicosociales." },
-                  { title: "Mejora del clima organizacional", desc: "Fortalece las relaciones internas y la motivación, creando un entorno colaborativo." },
-                  { title: "Salud mental en el trabajo", desc: "Disminuye el desgaste emocional, promoviendo el equilibrio y la salud ocupacional." }
+                  { title: "Sinergia de equipo", desc: "Fortalece los vínculos y la confianza para un trabajo colaborativo eficiente." },
+                  { title: "Comunicación efectiva", desc: "Mejora el flujo de información y reduce drásticamente los conflictos laborales." },
+                  { title: "Mayor compromiso", desc: "Incrementa el sentido de pertenencia y motiva el desarrollo de talento." },
+                  { title: "Liderazgo", desc: "Potencia habilidades de gestión para guiar equipos hacia metas comunes." },
+                  { title: "Clima organizacional", desc: "Crea entornos positivos que aumentan el bienestar y reducen la alta rotación." },
+                  { title: "Sinergia de equipo", desc: "Fortalece los vínculos y la confianza para un trabajo colaborativo eficiente." },
+                  { title: "Comunicación efectiva", desc: "Mejora el flujo de información y reduce drásticamente los conflictos laborales." }
                 ].map((benefit, index) => (
                   <div key={index} className="bg-gray-50 p-8 rounded-lg flex-shrink-0 w-96">
                     <h3 className="text-lg font-bold text-gray-900 mb-3">{benefit.title}</h3>
@@ -515,8 +523,8 @@ export default function TeamBuildingLanding() {
         {/* CTA Section */}
         <section className="py-16 md:py-24 bg-gradient-to-r from-blue-50 to-purple-50">
           <div className="container max-w-4xl text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Empieza hoy a cuidar a quienes sostienen tu organización</h2>
-            <p className="text-lg text-gray-700 mt-4">Invertir en bienestar laboral es invertir en personas, cultura y resultados.</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Empieza hoy a fortalecer el motor de tu organización</h2>
+            <p className="text-lg text-gray-700 mt-4">Invertir en Team Building es invertir en sinergia, cultura y resultados colectivos.</p>
           </div>
         </section>
 
@@ -596,7 +604,7 @@ export default function TeamBuildingLanding() {
         <section className="py-12 md:py-16 bg-gray-50">
           <div className="container max-w-3xl">
             <h2 className="text-xl md:text-2xl font-semibold text-gray-700 mb-8 text-center">
-              Preguntas frecuentes Programa de bienestar laboral y calidad de vida
+              Preguntas Frecuentes sobre Team Building Estratégico
             </h2>
             <div className="space-y-4 mb-12">
               {faqItems.map((item, index) => (
