@@ -171,8 +171,8 @@ export default function Services() {
         <div className="mt-12">
           <div className="bg-gray-300 rounded-lg overflow-hidden h-96">
             <img 
-              src="/images/services.jpg" 
-              alt="Servicios profesionales" 
+              src="/services.webp" 
+              alt="Profesionales en reunión de trabajo colaborativo en oficina moderna" 
               className="w-full h-full object-cover"
             />
           </div>

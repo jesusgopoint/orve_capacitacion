@@ -69,8 +69,8 @@ export default function OurStory() {
             {/* Left Image */}
             <div className="bg-gray-300 rounded-lg overflow-hidden h-96 animate-fade-in-scale">
               <img 
-                src="/images/history.jpg" 
-                alt="Nuestra historia" 
+                src="/history.webp" 
+                alt="Equipo en oficina moderna viendo timeline de crecimiento empresarial" 
                 className="w-full h-full object-cover"
               />
             </div>
