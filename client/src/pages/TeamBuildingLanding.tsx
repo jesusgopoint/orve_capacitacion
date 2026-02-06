@@ -102,7 +102,9 @@ export default function TeamBuildingLanding() {
       activities: [
         "Búsqueda del Tesoro (Geo Cooking): Superar desafíos para encontrar ingredientes y cocinar en equipo.",
         "El Hit del Momento: Ejercicio colaborativo de reescritura de canciones vinculadas a la cultura de la empresa.",
-        "Campeonato de Karting: Fomento del compañerismo en un ambiente de velocidad y sana competencia."
+        "Campeonato de Karting: Fomento del compañerismo en un ambiente de velocidad y sana competencia.",
+        "Lego Serious Play: Metodología que usa LEGO para pensar, comunicar y resolver problemas de forma creativa.",
+        "Desafíos co-creativos: Dinámicas colaborativas donde un equipo construye soluciones conjuntamente a partir de la interacción y el trabajo en equipo."
       ]
     }
   ];

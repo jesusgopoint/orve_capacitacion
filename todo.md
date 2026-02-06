@@ -44,3 +44,4 @@
 - [x] Actualizar items de la ficha "Charlas" en /capacitacion-laboral
 - [x] Descomentar ruta /team-building para mostrar en desarrollo
 - [x] Copiar estructura y diseño de /programa-de-bienestar a /team-building
+- [x] Agregar Lego Serious Play y Desafíos co-creativos a tarjeta Integración Lúdica en /team-building
