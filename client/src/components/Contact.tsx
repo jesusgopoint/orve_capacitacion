@@ -219,7 +219,7 @@ export default function Contact() {
               <p className="text-xl font-semibold text-gray-900 mb-4">Llámanos</p>
               <div className="flex items-center gap-3">
                 <Phone className="w-6 h-6 text-primary flex-shrink-0" />
-                <p className="text-gray-700">+56 9 8698 3439</p>
+                <p className="text-gray-700">+56 9 8652 8382</p>
               </div>
             </div>
 
