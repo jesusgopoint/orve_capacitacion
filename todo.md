@@ -45,3 +45,4 @@
 - [x] Descomentar ruta /team-building para mostrar en desarrollo
 - [x] Copiar estructura y diseño de /programa-de-bienestar a /team-building
 - [x] Agregar Lego Serious Play y Desafíos co-creativos a tarjeta Integración Lúdica en /team-building
+- [x] Cambiar número de WhatsApp a +56 9 8652 8382 en botón de contacto y botón flotante

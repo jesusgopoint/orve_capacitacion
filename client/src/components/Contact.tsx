@@ -253,7 +253,7 @@ export default function Contact() {
                   </svg>
                 </a>
                 {/* WhatsApp */}
-                <a href="https://api.whatsapp.com/send/?phone=56986983439&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-lg flex items-center justify-center hover:opacity-80 transition-opacity flex-shrink-0">
+                <a href="https://api.whatsapp.com/send/?phone=56986528382&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-lg flex items-center justify-center hover:opacity-80 transition-opacity flex-shrink-0">
                   <img src="/images/whatsapp-icon.png" alt="WhatsApp" className="w-full h-full object-contain rounded-lg" />
                 </a>
                 {/* YouTube */}
