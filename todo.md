@@ -48,3 +48,4 @@
 - [x] Cambiar número de WhatsApp a +56 9 8652 8382 en botón de contacto y botón flotante
 - [x] Cambiar número de teléfono en sección Llámanos de +56 9 8698 3439 a +56 9 8652 8382
 - [x] Actualizar link de WhatsApp con wa.me y mensaje predeterminado en botón contacto y flotante
+- [x] Crear carrusel de fotos de actividades de team building en /team-building
