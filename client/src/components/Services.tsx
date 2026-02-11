@@ -57,6 +57,32 @@ export default function Services() {
       ]
     },
     {
+      id: "teambuilding",
+      title: "Team Building",
+      content: [
+        {
+          text: "En ORVE Capacitación, diseñamos experiencias de Team Building transformadoras que van más allá de la recreación. Creamos entornos dinámicos para ",
+          bold: "fortalecer la cohesión, la confianza y el compromiso",
+          rest: " de tus colaboradores, impactando directamente en la cultura organizacional."
+        },
+        {
+          text: "Nuestras jornadas se centran en pilares clave como la ",
+          bold: "comunicación asertiva, la resolución de conflictos y el liderazgo colaborativo",
+          rest: ", adaptándonos a los desafíos específicos de cada equipo para convertirlos en unidades de alto desempeño."
+        },
+        {
+          text: "Ofrecemos ",
+          bold: "actividades personalizadas",
+          rest: " que integran el aprendizaje con la acción, garantizando que el impacto positivo se traslade del evento al día a día en la oficina."
+        },
+        {
+          text: "Potencia la ",
+          bold: "sinergia de tu capital humano",
+          rest: " con programas diseñados para conectar equipos y alcanzar metas comunes."
+        }
+      ]
+    },
+    {
       id: "desarrollo",
       title: "Desarrollo Organizacional",
       content: [
