@@ -95,8 +95,8 @@ export default function WellnessPillars() {
             {/* Right Image */}
             <div className="bg-gray-300 rounded-lg overflow-hidden h-96 animate-fade-in-scale" style={{animationDelay: '0.2s'}}>
               <img 
-                src="/images/hero-1.jpg" 
-                alt="SENCE" 
+                src="/images/sence.webp" 
+                alt="Equipo trabajando con excedentes SENCE" 
                 className="w-full h-full object-cover animate-float"
               />
             </div>
