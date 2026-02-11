@@ -4,19 +4,19 @@ export default function WellnessPillars() {
       title: "Bienestar Físico",
       description: "Programas enfocados en la salud y actividad física de los colaboradores, promoviendo hábitos saludables y energía en el trabajo.",
       features: ["Pausas Activas", "Masajes en Silla", "Baile entretenido", "Entre Otros"],
-      image: "/images/pilar-fisico.jpg"
+      image: "/images/pilar-fisico.webp"
     },
     {
       title: "Bienestar Psicoemocional",
       description: "Iniciativas para cuidar la salud emocional y mental del equipo, generando espacios de calma y equilibrio.",
       features: ["Pausas Psicológicas", "Mindfulness (Eating, express, tradicional)", "Yoga", "Entre Otros"],
-      image: "/images/pilar-mental.jpg"
+      image: "/images/pilar-mental.webp"
     },
     {
       title: "Bienestar Integral de Salud",
       description: "Programas integrales que cuidan la salud general de los colaboradores desde múltiples dimensiones.",
       features: ["Operativos Médicos", "Programa Alimentación Saludable Organizacional", "Programa Integral de Salud", "Entre Otros"],
-      image: "/images/pilar-social.jpg"
+      image: "/images/pilar-social.webp"
     }
   ];
 
