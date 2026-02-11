@@ -1,35 +1,9 @@
 import { useState } from "react";
 
 export default function Services() {
-  const [activeTab, setActiveTab] = useState("formacion");
+  const [activeTab, setActiveTab] = useState("bienestar");
 
   const services = [
-    {
-      id: "formacion",
-      title: "Formación",
-      content: [
-        {
-          text: "En ORVE Capacitación, diseñamos programas de formación especializados en el desarrollo de ",
-          bold: "habilidades blandas",
-          rest: " para potenciar el desempeño y crecimiento del talento dentro de las organizaciones."
-        },
-        {
-          text: "Nuestras capacitaciones abarcan áreas clave como liderazgo, trabajo en equipo, comunicación efectiva, gestión del tiempo, entre otras, ",
-          bold: "adaptándose a las necesidades",
-          rest: " específicas de cada empresa."
-        },
-        {
-          text: "Ofrecemos ",
-          bold: "diversas modalidades",
-          rest: " de formación, incluyendo cursos, talleres, charlas y seminarios web, asegurando flexibilidad y efectividad en el aprendizaje."
-        },
-        {
-          text: "Impulsa el desarrollo de tu equipo con programas diseñados para ",
-          bold: "fortalecer desempeño",
-          rest: " y productividad."
-        }
-      ]
-    },
     {
       id: "bienestar",
       title: "Programa de Calidad de Vida y Bienestar",
@@ -53,6 +27,32 @@ export default function Services() {
           text: "Cuida a tus colaboradores que ",
           bold: "ellos cuidarán",
           rest: " de tu compañía."
+        }
+      ]
+    },
+    {
+      id: "formacion",
+      title: "Formación",
+      content: [
+        {
+          text: "En ORVE Capacitación, diseñamos programas de formación especializados en el desarrollo de ",
+          bold: "habilidades blandas",
+          rest: " para potenciar el desempeño y crecimiento del talento dentro de las organizaciones."
+        },
+        {
+          text: "Nuestras capacitaciones abarcan áreas clave como liderazgo, trabajo en equipo, comunicación efectiva, gestión del tiempo, entre otras, ",
+          bold: "adaptándose a las necesidades",
+          rest: " específicas de cada empresa."
+        },
+        {
+          text: "Ofrecemos ",
+          bold: "diversas modalidades",
+          rest: " de formación, incluyendo cursos, talleres, charlas y seminarios web, asegurando flexibilidad y efectividad en el aprendizaje."
+        },
+        {
+          text: "Impulsa el desarrollo de tu equipo con programas diseñados para ",
+          bold: "fortalecer desempeño",
+          rest: " y productividad."
         }
       ]
     },
