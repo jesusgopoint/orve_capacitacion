@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "wouter";
 
 export default function Services() {
   const [activeTab, setActiveTab] = useState("bienestar");
@@ -7,6 +8,7 @@ export default function Services() {
     {
       id: "bienestar",
       title: "Programa de Calidad de Vida y Bienestar",
+      link: "/programa-de-bienestar",
       content: [
         {
           text: "En ORVE ofrecemos un programa diseñado para ",
@@ -33,6 +35,7 @@ export default function Services() {
     {
       id: "formacion",
       title: "Formación",
+      link: "/capacitacion-laboral",
       content: [
         {
           text: "En ORVE Capacitación, diseñamos programas de formación especializados en el desarrollo de ",
@@ -59,6 +62,7 @@ export default function Services() {
     {
       id: "teambuilding",
       title: "Team Building",
+      link: "/team-building",
       content: [
         {
           text: "En ORVE Capacitación, diseñamos experiencias de Team Building transformadoras que van más allá de la recreación. Creamos entornos dinámicos para ",
@@ -177,9 +181,9 @@ export default function Services() {
           {/* Content Area */}
           <div className="md:col-span-3">
             {activeService && (
-              <div className="bg-gray-50 rounded-lg p-8 min-h-96">
+              <div className="bg-gray-50 rounded-lg p-8 min-h-96 flex flex-col">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">{activeService.title}</h3>
-                <div className="space-y-4">
+                <div className="space-y-4 flex-1">
                   {activeService.content.map((item, index) => (
                     <p key={index} className="text-gray-700 leading-relaxed">
                       {item.text}
@@ -188,6 +192,15 @@ export default function Services() {
                     </p>
                   ))}
                 </div>
+                {activeService.link && (
+                  <div className="mt-8">
+                    <Link href={activeService.link}>
+                      <button className="bg-primary hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300">
+                        Más información
+                      </button>
+                    </Link>
+                  </div>
+                )}
               </div>
             )}
           </div>
