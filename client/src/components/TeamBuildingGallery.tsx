@@ -7,18 +7,14 @@ interface GalleryImage {
 }
 
 const galleryImages: GalleryImage[] = [
-  { src: "/images/ActividadTeamBuilding-1.webp", alt: "Actividad Team Building 1 - Personas trabajando en equipo" },
-  { src: "/images/ActividadTeamBuilding-2.webp", alt: "Actividad Team Building 2 - Dinámicas colaborativas" },
-  { src: "/images/ActividadTeamBuilding-3.webp", alt: "Actividad Team Building 3 - Ejercicio de integración" },
-  { src: "/images/ActividadTeamBuilding-4.webp", alt: "Actividad Team Building 4 - Trabajo en equipo" },
-  { src: "/images/ActividadTeamBuilding-5.webp", alt: "Actividad Team Building 5 - Desafío colaborativo" },
-  { src: "/images/ActividadTeamBuilding-6.webp", alt: "Actividad Team Building 6 - Actividad grupal" },
-  { src: "/images/ActividadTeamBuilding-7.webp", alt: "Actividad Team Building 7 - Ejercicio de confianza" },
-  { src: "/images/ActividadTeamBuilding-7(1).webp", alt: "Actividad Team Building 7 - Variante de ejercicio" },
-  { src: "/images/ActividadTeamBuilding-8.webp", alt: "Actividad Team Building 8 - Dinámica de grupo" },
-  { src: "/images/ActividadTeamBuilding-9.webp", alt: "Actividad Team Building 9 - Integración de equipo" },
-  { src: "/images/ActividadTeamBuilding-10.webp", alt: "Actividad Team Building 10 - Actividad experiencial" },
-  { src: "/images/ActividadTeamBuilding-11.webp", alt: "Actividad Team Building 11 - Celebración de logros" },
+  { src: "/images/ActividadTeamBuilding-1.webp", alt: "Paintball - Actividad de adrenalina y competencia" },
+  { src: "/images/ActividadTeamBuilding-2.webp", alt: "Karting - Campeonato de velocidad y destreza" },
+  { src: "/images/ActividadTeamBuilding-3.webp", alt: "Escape Room - Desafío de construcción y lógica" },
+  { src: "/images/ActividadTeamBuilding-4.webp", alt: "Actividad de Adrenalina - Trabajo en equipo al aire libre" },
+  { src: "/images/ActividadTeamBuilding-5.webp", alt: "Dinámicas de Integración - Juegos colaborativos en la naturaleza" },
+  { src: "/images/ActividadTeamBuilding-7.webp", alt: "Ejercicio de Confianza - Actividad grupal de integración" },
+  { src: "/images/ActividadTeamBuilding-9.webp", alt: "Desafío Colaborativo - Construcción conjunta de soluciones" },
+  { src: "/images/ActividadTeamBuilding-11.webp", alt: "Lego Serious Play - Metodología creativa de resolución de problemas" },
 ];
 
 export default function TeamBuildingGallery() {

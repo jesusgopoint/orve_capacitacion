@@ -371,7 +371,14 @@ export default function TeamBuildingLanding() {
           </div>
         </section>
 
+        {/* Divider Section */}
+        <div className="bg-gradient-to-r from-transparent via-gray-300 to-transparent h-1"></div>
 
+        {/* Gallery Section */}
+        <TeamBuildingGallery />
+
+        {/* Divider Section */}
+        <div className="bg-gradient-to-r from-transparent via-gray-300 to-transparent h-1"></div>
 
         {/* Why Choose Section */}
         <section className="py-16 md:py-24 bg-gray-50">
@@ -600,15 +607,6 @@ export default function TeamBuildingLanding() {
             </form>
           </div>
         </section>
-
-        {/* Divider Section */}
-        <div className="bg-gradient-to-r from-transparent via-gray-300 to-transparent h-1"></div>
-
-        {/* Gallery Section */}
-        <TeamBuildingGallery />
-
-        {/* Divider Section */}
-        <div className="bg-gradient-to-r from-transparent via-gray-300 to-transparent h-1"></div>
 
         {/* FAQ Section */}
         <section className="py-12 md:py-16 bg-gray-50">
