@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { ChevronDown, ChevronUp, Heart, Brain, Users, Leaf } from "lucide-react";
+import { ChevronDown, ChevronUp, Heart, Brain, Users, Leaf, Cog, Globe } from "lucide-react";
 import { useLocation } from "wouter";
 
 // Función para disparar evento personalizado a GTM
@@ -57,7 +57,7 @@ export default function BienestarLanding() {
 
   const wellnessAreas = [
     {
-      title: "Salud Física",
+      title: "Físico",
       icon: Heart,
       color: "text-red-500",
       description: "Programas de actividad física, nutrición y prevención de enfermedades ocupacionales.",
@@ -69,7 +69,7 @@ export default function BienestarLanding() {
       ]
     },
     {
-      title: "Salud Mental",
+      title: "Salud",
       icon: Brain,
       color: "text-blue-500",
       description: "Gestión del estrés, mindfulness y apoyo psicológico para el bienestar emocional.",
@@ -93,7 +93,7 @@ export default function BienestarLanding() {
       ]
     },
     {
-      title: "Bienestar Social",
+      title: "Psicoemocional",
       icon: Leaf,
       color: "text-green-500",
       description: "Actividades que fortalecen las relaciones y el sentido de comunidad.",
@@ -102,6 +102,30 @@ export default function BienestarLanding() {
         "Programas de voluntariado corporativo",
         "Eventos de celebración y reconocimiento",
         "Espacios de convivencia y camaradería"
+      ]
+    },
+    {
+      title: "Fortalecimiento Organizacional",
+      icon: Cog,
+      color: "text-orange-500",
+      description: "Fortalecer la cultura organizacional, el liderazgo positivo y la mejora del clima laboral para generar entornos más colaborativos y productivos.",
+      activities: [
+        "Talleres de desarrollo profesional: Liderazgo, comunicación efectiva, gestión del cambio y manejo de conflictos",
+        "Dinámicas participativas e innovadoras: Team building (outdoor/indoor), Lego Serious Play y Escape Rooms",
+        "Actividades de fortalecimiento: Charlas sobre riesgos psicosociales, fidelidad empresarial, engagement y accountability",
+        "Intervenciones de clima: Sensibilización de clima laboral y presentaciones efectivas (storytelling)"
+      ]
+    },
+    {
+      title: "Sustentabilidad",
+      icon: Globe,
+      color: "text-green-600",
+      description: "Fomentar una cultura comprometida con el medio ambiente y la responsabilidad social, incentivando prácticas sostenibles en la vida personal y laboral.",
+      activities: [
+        "Charlas de sensibilización ambiental: Huella de carbono, economía circular, impacto en la comunidad y reducción de plásticos",
+        "Cursos y talleres prácticos: Taller de compostaje, ciclos de huertos urbanos y talleres de 'Cómo impactan nuestras acciones'",
+        "Actividades de impacto social y ecológico: Programa 'Reforestemos Santiago' y voluntariados ambientales corporativos",
+        "Iniciativas locales: Participación en campañas de sostenibilidad y compromiso con el medio ambiente"
       ]
     }
   ];
